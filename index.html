@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-
 <body>
-
     <header>
         <div class=menu>
             <h1 class=logo><a title="logoInicio" href="Index.html">
@@ -50,7 +48,7 @@
                     </div>
                     <div class="txtCard1">
                         <h4><b>Viaja a Medellin</b></h4>
-                        <p>Desde $50.000 la noche</p>
+                        <p>Desde $42.000 la noche</p>
                     </div>
             </div></a>
             <div class="cardP3"><a href="index.html">
@@ -59,30 +57,80 @@
                     </div>
                     <div class="txtCard1">
                         <h4><b>Viaja a Cartagena</b></h4>
-                        <p>Desde $50.000 la noche</p>
+                        <p>Desde $20.000 la noche</p>
                     </div>
             </div></a>
         </div>
         <section class="formReserva">
             <div class = "caja">
-                <p>Ciudad</p>
-                <div class="Destino" name="Destinos" style="width: 200px;">
-                    <select>
-                        <option value="opcion 1">BARICHARA</option>
-                        <option value="opcion 2">BARRANQUILLA</option>
-                        <option value="opcion 3">BOGOTÁ</option>
-                        <option value="opcion 4">CALÍ</option>
-                        <option value="opcion 5">CARTAGENA</option>
-                        <option value="opcion 6">SAN ANDRES</option>
-                        <option value="opcion 7">SANTA MARTA</option>
-                        <option value="opcion 8">LETICIA</option>
-                    </select>
-    
+                <div class = "cajadiv">
+                    <p>Ciudad</p>
+                    <div class="Destino" name="Destinos" style="width: 150px;">
+                        <select class = "select1">
+                            <option value="opcion 1">BARICHARA</option>
+                            <option value="opcion 2" selected>BARRANQUILLA</option>
+                            <option value="opcion 3">BOGOTÁ</option>
+                            <option value="opcion 4">CALÍ</option>
+                            <option value="opcion 5">CARTAGENA</option>
+                            <option value="opcion 6">SAN ANDRES</option>
+                            <option value="opcion 7">SANTA MARTA</option>
+                            <option value="opcion 8">LETICIA</option>   
+                        </select>  
+                    <img src="VectoricoCiudad.svg"> 
+                    </div>
                 </div>
+                <div class = "cajadiv2">
+                    <div class="boxIN">
+                        <label class ="txtCheckin">Check-In</label >
+                        <input class = "cajaIn" type="date" min="2022-08-25" max ="2023-02-22"
+                        value ="2022-08-28"  style="width: 100px;" onkeydown="return false">
+                        <img src="Vectorcalendario.svg">
+                    </div>
 
+                </div>
+                <div class = "cajadiv3">
+                    <div class="boxOUT">
+                        <label class ="txtCheckout">Check-Out</label>
+                        <input class = "cajaOut" type="date" min="2022-08-25" max ="2023-02-22"  
+                        value ="2022-08-28" style="width: 100px;" onkeydown="return false">
+                        <img src="Vectorcalendario.svg">
+                    </div>
+                </div>
+                <div class = "cajadiv4">
+                    <div class="huespedes" name="Huespedes" style="width: 150px;">
+                        <label>Huespedes</label>
+                        <select class = "select2">
+                            <option value="opcion 1">1 Adulto</option>
+                            <option value="opcion 2">2 Adultos</option>
+                            <option value="opcion 3">3 Adultos</option>
+                            <option value="opcion 4">4 Adultos</option>
+                           
+                        </select>
+                        <select class = "select3">
+                            <option value="opcion 0">0 Niños</option>
+                            <option value="opcion 1">1 Niño</option>
+                            <option value="opcion 2">2 Niños</option>
+                            <option value="opcion 3">3 Niños</option>
+                            <option value="opcion 4">4 Niños</option>
+                        
+                        </select>
+                    </div>
+                    <img src="icoHuesped.svg ">
+                    <img src="icoHuesped.svg " class = "img3">
+                </div>
+                <a href="destinos.html"><div class ="buscar"><img src="lupa.svg"></div></a> 
+
+                  <!--   TAL VEZ SE INTEGRE...
+                    <div class="habitaciones" name="habitaciones" style="width: 5px;">
+                        <label>Habitaciones</label>
+                        <select class = "select4">
+                            <option value="opcion 1">1 Habitacion</option>
+                            <option value="opcion 2">2 Habitaciones</option>
+                            <option value="opcion 3">3 Habitaciones</option>
+                            <option value="opcion 4">4 Habitaciones</option> 
+                        </select>
+                    </div> -->
             </div>
-            
-
         </section>
 
 

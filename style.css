@@ -241,34 +241,69 @@ nav a:hover {
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  CAJA FORMULARIO RESERVA
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
-
+.formReserva{
+    width: 100%;
+    position:sticky;
+    padding-left: 15%;
+    margin-top: -50px;
+    
+}
 .caja {
     background: #ffffff;
-    width: 1000PX;
+    width: 850px;
     height: 100px;
     box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
     border-radius: 20px 20px 20px 20px;
     position: absolute;
-    top: 635px;
-    left: 160px;
+    
 }
+
+/*--------DESTINO-----------*/
+.cajadiv{
+    background: #F9F7F7;
+    width: 190px;
+    height: 60px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 10px 0 0 10px;
+}
+
+.cajadiv img{
+    position:relative;
+    top:-35px;
+    left: 20px;
+}
+.cajadiv .img2{
+    position:relative;
+    top:-55px;
+    left: 160px; 
+
+}
+
 
 .caja p{
     color:#023F76;
     font-family: poppinsRegular;
     font-size: 13px;
-    margin: 30px 0 0 65px;
-
+    margin: 15px 0 0 60px;
 }
-select {
+.caja label{
+    color:#023F76;
+    font-family: poppinsRegular;
+    font-size: 13px;
+    margin: 30px 0 0 65px;
+}
+
+.select1 {
     appearance: none;
     background-color: transparent;
     border: none;
-    margin: 0px 0 0 60px;
-    width: 100%;
+    margin: 0px 0 0 55px;
+    width: 90%;
     color:#023F76;
     font-family: poppinsSemibold;
-    font-size: inherit;
+    font-size: 13px;
     cursor: pointer;
     line-height: inherit;
     outline: none;
@@ -279,13 +314,212 @@ select {
 
 
 
+/*--------CHECK IN-----------*/
+
+.cajadiv2 img{
+    position:relative;
+    top:35px;
+    left: 10px;
+    
+
+}
+.cajadiv2{
+    background: #F9F7F7;
+    width: 165px;
+    height: 60px;
+    position: absolute;
+    top: 20px;
+    left: 215px;
+    border-radius: 0 0 0 0;
+}
+
+.boxIN{
+    position:relative;
+    top:-18px;
+    left: 10px;
+    
+}
+.txtCheckin{
+    position: absolute;
+    top:0;
+    left: -15px;
+}
+.cajaIn{
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    font-family:poppinsSemibold;
+    color: #023F76;
+    font-size: 12px;
+    position: absolute;
+    top:45px;
+    left: 48px;
+}
+
+
+
+
+/*--------CHECK OUT-----------*/
+
+.cajadiv3 img{
+    position:relative;
+    top:20px;
+    right: 5px;
+    
+
+}
+.cajadiv3{
+    background: #F9F7F7;
+    width: 165px;
+    height: 60px;
+    position: absolute;
+    top: 20px;
+    left: 385px;
+    border-radius: 0 0 0 0;
+}
+.boxOUT{
+    position: relative;
+    top:-2px;
+    left: 20px;
+    
+}
+.txtCheckout{
+    position: absolute;
+    top: -15px;
+    left: -30px;
+}
+.cajaOut{
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    font-family:poppinsSemibold;
+    color: #023F76;
+    font-size: 12px;
+    position: absolute;
+    top:30px;
+    left: 35px;
+}
+
+
+
+/*--------HUESPEDES-----------*/
+.cajadiv4 img{
+    position:relative;
+    top:-15px;
+    left: 15px;
+    
+}
+.cajadiv4 .img3{
+    position:relative;
+    width: 5.5%;
+    top:-12px;
+    left: 98px;
+}
+
+.cajadiv4{
+    background: #F9F7F7;
+    width: 210px;
+    height: 60px;
+    position: absolute;
+    top: 20px;
+    left: 555px;
+    
+    border-radius: 0 10px 10px 0;
+}
+.huespedes label{
+    position: relative;
+    top: 10px;    
+    font-size: 13px;
+    right: 15px;
+}
+.select2{
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    width: 50%;
+    color:#023F76;
+    font-family: poppinsSemibold;
+    font-size: 13px;
+    cursor: pointer;
+    line-height: inherit;
+    outline: none;
+    /* BORDE DE SELCCION*/
+    position: relative;
+    top: 15px;
+    left:50px;
+}
+.select3{
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    width: 40%;
+    color:#023F76;
+    font-family: poppinsSemibold;
+    font-size: 13px;
+    cursor: pointer;
+    line-height: inherit;
+    outline: none;
+    /* BORDE DE SELCCION*/
+    position: relative;
+    top: 15px;
+   left:59px;
+}
+
+
+/*--------HABITACIONES-----------*/
+.select4{
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    margin: -56px 0 0 670px;
+    width: 100%;
+    color:#023F76;
+    font-family: poppinsSemibold;
+    font-size: 13px;
+    cursor: pointer;
+    line-height: inherit;
+    outline: none;
+    /* BORDE DE SELCCION*/
+    padding: 5px;
+}
+
+.habitaciones label{
+    position: relative;
+    top:-55px;
+    left: 610px;
+    font-size: 13px;
+}
+
+.buscar {
+    background: #E48D36;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px 10px 10px 10px;
+    position: absolute;
+    margin: 20px 0 0 770px;
+    cursor: pointer;
+}
+.buscar img{
+    width: 50%;
+    margin: 15px 0 0 15px;
+    cursor: pointer;
+}
+.buscar:hover{
+    scale: 1.03;
+    transition: 0.2s all;
+}
+
 
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  QUERIES
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
     .cardP1 {
         position: absolute;
         top: 270px;
@@ -303,7 +537,7 @@ select {
 
 
 
-}
+} */
 
 @media screen and (max-width: 940px) {
     .cardP1 {

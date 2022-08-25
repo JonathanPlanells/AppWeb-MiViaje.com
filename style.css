@@ -30,13 +30,10 @@ header {
     position: relative;
     margin: 0 auto;
     /* AL CAMBIAR DE TAMAÑO DE PANTALLA ESTE SE REDIMENSIONA*/
-
-
 }
 
 .logo {
     margin: 30px 0 0 80px;
-
 }
 
 nav {
@@ -66,62 +63,167 @@ nav a:hover {
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++
-//  BANNER
+//  CARDS - BANNER
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
-.cardpos{
-    position: relative;
-    margin: 0 auto;
-
+.txtBanner2 a {
+    text-decoration: none;
+    color: #023F76;
 }
 
-.cardP1 a{
+.txtBanner {
+    font-size: 40px;
+    font-family: poppinsSemiBold;
+    color: #023F76;
+    position: absolute;
+    top: 200px;
+    left: 90px;
+}
+
+.txtBanner2 {
+    font-size: 20px;
+    font-family: poppinsSemiBold;
+
+    position: absolute;
+    top: 300px;
+    left: 90px;
+}
+
+.txtBanner2:hover {
+    transform: scale(1.03);
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.cardP1 a {
     text-decoration: none;
 }
+
 .cardP1 {
-    background: rgba(255,255,255,0.6);
-    width: 200PX;
-    height: 270px;
+    background: rgba(255, 255, 255, 0.6);
+    width: 170PX;
+    height: 230px;
     overflow: hidden;
     position: absolute;
-    top: 250px;
+    top: 350px;
     left: 80px;
     /* position: relative;
     margin: -380px 0 0 60px; */
     box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
-    border-radius: 20px 20px 10px 10px;    
+    border-radius: 20px 20px 10px 10px;
 }
 
 .card1 {
-    width: 180PX;
-    height: 200px;
+    width: 151PX;
+    height: 160px;
     overflow: hidden;
     margin: 10px;
-    border-radius: 10px 10px 4px 4px; 
+    border-radius: 10px 10px 4px 4px;
 }
 
 .destinop1 {
     width: 200%;
-    margin-left: -30px;    
+    margin-left: -30px;
 }
 
-.txtCard1 b{
-    margin-left: 20px;
+.txtCard1 b {
+    margin-left: 10px;
     font-family: poppinsSemiBold;
     color: #023F76;
+    font-size: 15px;
 }
-.txtCard1 p{
+
+.txtCard1 p {
     color: #023F76;
-    margin-left: 20px;
+    margin-left: 10px;
     font-family: poppinsSemiBold;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 25px
-
 }
 
-.cardP1:hover{
+.cardP2 a {
+    text-decoration: none;
+}
+
+.cardP2 {
+    background: rgba(255, 255, 255, 0.6);
+    width: 170PX;
+    height: 230px;
+    overflow: hidden;
+    position: absolute;
+    top: 350px;
+    left: 270px;
+    /* position: relative;
+    margin: -380px 0 0 60px; */
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 20px 20px 10px 10px;
+}
+
+.card2 {
+    width: 150PX;
+    height: 160px;
+    overflow: hidden;
+    margin: 10px;
+    border-radius: 10px 10px 4px 4px;
+}
+
+.destinop2 {
+    width: 200%;
+    margin-left: -140px;
+}
+
+.cardP3 a {
+    text-decoration: none;
+}
+
+.cardP3 {
+    background: rgba(255, 255, 255, 0.6);
+    width: 170PX;
+    height: 230px;
+    overflow: hidden;
+    position: absolute;
+    top: 350px;
+    left: 460px;
+    /* position: relative;
+    margin: -380px 0 0 60px; */
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 20px 20px 10px 10px;
+}
+
+.card3 {
+    width: 151PX;
+    height: 160px;
+    overflow: hidden;
+    margin: 10px;
+    border-radius: 10px 10px 4px 4px;
+}
+
+.destinop3 {
+    width: 200%;
+    margin-left: -30px;
+}
+
+
+/*
+//// HOVER CARDS -------------------------------
+*/
+.cardP1:hover {
     transform: scale(1.03);
     transition: 0.5s all;
 }
+
+.cardP2:hover {
+    transform: scale(1.03);
+    transition: 0.5s all;
+}
+
+.cardP3:hover {
+    transform: scale(1.03);
+    transition: 0.5s all;
+}
+
+/*
+//// BANNER--------------------------------------
+*/
 
 .container {
     width: 100%;
@@ -135,3 +237,165 @@ nav a:hover {
     margin-top: -150px;
 }
 
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++
+//  CAJA FORMULARIO RESERVA
++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.caja {
+    background: #ffffff;
+    width: 1000PX;
+    height: 100px;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 20px 20px 20px 20px;
+    position: absolute;
+    top: 635px;
+    left: 160px;
+}
+
+.caja p{
+    color:#023F76;
+    font-family: poppinsRegular;
+    font-size: 13px;
+    margin: 30px 0 0 65px;
+
+}
+select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    margin: 0px 0 0 60px;
+    width: 100%;
+    color:#023F76;
+    font-family: poppinsSemibold;
+    font-size: inherit;
+    cursor: pointer;
+    line-height: inherit;
+    outline: none;
+    /* BORDE DE SELCCION*/
+    padding: 5px;
+}
+
+
+
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++
+//  QUERIES
++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+@media screen and (max-width: 1200px) {
+    .cardP1 {
+        position: absolute;
+        top: 270px;
+    }
+
+    .cardP2 {
+        position: absolute;
+        top: 270px;
+    }
+
+    .cardP3 {
+        position: absolute;
+        top: 270px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 940px) {
+    .cardP1 {
+        position: absolute;
+        left: 80px;
+        top: 180px;
+    }
+
+    .cardP2 {
+        position: absolute;
+        left: 300px;
+        top: 180px;
+    }
+
+    .cardP3 {
+        position: absolute;
+        left: 520px;
+        top: 180px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        position: static;
+        text-align: center;
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        position: static;
+        text-align: center;
+
+    }
+
+    .menu {
+        width: auto;
+    }
+
+    .cardP1 {
+        position: absolute;
+        left: 60px;
+        top: 160px;
+    }
+
+    .cardP2 {
+        position: absolute;
+        left: 280px;
+        top: 160px;
+    }
+
+    .cardP3 {
+        position: absolute;
+        left: 500px;
+        top: 160px;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: #023F76;
+    }
+
+    .menu {
+        background-color: #023F76;
+    }
+
+    nav a {
+        color: #ffffff;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .cardP1 {
+        position: absolute;
+        left: 80px;
+        top: 130px;
+    }
+
+    .cardP2 {
+        position: absolute;
+        left: 310px;
+        top: 130px;
+    }
+
+    .cardP3 {
+        display: none;
+    }
+}

@@ -1,0 +1,137 @@
+@font-face {
+    font-family: poppinsRegular;
+    src: url(poppins/Poppins-Regular.otf);
+}
+
+@font-face {
+    font-family: poppinsSemiBold;
+    src: url(poppins/Poppins-SemiBold.otf);
+}
+
+@font-face {
+    font-family: poppinsBold;
+    src: url(poppins/Poppins-Bold.otf);
+}
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++
+//  HEADER - MENU 
++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+header {
+    background: #ffffff;
+    padding: 0px 0;
+}
+
+.menu {
+    width: 100%;
+    /* DIMENSIONAR LOS PIXELES DE LAS PANTALLAS*/
+    position: relative;
+    margin: 0 auto;
+    /* AL CAMBIAR DE TAMAÑO DE PANTALLA ESTE SE REDIMENSIONA*/
+
+
+}
+
+.logo {
+    margin: 30px 0 0 80px;
+
+}
+
+nav {
+    position: absolute;
+    /* CREAR UNA POSICION APARTIR DE UN PUNTO*/
+    top: 10px;
+    right: 70px;
+}
+
+nav li {
+    display: inline;
+    /* AJUSTAR LATERALMENTE EL MENU*/
+}
+
+nav a {
+    color: #023F76;
+    font-family: poppinsSemiBold;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 0 0 0 15px;
+    /* ESPACIAMIENTO INTERNO (ARRIBA ABAJO DERECHA IZQUIERDA) */
+}
+
+nav a:hover {
+    color: #E48D36;
+    transition: 0.5s;
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++
+//  BANNER
++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.cardpos{
+    position: relative;
+    margin: 0 auto;
+
+}
+
+.cardP1 a{
+    text-decoration: none;
+}
+.cardP1 {
+    background: rgba(255,255,255,0.6);
+    width: 200PX;
+    height: 270px;
+    overflow: hidden;
+    position: absolute;
+    top: 250px;
+    left: 80px;
+    /* position: relative;
+    margin: -380px 0 0 60px; */
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 20px 20px 10px 10px;    
+}
+
+.card1 {
+    width: 180PX;
+    height: 200px;
+    overflow: hidden;
+    margin: 10px;
+    border-radius: 10px 10px 4px 4px; 
+}
+
+.destinop1 {
+    width: 200%;
+    margin-left: -30px;    
+}
+
+.txtCard1 b{
+    margin-left: 20px;
+    font-family: poppinsSemiBold;
+    color: #023F76;
+}
+.txtCard1 p{
+    color: #023F76;
+    margin-left: 20px;
+    font-family: poppinsSemiBold;
+    font-size: 13px;
+    line-height: 25px
+
+}
+
+.cardP1:hover{
+    transform: scale(1.03);
+    transition: 0.5s all;
+}
+
+.container {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    margin: 20px 0 0 0px;
+}
+
+.banner {
+    width: 100%;
+    margin-top: -150px;
+}
+

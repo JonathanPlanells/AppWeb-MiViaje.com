@@ -1,18 +1,6 @@
-@font-face {
-    font-family: poppinsRegular;
-    src: url(poppins/Poppins-Regular.otf);
-}
 
-@font-face {
-    font-family: poppinsSemiBold;
-    src: url(poppins/Poppins-SemiBold.otf);
-}
 
-@font-face {
-    font-family: poppinsBold;
-    src: url(poppins/Poppins-Bold.otf);
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++
@@ -50,7 +38,8 @@ nav li {
 
 nav a {
     color: #023F76;
-    font-family: poppinsSemiBold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     font-size: 14px;
     text-decoration: none;
     margin: 0 0 0 15px;
@@ -86,21 +75,24 @@ nav a:hover {
 
 .txtBanner {
     font-size: 55px;
-    font-family: poppinsSemiBold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     color: #023F76;
     position: absolute;
     top: 200px;
     left: 90px;
     letter-spacing: -2px;
+    text-shadow: 10px 10px 40px #ffffff;
 }
 
 .txtBanner2 {
     font-size: 20px;
-    font-family: poppinsSemiBold;
-
+    font-family: 'Poppins', sans-serif;
+    font-weight:500;
     position: absolute;
     top: 300px;
     left: 90px;
+    text-shadow: 10px 10px 40px #ffffff;
 }
 
 .txtBanner2:hover {
@@ -144,7 +136,8 @@ nav a:hover {
 
 .txtCard1 b {
     margin-left: 10px;
-    font-family: poppinsSemiBold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     color: #023F76;
     font-size: 15px;
 }
@@ -152,7 +145,8 @@ nav a:hover {
 .txtCard1 p {
     color: #023F76;
     margin-left: 10px;
-    font-family: poppinsSemiBold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     font-size: 12px;
     line-height: 25px
 }
@@ -282,14 +276,16 @@ nav a:hover {
 
 .caja p {
     color: #023F76;
-    font-family: poppinsRegular;
+    font-family: 'Poppins', sans-serif;
+    font-weight:200;
     font-size: 13px;
     margin: 15px 0 0 60px;
 }
 
 .caja label {
     color: #023F76;
-    font-family: poppinsRegular;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
     font-size: 13px;
     margin: 30px 0 0 65px;
 }
@@ -301,7 +297,8 @@ nav a:hover {
     margin: 0px 0 0 55px;
     width: 90%;
     color: #023F76;
-    font-family: poppinsSemibold;
+    font-family: 'Poppins', sans-serif;
+    font-weight:600;
     font-size: 13px;
     cursor: pointer;
     line-height: inherit;
@@ -352,7 +349,8 @@ nav a:hover {
     background-color: transparent;
     border: none;
     position: absolute;
-    font-family: poppinsSemibold;
+    font-family: 'Poppins', sans-serif;
+    font-weight:600;
     color: #023F76;
     font-size: 12px;
     position: absolute;
@@ -402,7 +400,8 @@ nav a:hover {
     background-color: transparent;
     border: none;
     position: absolute;
-    font-family: poppinsSemibold;
+    font-family: 'Poppins', sans-serif;
+    font-weight:600;
     color: #023F76;
     font-size: 12px;
     position: absolute;
@@ -451,7 +450,8 @@ nav a:hover {
     border: none;
     width: 50%;
     color: #023F76;
-    font-family: poppinsSemibold;
+    font-family: 'Poppins', sans-serif;
+    font-weight:600;
     font-size: 13px;
     cursor: pointer;
     line-height: inherit;
@@ -469,7 +469,8 @@ nav a:hover {
     position: absolute;
     width: 40%;
     color: #023F76;
-    font-family: poppinsSemibold;
+    font-family: 'Poppins', sans-serif;
+    font-weight:600;
     font-size: 13px;
     cursor: pointer;
     line-height: inherit;
@@ -491,7 +492,8 @@ nav a:hover {
     margin: -56px 0 0 670px;
     width: 100%;
     color: #023F76;
-    font-family: poppinsSemibold;
+    font-family: 'Poppins', sans-serif;
+    font-weight:600;
     font-size: 13px;
     cursor: pointer;
     line-height: inherit;
@@ -580,7 +582,8 @@ nav a:hover {
 .cajaText {
     font-size: 30px;
     color: #023F76;
-    font-family: poppinsSemibold;
+    font-family: 'Poppins', sans-serif;
+    font-weight:600;
     display: inline-block;
     margin-top: auto;
     margin-left: auto;
@@ -606,7 +609,8 @@ nav a:hover {
 
 .desc .text3 {
     font-size: 16px;
-    font-family: poppinsRegular;
+    font-family: 'Poppins', sans-serif;
+    font-weight:300;
     margin: 0 0 0 30px;
 }
 
@@ -617,7 +621,8 @@ nav a:hover {
 }
 .desc .text5 {
     font-size: 16px;
-    font-family: poppinsRegular;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
     margin: 0 0 0 30px;
 }
 .desc .text6 {
@@ -656,13 +661,16 @@ nav a:hover {
     overflow: hidden;
     margin-top: 100px;
     width: 100%;
-    height: 400px;  
+    height: 420px;  
 }
 .bannerAventuras{
   width: 150%;
-  margin:-400px 0 0 0;
+  margin:-470px 0 0 0;
   opacity: 25% ;
 }
+
+
+/* ------------TEXTO--------------*/
 .textAventuras{
     display: block;
     position: absolute;
@@ -672,15 +680,23 @@ nav a:hover {
 .textAventuras .txt1Aventuras{
     font-size: 28px;
     letter-spacing: -1px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
     margin-left: 25px;
     color: #023F76;
 }
 .textAventuras .txt2Aventuras{
     font-size: 45px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
     letter-spacing: -1px;
     text-align: right;
     color: #E48D36;
 }
+
+
+
+/* ------------BOTONES--------------*/
 .btnAventuras{
     background: #E48D36;
     width: 200px;
@@ -695,7 +711,8 @@ nav a:hover {
     color: #ffffff;
     text-align: center;
     padding-top: 18px;
-    font-family: poppinsSemiBold;
+    font-family: 'Poppins', sans-serif;
+    font-weight:600;
 }
 .btnAventuras:hover{
     transform: scale(1.04);
@@ -704,15 +721,90 @@ nav a:hover {
 .textAventuras a {
     text-decoration: none;
 }
+
+.btnAventuras2{
+    background: #023F76;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    margin: 580px 0 0 90px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.btnAventuras2 .txtbtn{
+    font-size: 11px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight:200;
+    line-height: 15px;
+}
+.grupoCard1:hover{
+    transform: scale(1.01);
+    transition: 0.5s;
+}
+
+.btnAventuras3{
+    background: #023F76;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    margin: 610px 0 0 340px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.btnAventuras3 .txtbtn{
+    font-size: 11px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight:200;
+    line-height: 15px;
+}
+.grupoCard2:hover{
+    transform: scale(1.01);
+    transition: 0.5s;
+}
+
+.btnAventuras4{
+    background: #023F76;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    margin: 560px 0 0 589px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.btnAventuras4 .txtbtn{
+    font-size: 11px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight:200;
+    line-height: 15px;
+}
+.grupoCard3:hover{
+    transform: scale(1.01);
+    transition: 0.5s;
+}
+
+
+
+
+/* ------------CARDS--------------*/
 .cardAventuras{
     display: block;
     position: absolute;
     top:940px;
     left: 430px;
-    
 }
-
-.cardAventuras .cardP1{
+.cardAventuras .cardP1NA{
     background: rgba(255, 255, 255, 0.6);
     width: 210PX;
     height: 260px;
@@ -726,7 +818,7 @@ nav a:hover {
     border-radius: 20px 20px 10px 10px;
 }
 
-.cardAventuras .card1 {
+.cardAventuras .card1NA {
     width: 110%;
     height: 110%;
     overflow: hidden;
@@ -738,7 +830,7 @@ nav a:hover {
     width: 200%;
 }
 
-.cardAventuras .cardP2{
+.cardAventuras .cardP2NA{
     background: rgba(255, 255, 255, 0.6);
     width: 210PX;
     height: 260px;
@@ -752,7 +844,7 @@ nav a:hover {
     border-radius: 20px 20px 10px 10px;
 }
 
-.cardAventuras .card2 {
+.cardAventuras .card2NA {
     width: 120%;
     height: 110%;
     overflow: hidden;
@@ -766,7 +858,7 @@ nav a:hover {
     margin: 20px 0px 0 -50px;
 }
 
-.cardAventuras .cardP3{
+.cardAventuras .cardP3NA{
     background: rgba(255, 255, 255, 0.6);
     width: 210PX;
     height: 260px;
@@ -780,7 +872,7 @@ nav a:hover {
     border-radius: 20px 20px 10px 10px;
 }
 
-.cardAventuras .card3 {
+.cardAventuras .card3NA {
     width: 120%;
     height: 110%;
     overflow: hidden;
@@ -797,19 +889,113 @@ nav a:hover {
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  APP
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
-.App{
-    background-color: #82ba11;
-    margin-top: 100px;
+.App {
     width: 100%;
-    height: 560px;
+    display: block;
+    background: transparent;
+    width: 100%;
+    height: 730px;
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+.App .fondoApp{
+    position: absolute;
+    width: 110%;
+    margin: -50px 0 0 -700px;
 }
 
+.cajaApp {
+    background: transparent;
+    width: 100%;
+    height: 730px;
+    display:inline-block;
+    margin-top: auto;
+    margin-left: auto;
+    position: absolute;
+    top: -30px;
+    left: 0;
+}
+
+.cajaApp .mockup {
+    position: absolute;
+    width: 536px;
+    height: 632px;
+    margin: 80px 0 0 -60px ;
+
+}
+.cajaApp .mockup:hover{
+    transform: scale(1.01);
+    transition: 0.2s all;
+}
+
+.cajaApp .btnStore{
+    position: absolute;
+    width: 220px;
+    height: 160px;
+    margin: 380px 0 0 -370px;
+
+}
+
+.cajaApp .textApp{
+    position: absolute;
+    margin: 140px 0 0 250px ;
+}
+.textApp .txtApp1{
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #023F76;
+   
+}.textApp .txtApp1 .txtApp1-1{
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #E48D36;
+}
+.textApp2 .txtApp2{
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #023F76;
+}
+.textApp2 .txtApp3{
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #023F76;
+}
+.textApp2 .txtApp3 .txtApp1-2{
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #E48D36;
+}
+.textApp2 .txtApp4{
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #023F76;
+}
+.textApp2 .txtApp5{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #023F76;
+    position: absolute;
+    margin: 30px 0 0 -85px;
+}
+.textApp2{
+    position: absolute;
+    margin: 240px 0 0 210px;
+
+}
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  FOOTER
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
 footer{
     background-color:#023F76;
-    margin-top: 100px;
     width: 100%;
     height: 260px;
 }
@@ -853,6 +1039,9 @@ footer{
     }
     .nuevasAventuras .cardP3{
         display: none;
+    }
+    .imgApp{
+        margin: -100px 0 0 400px;
     }
 
 }
@@ -946,5 +1135,14 @@ footer{
 
     .cardP3 {
         display: none;
+    }
+    .cajaApp .mockup {
+        width: 200px;
+        height: 400px;
+    }
+
+    .cajaApp .fondoApp{
+    
+        margin: -50px 0 0 -200px;
     }
 }

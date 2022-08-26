@@ -103,6 +103,7 @@ nav a:hover {
 
 
 /*-------------CARDS------------*/
+
 .cardP1 a {
     text-decoration: none;
 }
@@ -541,6 +542,16 @@ nav a:hover {
     margin-right: auto;
     margin-left: auto;
     text-align: center;
+}
+.check{
+    width: 9%;
+    position: absolute;
+    margin: 35px 0 0 -10px;
+}
+.check2{
+    width: 9%;
+    position: absolute;
+    margin: 100px 0 0 -10px;
 }
 
 .cajaDia {
@@ -1007,50 +1018,50 @@ footer{
     height: 260px;
 }
 .logoFooter{
+    
     text-align: center;
-    padding-top: 100px;
-    position:initial;
-    margin-left: 270px;
+    padding-top: 120px;  
 }
 .redesSociales{
+    
     text-align: center;
     margin-top: 20px;
 }
-
 .redesSociales img{
-    padding-left: 20px;
+    width:1.5%;
+    margin-right: 20px;
+    margin-left: 20px;
 }
-
-.redesSociales .facebook:hover{
-    cursor: pointer;
-    transform: scale(1.02);
-    transition: 0.3s all;
-}
-.redesSociales .twitter:hover{
-    cursor: pointer;
-    transform: scale(1.02);
-    transition: 0.3s all;
-}
-.redesSociales .instagram:hover{
-    cursor: pointer;
-    transform: scale(1.02);
-    transition: 0.3s all;
-}
-.redesSociales .telegram:hover{
-    cursor: pointer;
-    transform: scale(1.02);
-    transition: 0.3s all;
-}
-
 .txtFinal{
     text-align: center;
-    margin-top:30px;
-    
     color: #ffffff;
     font-size: 13px;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
+    margin: 20px 0 0 -30px;
 }
+
+.redesSociales .facebook:hover{
+    cursor: pointer;
+    transform: scale(1.15);
+    transition: 0.3s all;
+}
+.redesSociales .twitter:hover{
+    cursor: pointer;
+    transform: scale(1.15);
+    transition: 0.3s all;
+}
+.redesSociales .instagram:hover{
+    cursor: pointer;
+    transform: scale(1.15);
+    transition: 0.3s all;
+}
+.redesSociales .telegram:hover{
+    cursor: pointer;
+    transform: scale(1.15);
+    transition: 0.3s all;
+}
+
 .conocenos{
     float:left;
     margin-top: 50px;
@@ -1073,7 +1084,6 @@ footer{
 }
 
 .dudas{
-    
     float:right;
     text-align: center;
     margin-top: 50px;

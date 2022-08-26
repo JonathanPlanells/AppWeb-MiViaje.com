@@ -937,8 +937,15 @@ nav a:hover {
     margin: 380px 0 0 -370px;
 
 }
+.cajaApp .cajaTxtApp{
+    position: absolute;
+    display: inline-table;
+    width: 100%;
+    margin: 0 0 0 -655px;
+    
+}
 
-.cajaApp .textApp{
+.cajaTxtApp .textApp{
     position: absolute;
     margin: 140px 0 0 250px ;
 }
@@ -999,6 +1006,94 @@ footer{
     width: 100%;
     height: 260px;
 }
+.logoFooter{
+    text-align: center;
+    padding-top: 100px;
+    position:initial;
+    margin-left: 270px;
+}
+.redesSociales{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.redesSociales img{
+    padding-left: 20px;
+}
+
+.redesSociales .facebook:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: 0.3s all;
+}
+.redesSociales .twitter:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: 0.3s all;
+}
+.redesSociales .instagram:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: 0.3s all;
+}
+.redesSociales .telegram:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: 0.3s all;
+}
+
+.txtFinal{
+    text-align: center;
+    margin-top:30px;
+    
+    color: #ffffff;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+.conocenos{
+    float:left;
+    margin-top: 50px;
+    margin-left: 100px;
+    text-align: center;
+}
+.conocenos p{
+    font-size: 24px;
+    color: #ffffff;
+    font-family:'Poppins', sans-serif;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+.conocenos .listaConocenos{
+    font-size: 13px;
+    color: #ffffff;
+    font-family:'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+.dudas{
+    
+    float:right;
+    text-align: center;
+    margin-top: 50px;
+    margin-right: 100px;
+}
+.dudas p{
+    font-size: 24px;
+    color: #ffffff;
+    font-family:'Poppins', sans-serif;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+.dudas .listaDudas{
+    font-size: 13px;
+    color: #ffffff;
+    font-family:'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 25px;
+}
+
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  QUERIES
@@ -1037,112 +1132,16 @@ footer{
     .textAventuras{
         margin: -50px 0 0 -80px;
     }
-    .nuevasAventuras .cardP3{
+    .nuevasAventuras .grupoCard3{
         display: none;
     }
-    .imgApp{
-        margin: -100px 0 0 400px;
+    .App .fondoApp{
+       
+        margin-left: -500px;
+    }
+    .App{
+        height: 700px;
     }
 
 }
 
-@media screen and (max-width: 940px) {
-    .cardP1 {
-        position: absolute;
-        left: 80px;
-        top: 180px;
-    }
-
-    .cardP2 {
-        position: absolute;
-        left: 300px;
-        top: 180px;
-    }
-
-    .cardP3 {
-        position: absolute;
-        left: 520px;
-        top: 180px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .logo {
-        position: static;
-        text-align: center;
-        margin-left: 30px;
-        margin-bottom: 10px;
-    }
-
-    nav {
-        position: static;
-        text-align: center;
-
-    }
-
-    .menu {
-        width: auto;
-    }
-
-    .cardP1 {
-        position: absolute;
-        left: 60px;
-        top: 160px;
-    }
-
-    .cardP2 {
-        position: absolute;
-        left: 280px;
-        top: 160px;
-    }
-
-    .cardP3 {
-        position: absolute;
-        left: 500px;
-        top: 160px;
-    }
-
-}
-
-@media screen and (max-width: 600px) {
-    body {
-        background-color: #023F76;
-    }
-
-    .menu {
-        background-color: #023F76;
-    }
-
-    nav a {
-        color: #ffffff;
-    }
-
-    .banner {
-        display: none;
-    }
-
-    .cardP1 {
-        position: absolute;
-        left: 80px;
-        top: 130px;
-    }
-
-    .cardP2 {
-        position: absolute;
-        left: 310px;
-        top: 130px;
-    }
-
-    .cardP3 {
-        display: none;
-    }
-    .cajaApp .mockup {
-        width: 200px;
-        height: 400px;
-    }
-
-    .cajaApp .fondoApp{
-    
-        margin: -50px 0 0 -200px;
-    }
-}

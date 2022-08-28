@@ -1,55 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 
+
 /*++++++++++++++++++++++++++++++++++++++++++++++++
-//  HEADER - MENU - BLANCO
+//  HEADER - MENU - AZUL
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 header {
-    background: #ffffff;
-    padding: 0px 0;
+    background: #023F76;
     position: fixed;
     top: 0;
     width: 100%;
     padding: 0px 0 10px 0;
     box-sizing: border-box;
-    box-shadow: 2px 4px 17px rgba(0, 0, 0, 0.25);
-    z-index: 1000;
-
-}
-
-.menu {
-    width: 100%;
-    /* DIMENSIONAR LOS PIXELES DE LAS PANTALLAS*/
-    position: relative;
-    margin: 0 auto;
-    /* AL CAMBIAR DE TAMAÑO DE PANTALLA ESTE SE REDIMENSIONA*/
-}
-
-.logo {
-    margin: 30px 0 0 80px;
+    z-index: 40;
 }
 
 nav {
-    position: absolute;
-    /* CREAR UNA POSICION APARTIR DE UN PUNTO*/
-    top: 10px;
-    right: 70px;
+    display: flex;
+    justify-content: space-between;
+    transition: align-items .2s;
+
 }
 
-nav li {
-    display: inline;
-    /* AJUSTAR LATERALMENTE EL MENU*/
+.logo {
+    font-size: 2rem;
+    display: inline-block;
+    margin: 30px 0 0 80px;
+
 }
 
-nav a {
-    color: #023F76;
+nav ul {
+    display: flex;
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px;
+    position: relative;
+    top: 40px;
+    left: -70px;
+}
+
+
+li a {
+    color: #ffffff;
     text-decoration: none;
-    margin: 0 0 0 15px;
-    /* ESPACIAMIENTO INTERNO (ARRIBA ABAJO DERECHA IZQUIERDA) */
+    margin-left: 25px;
 }
 
 nav a:hover {
@@ -57,199 +52,28 @@ nav a:hover {
     transition: 0.5s;
 }
 
-/*++++++++++++++++++++++++++++++++++++++++++++++++
-//  CARDS - BANNER
-+++++++++++++++++++++++++++++++++++++++++++++++++*/
-/* ------------BANNER-------------*/
-
-.container {
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
-    margin: 20px 0 0 0px;
-    z-index: 1;
-}
-
-.banner {
-    width: 100%;
-    margin-top: -150px;
-    z-index: -2;
-}
-
-.txtBanner2 a {
-    text-decoration: none;
-    color: #023F76;
-}
-
-.txtBanner {
-    font-size: 55px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    color: #023F76;
-    position: absolute;
-    top: 180px;
-    left: 90px;
-    letter-spacing: -2px;
-    text-shadow: 10px 10px 40px #ffffff;
-}
-
-.txtBanner2 {
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    position: absolute;
-    top: 250px;
-    left: 90px;
-    text-shadow: 10px 10px 40px #ffffff;
-}
-
-.txtBanner2:hover {
-    transform: scale(1.03);
-    transition: 0.5s all;
-    cursor: pointer;
-}
-
-
-/*-------------CARDS------------*/
-
-.cardP1 a {
-    text-decoration: none;
-}
-
-.cardP1 {
-    background: rgba(255, 255, 255, 0.6);
-    width: 170PX;
-    height: 230px;
-    overflow: hidden;
-    position: absolute;
-    top: 300px;
-    left: 80px;
-    /* position: relative;
-    margin: -380px 0 0 60px; */
-    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
-    border-radius: 20px 20px 10px 10px;
-}
-
-.card1 {
-    width: 151PX;
-    height: 160px;
-    overflow: hidden;
-    margin: 10px;
-    border-radius: 10px 10px 4px 4px;
-}
-
-.destinop1 {
-    width: 200%;
-    margin-left: -30px;
-}
-
-.txtCard1 b {
-    margin-left: 10px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    color: #023F76;
-    font-size: 15px;
-}
-
-.txtCard1 p {
-    color: #023F76;
-    margin-left: 10px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 25px
-}
-
-.cardP2 a {
-    text-decoration: none;
-}
-
-.cardP2 {
-    background: rgba(255, 255, 255, 0.6);
-    width: 170PX;
-    height: 230px;
-    overflow: hidden;
-    position: absolute;
-    top: 300px;
-    left: 270px;
-    /* position: relative;
-    margin: -380px 0 0 60px; */
-    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
-    border-radius: 20px 20px 10px 10px;
-}
-
-.card2 {
-    width: 150PX;
-    height: 160px;
-    overflow: hidden;
-    margin: 10px;
-    border-radius: 10px 10px 4px 4px;
-}
-
-.destinop2 {
-    width: 200%;
-    margin-left: -140px;
-}
-
-.cardP3 a {
-    text-decoration: none;
-}
-
-.cardP3 {
-    background: rgba(255, 255, 255, 0.6);
-    width: 170PX;
-    height: 230px;
-    overflow: hidden;
-    position: absolute;
-    top: 300px;
-    left: 460px;
-    /* position: relative;
-    margin: -380px 0 0 60px; */
-    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
-    border-radius: 20px 20px 10px 10px;
-}
-
-.card3 {
-    width: 151PX;
-    height: 160px;
-    overflow: hidden;
-    margin: 10px;
-    border-radius: 10px 10px 4px 4px;
-}
-
-.destinop3 {
-    width: 200%;
-    margin-left: -30px;
-}
-
-
-/*
-//// HOVER CARDS -------------------------------
-*/
-.cardP1:hover {
-    transform: scale(1.03);
-    transition: 0.5s all;
-}
-
-.cardP2:hover {
-    transform: scale(1.03);
-    transition: 0.5s all;
-}
-
-.cardP3:hover {
-    transform: scale(1.03);
-    transition: 0.5s all;
-}
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  CAJA FORMULARIO RESERVA
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
+#box {
+    position: fixed;
+    background-color: #023F76;
+    width: 100%;
+    height: 80px;
+    display: grid;
+    margin-top: -200px;
+    z-index: 30;
+}
+
 .formulario {
-    position: absolute;
+    position: fixed;
+    margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
+
 }
 
 .cajaPrincipal {
@@ -536,148 +360,288 @@ nav a:hover {
     font-size: 13px;
 }
 
+
+
+
+
 /*++++++++++++++++++++++++++++++++++++++++++++++++
-//  RECOMENDADO DEL DIA
+//  DESTINOS - COLUMNA 1
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
-.recoDia {
-    display: block;
-    margin-top: 60px;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
+.destinos {
+
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    margin-top: 270px;
 }
 
-.check {
-    width: 9%;
-    position: absolute;
-    margin: 35px 0 0 -10px;
+.destinop1 {
+    width: 200%;
+    margin-left: -30px;
 }
 
-.check2 {
-    width: 9%;
-    position: absolute;
-    margin: 100px 0 0 -10px;
-}
 
-.cajaDia {
-    background: #ffffff;
-    width: 378px;
-    height: 358px;
-    box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.25);
-    border-radius: 20px 20px 20px 20px;
+.destinos b {
     display: inline-block;
-    margin-top: auto;
-    margin-left: auto;
-    position: relative;
-    top: 60px;
-    left: auto;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.cajaDia:hover {
-    transform: scale(1.02);
-    transition: 0.5s all;
-}
-
-.estrellas {
-    text-align: left;
-}
-
-.cajaDia img {
-    width: 100%
-}
-
-.txtRD2 {
-    text-align: left;
-    font-size: 70px;
-}
-
-.txtRD {
-    text-align: left;
-    letter-spacing: -0.3px;
-}
-
-.cajaText {
-    scale: 85%;
-    font-size: 30px;
-    color: #023F76;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    display: inline-block;
-    margin-top: auto;
-    margin-left: auto;
-    position: relative;
-    top: 40px;
-    left: 20px;
-}
-
-.recoDia .desc {
-    text-align: left;
-}
-
-.desc .text1 {
+    color: #023F76;
     font-size: 18px;
-    line-height: 30px;
+    padding-bottom: 10px;
 }
 
-.desc .text2 {
-    font-size: 20px;
-    line-height: 35px;
-    margin: 0 0 0 30px;
-
-}
-
-.desc .text3 {
-    font-size: 16px;
+.destinos p {
+    display: inline-block;
+    color: #023F76;
     font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    margin: 0 0 0 30px;
-}
-
-.desc .text4 {
-    font-size: 20px;
-    line-height: 35px;
-    margin: 0 0 0 30px;
-}
-
-.desc .text5 {
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    margin: 0 0 0 30px;
-}
-
-.desc .text6 {
-    margin: 30px 0 0 0;
-    letter-spacing: -2px;
-}
-
-.btnRecomendadoDia {
-    background: #E48D36;
-    width: 200px;
-    height: 50px;
-    position: relative;
-    margin: -50px 0 0 220px;
-    border-radius: 7px;
-    cursor: pointer;
-}
-
-.btnRecomendadoDia .txtbtn {
+    font-weight: 400;
     font-size: 15px;
-    color: #ffffff;
-    text-align: center;
-    padding-top: 18px;
+    line-height: 20px
 }
 
-.btnRecomendadoDia:hover {
-    transform: scale(1.04);
-    transition: 0.5s all;
+
+/*::::::::DESTINO 1:::::::::::::*/
+
+.cardD1 {
+    background: rgba(255, 255, 255, 0.6);
+    width: 250PX;
+    height: 280px;
+    overflow: hidden;
+    display: inline-block;
+    left: 20px;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 20px 20px 10px 10px;
 }
 
-.cajaText a {
+.card1 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.txtCard1 {
+    padding-top: 15px;
+    margin-left: 0px;
+}
+
+
+
+/*::::::::DESTINO 2:::::::::::::*/
+
+.cardD2 a {
     text-decoration: none;
 }
+
+.cardD2 {
+    background: rgba(255, 255, 255, 0.6);
+    width: 250PX;
+    height: 280px;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 30px;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 20px 20px 10px 10px;
+}
+
+.card2 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.destinop2 {
+    width: 200%;
+    margin-left: -140px;
+}
+
+
+.txtCard2 {
+    padding-top: 15px;
+    margin-left: 30px;
+}
+
+
+/*::::::::DESTINO 3:::::::::::::*/
+
+.cardD3 a {
+    text-decoration: none;
+}
+
+.cardD3 {
+    background: rgba(255, 255, 255, 0.6);
+    width: 250PX;
+    height: 280px;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 30px;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px 10px 10px;
+}
+
+.card3 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.destinop3-1 {
+    width: 200%;
+    margin-left: -30px;
+
+}
+
+.txtCard3 {
+    padding-top: 15px;
+    margin-left: 30px;
+}
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++
+//  DESTINOS - COLUMNA 2
++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.destinos2 {
+
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.destinop1 {
+    width: 200%;
+    margin-left: -30px;
+}
+
+
+.destinos2 b {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #023F76;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.destinos2 p {
+    display: inline-block;
+    color: #023F76;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px
+}
+
+
+/*::::::::DESTINO 4:::::::::::::*/
+
+
+
+
+/*::::::::DESTINO 5:::::::::::::*/
+
+
+
+.destinos2 .destino5 .destinop2 {
+    margin: -60px 0 0 0px;
+}
+
+/*::::::::DESTINO 6:::::::::::::*/
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++
+//  DESTINOS - COLUMNA 3
++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.destinos3 {
+
+    width: 100%;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    padding-bottom: 90px;
+}
+
+.destinop1 {
+    width: 200%;
+    margin-left: -30px;
+}
+
+
+.destinos3 b {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #023F76;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.destinos3 p {
+    display: inline-block;
+    color: #023F76;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px
+}
+
+
+/*::::::::DESTINO 7:::::::::::::*/
+
+.destinos3 .destino7 .destinop1 {
+
+    margin: -160px 0 0 -120px;
+}
+
+/*::::::::DESTINO 8:::::::::::::*/
+
+
+
+.destinos3 .destino8 .destinop2 {
+
+    margin: -80px 0 0 -120px;
+}
+
+
+/*::::::::DESTINO 9:::::::::::::*/
+
+.cardD8 {
+    background: transparent;
+    width: 250PX;
+    height: 280px;
+
+    display: inline-block;
+    margin-left: 30px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.card3 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.destino9 .destinop3 span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 29px;
+    margin: 0 0 0 0;
+    line-height: 30px;
+
+}
+
+.destino9 .destinop3 {
+    text-align: left;
+    padding-top: 60px;
+    margin: 10px 0 -40px 0px;
+    color: #023F76;
+}
+
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  NUEVAS AVENTURAS
@@ -687,9 +651,10 @@ nav a:hover {
     text-align: center;
     display: block;
     overflow: hidden;
-    margin-top: 100px;
+    margin-top: -40px;
     width: 100%;
     height: 420px;
+
 }
 
 .bannerAventuras {
@@ -701,11 +666,10 @@ nav a:hover {
 
 /* ------------TEXTO--------------*/
 .textAventuras {
-    scale: 90%;
     display: block;
     position: absolute;
-    top: 1300px;
-    left: 60px;
+    top: 1650px;
+    left: 80px;
 }
 
 .textAventuras .txt1Aventuras {
@@ -838,8 +802,8 @@ nav a:hover {
 .cardAventuras {
     display: block;
     position: absolute;
-    top: 880px;
-    left: 340px;
+    top: 1230px;
+    left: 360px;
 }
 
 .cardAventuras .cardP1NA {
@@ -924,130 +888,344 @@ nav a:hover {
     margin: 20px 0px 0 -50px;
 }
 
-/*++++++++++++++++++++++++++++++++++++++++++++++++
-//  APP
-+++++++++++++++++++++++++++++++++++++++++++++++++*/
-.App {
-    width: 100%;
-    display: block;
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//  DESTINOS RESERVADOS ::::::::::::::::::::::::::::::::::::::::::::::.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/*::::::::::HOTELES::::::::::::*/
+.hoteles {
     background: transparent;
+    margin-top: 260px;
     width: 100%;
-    height: 730px;
-    overflow: hidden;
+    height: 1150px;
+    z-index: 1;
+
+}
+.hotel1, .hotel2, .hotel3{
+    margin-bottom: 50px;
+
+}
+
+.cajaHotelPrincipal {
+    background-color: #ffffff;
+    width: 730px;
+    height: 320px;
+    margin-left: auto;
     margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-}
-
-.App .fondoApp {
-    position: absolute;
-    width: 110%;
-    margin: -50px 0 0 -700px;
-}
-
-.cajaApp {
-    background: transparent;
-    width: 100%;
-    height: 730px;
-    display: inline-block;
-    margin-top: auto;
-    margin-left: auto;
-    position: absolute;
-    top: -30px;
+    border-radius: 10px;
+    overflow: hidden;
     left: 0;
+    right: 0;
+    box-shadow: 0px 4px 28px -3px rgba(0, 0, 0, 0.2);
 }
 
-.cajaApp .mockup {
+
+.cajaHotelPrincipal .caja1 {
+    display: inline-block;
+    background-color: #ffffff;
+    width: 49%;
+    height: 300px;
+    overflow: hidden;
+    margin: 10px 0px 0 20px;
+}
+
+.cajaHotelPrincipal .caja1 .informacion{
+    background-color: #ffffff;
+    width: 340px;
+    height: 135px;
+    margin: 10px 0 0 10px;
+
+}
+.cajaHotelPrincipal .caja1 .informacion .cajaText{
+    margin: 0 0 0 -20px;
+}
+
+.cajaHotelPrincipal .caja2 {
+    scale: 90%;
+    display: inline-block;
+    
+    width: 46%;
+    height: 300px;
+    overflow: hidden;
+    margin: -10px 0 0 -0px;
+    border-radius: 10px;
+    top: -10px;
+}
+
+
+/*::::::::::: CHECK IN :::::::::::::*/
+
+.informacion .checkIn {
+    background-color: #F9F7F7;
+    width: 170px;
+    height: 60px;
+    margin-right: 4px;
+    margin-top: -5px;
+    border-radius: 10px;
+}
+
+.informacion .imgCalendarioIN {
+    float: left;
+    margin: 20px 0 0 15px;
+}
+
+.informacion .checkIn .datosCheckIN {
+
+    float: left;
+    justify-content: right;
+    margin: 15px 0 0 20px;
+}
+
+.informacion .datosCheckIN p {
+    font-size: 13px;
+    font-family: Poppins, sans-serif;
+    font-weight: 300;
+    color: #023F76;
+}
+
+.informacion .datosCheckIN .cajaIn {
+    border: none;
+    background-color: transparent;
     position: absolute;
-    width: 536px;
-    height: 632px;
-    margin: 80px 0 0 -60px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #023F76;
+    font-size: 13px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: -3px;
+    margin-top: 3px;
+}
+
+
+
+/*:::::::::: CHECK OUT :::::::::::*/
+
+
+.informacion .checkOut {
+    background-color: #F9F7F7;
+    width: 170px;
+    height: 60px;
+    margin-right: 4px;
+    margin-top: -60px;
+    margin-left: 175px;
+    border-radius: 10px;
+}
+
+.informacion .checkOut .imgCalendarioOut {
+    
+    margin: 20px 0 0 15px;
+}
+
+.informacion .checkOut .datosCheckOut {
+   
+    justify-content: right;
+    margin: 15px 0 0 20px;
+}
+
+.informacion .datosCheckOut p {
+    font-size: 13px;
+    font-family: Poppins, sans-serif;
+    font-weight: 300;
+    color: #023F76;
+}
+
+.informacion .datosCheckOut .cajaOut {
+
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #023F76;
+    font-size: 13px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: -3px;
+    margin-top: 3px;
+}
+
+
+/*:::::::::: HUESPEDES :::::::::::*/
+.informacion .huespedes {
+    background-color: #F9F7F7;
+    width: 210px;
+    height: 60px;
+    margin-right: 4px;
+    border-radius: 10px;
+    margin-top:10px;
+}
+
+.informacion .huespedes .imgHuespedes {
+    scale: 120%;
+    float: left;
+    margin: 20px 0 0 20px;
+}
+
+
+
+.informacion .huespedes .datosHuespedes {
+    float: left;
+    justify-content: right;
+    margin: 15px 0 0 15px;
+}
+
+.informacion .datosHuespedes p {
+    font-size: 13px;
+    font-family: Poppins, sans-serif;
+    font-weight: 300;
+    color: #023F76;
+}
+
+.informacion .select2 {
+
+    scale: 100%;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 3px 1em 0 0;
+    margin: 0;
+    width: 100%;
+    color: #023F76;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+}
+
+.informacion .img3 {
+    scale: 60%;
+    float: left;
+    margin: -24px 0 0 120px;
+}
+
+.informacion .select3 {
+
+    float: left;
+    scale: 100%;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    color: #023F76;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+    margin: -20px 0 0 145px;
 
 }
 
-.cajaApp .mockup:hover {
-    transform: scale(1.01);
+
+/*:::::::::: RESERVAR AHORA:::::::::::*/
+.informacion .btnreservarAhora {
+    background: #E48D36;
+    width: 130px;
+    height: 58px;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: -58px;
+    margin-left: 215px;
+    cursor: pointer;
+}
+.btnreservarAhora a{
+    text-decoration: none;
+}
+.btnreservarAhora .txtbtn p {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.btnreservarAhora .txtbtn:hover {
+    scale: 1.01;
     transition: 0.2s all;
 }
 
-.cajaApp .btnStore {
-    position: absolute;
-    width: 220px;
-    height: 160px;
-    margin: 380px 0 0 -370px;
+/*:::::::::::HOTEL 1:::::::::::*/
 
+.hotel1 .caja2 img{
+    scale: 90%;
+    margin: -160px auto auto -190px;
 }
 
-.cajaApp .cajaTxtApp {
-    position: absolute;
-    display: inline-table;
-    width: 100%;
-    margin: 0 0 0 -655px;
-
+.hotel2 .caja2 img{
+    scale: 60%;
+    margin: -160px auto auto -190px;
 }
 
-.cajaTxtApp .textApp {
-    position: absolute;
-    margin: 140px 0 0 250px;
+.hotel3 .caja2 img{
+    scale: 90%;
+    margin: -160px auto auto -190px;
 }
 
-.textApp .txtApp1 {
-    font-size: 35px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+.cajaText {
+    scale: 85%;
+    font-size: 30px;
     color: #023F76;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: auto;
+    margin-left: auto;
+    position: relative;
+    
+}
+
+
+.estrellas {
+    scale: 80%;
+    margin: 3px 0 0 -40px;
+}
+
+
+.check {
+    scale: 70%;
+    position: absolute;
+    margin: 25px 0 0 0px;
+}
+
+.check2 {
+    scale: 70%;
+    position: absolute;
+    margin: 45px 0 0 0px;
+}
+
+.desc .text2 {
+    font-size: 13px;
+   
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 35px;
+    margin: -5px 0 0 0px;
 
 }
 
-.textApp .txtApp1 .txtApp1-1 {
-    font-size: 35px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+.desc .text3 {
+    font-size: 13px;
     color: #E48D36;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    margin: -5px 0 0 30px;
+    line-height: 25px;
 }
 
-.textApp2 .txtApp2 {
-    font-size: 19px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    color: #023F76;
-}
 
-.textApp2 .txtApp3 {
-    font-size: 19px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    color: #023F76;
-}
-
-.textApp2 .txtApp3 .txtApp1-2 {
-    font-size: 22px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+.desc .text5 {
+    font-size: 13px;
     color: #E48D36;
-}
-
-.textApp2 .txtApp4 {
-    font-size: 19px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    color: #023F76;
+    font-weight: 300;
+    margin: 0 0 0 30px;
 }
 
-.textApp2 .txtApp5 {
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    color: #023F76;
-    position: absolute;
-    margin: 30px 0 0 -85px;
-}
-
-.textApp2 {
-    position: absolute;
-    margin: 240px 0 0 210px;
-
-}
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  FOOTER
@@ -1155,61 +1333,22 @@ footer {
     line-height: 25px;
 }
 
-
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  QUERIES
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
-
 @media screen and (max-width: 1034px) {
-    .txtBanner {
-        margin-top: -60px;
-    }
-
-    .txtBanner2 {
-        margin-top: -60px;
-    }
-
-    .cardP1 {
-        position: absolute;
-        top: 240px;
-    }
-
-    .cardP2 {
-        position: absolute;
-        top: 240px;
-    }
-
-    .cardP3 {
-        position: absolute;
-        top: 240px;
-    }
-    
-    .formulario {
-        position: relative;
-        margin: -120px 0 0 0;
-    }
 
     .nuevasAventuras .cardAventuras {
-        margin: -60px 0 0 0px;
+        margin: 0px 0 0 0px;
     }
 
     .textAventuras {
-        margin: -50px 0 0 0px;
+        margin: -50px 0 0 -0px;
     }
 
     .nuevasAventuras .grupoCard3 {
         display: none;
     }
 
-    .App .fondoApp {
 
-        margin-left: -500px;
-    }
-
-    .App {
-        height: 700px;
-    }
-
-}
-@media screen and (max-width: 940px) {
 }

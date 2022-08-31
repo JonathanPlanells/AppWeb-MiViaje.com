@@ -81,7 +81,7 @@ nav {
 nav a {
     color: #023F76;
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.875rem;
     text-decoration: none;
     margin: 0 0 0 15px;
@@ -104,7 +104,7 @@ nav a:hover {
 }
 .headeAzul nav a {
     color: #ffffff;
-    font-weight: 500;
+    font-weight: 400;
 }
 .headeAzul .logoblanco {
     width: 40%;
@@ -892,14 +892,12 @@ nav a:hover {
     text-align: right;
     color: #E48D36;
 }
-
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //  :::::::::::::::::: DESTINOS RESERVADOS ::::::::::::::::::::::::::::::
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 // HOTELES
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
-
 .hoteles {
    display: flex;
     justify-content: center;
@@ -1057,7 +1055,6 @@ nav a:hover {
     cursor: pointer;
 }
 /*:::::::::::HOTEL 1:::::::::::*/
-
 .hotel1 .caja2 img{
     scale: 90%;
     margin: -160px auto auto -190px;
@@ -1077,24 +1074,24 @@ nav a:hover {
     scale: 80%;
     margin: 3px 0 0 -40px;
 }
-.check {
+.hotel1 .check {
     scale: 70%;
     position: absolute;
     margin: 25px 0 0 0px;
 }
-.check2 {
+.hotel1 .check2 {
     scale: 70%;
     position: absolute;
     margin: 45px 0 0 0px;
 }
-.desc .text2 {
+.hotel1 .desc .text2 {
     font-size: 0.813rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     line-height: 35px;
     margin: -5px 0 0 0px;
 }
-.desc .text3, .text5  {
+.hotel1 .desc .text3, .hotel1 .desc .text5  {
     font-size: 0.813rem;
     color: #E48D36;
     font-family: 'Poppins', sans-serif;
@@ -1102,7 +1099,6 @@ nav a:hover {
     margin: -5px 0 0 30px;
     line-height: 27px;
 }
-
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  FORMULARIO RESERVA - HOTEL SELECCIONADO
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -1118,7 +1114,6 @@ nav a:hover {
     height: 550px;
     overflow: hidden;
 }
-
 .hoteleSeleccionado .cajaHotelSelec{
     margin: 10px auto;
     width: 350px;
@@ -1126,22 +1121,18 @@ nav a:hover {
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
 }
-
 .reserva .formularioReserva {
     display: inline-block;
     width: 45%;
     height: 550px;
     overflow: hidden;
 }
-
 .formularioReserva .cajasTexto{
     color: #023F76;
     font-family: 'Poppins','sans-serif';
     font-weight: 500;
     font-size: 0.75rem;
-
 }
-
 .formularioReserva label{
     display: block;
     margin: 5px 0 0 85px;
@@ -1157,26 +1148,16 @@ nav a:hover {
     border-color:  transparent;
     background-color: #F9F7F7;
 }
-
-.cajasTexto input, textarea{
-    
-}
-
-
-
-
 /*::::::::::: ELIMINAR FLECHAS CUADRO DE NUMEROS*/
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
 }
-
 /*:::::::::::: BOTON :::::::::::::::::*/
 .formularioReserva .boton{
     font-size: 0.813rem;
@@ -1191,15 +1172,89 @@ input[type=number] {
     display: block;
     margin: 20px 0 0 75px;
 }
-
-
 .boton:hover{
     transition: 0.5s all;
     transform: scale(1.01); 
 } 
-
-
-
+/*++++++++++++++++++++++++++++++++++++++++++++++++
+//  PAGINA -404
++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.body404{
+    background-color: #023F76;
+}
+.p404{
+    width: 100%;
+    height: 690px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.caja404{
+    display: flex;
+    justify-content: center;
+}
+.p404 .txt404{
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    margin: 200px 0 0 0;
+    text-align: center;
+    overflow: hidden;
+}
+.p404 .img404{
+    display: inline-block;
+    width: 450px;
+    height: 400px;
+    margin: 200px 0 0 0;
+}
+.p404 .txt404 .txt1{
+    font-size: 9.375rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    letter-spacing: -12px;
+    color: #023F76;
+    margin: 0 0 0 -35px;
+}
+.p404 .txt404 .txt2{
+    font-size: 3.75rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color:#E48D36;
+}
+.p404 .txt404 .txt3{
+    font-size: 1.25rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    color:#023F76;
+}
+.p404 .txt404 .txt4{
+    margin: 40px 0 0 0;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    color:#023F76;
+}
+.p404 .txt404 .txt5{
+    margin: 5px 0 0 0;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    color: #E48D36;
+}
+.p404 .img404 img{
+    margin: -80px auto;
+}
+.p404 .txt6{
+    margin: 5px 0 0 0;
+    font-size: 0.813rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    color:#023F76;
+    text-align: center;
+}
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  FOOTER
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -1221,7 +1276,6 @@ footer {
     margin-right: 20px;
     margin-left: 20px;
 }
-
 .txtFinal {
     text-align: center;
     color: #ffffff;
@@ -1230,7 +1284,6 @@ footer {
     font-weight: 300;
     margin: 20px 0 0 -30px;
 }
-
 .redesSociales .facebook:hover, .twitter:hover, .instagram:hover, .instagram:hover, .telegram:hover {
     cursor: pointer;
     transform: scale(1.15);
@@ -1275,7 +1328,6 @@ footer {
     font-weight: 600;
     padding-bottom: 15px;
 }
-
 .dudas .listaDudas {
     font-size: 0.813rem;
     font-weight: 300;
@@ -1287,7 +1339,6 @@ footer {
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  QUERIES
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
-
 @media screen and (max-width: 1200px) {
     .txtBanner {
         margin-top: -60px;

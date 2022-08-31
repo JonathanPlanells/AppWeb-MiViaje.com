@@ -1256,68 +1256,64 @@ nav a:hover {
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  FORMULARIO RESERVA - HOTEL SELECCIONADO
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
-.hoteleSeleccionado{
-    background: transparent;
-    margin-top: 260px;
+.reserva{
     width: 100%;
-    height: 380px;
+    height: 600px;
+    text-align: center;
+    margin: 150px auto;
+}
+.reserva .hoteleSeleccionado{
+    display: inline-block;
+    width: 35%;
+    height: 550px;
+    overflow: hidden;
 }
 
-.hoteleSeleccionado .hotel{
-    margin-top: -120px;
+.hoteleSeleccionado .cajaHotelSelec{
+    margin: 10px auto;
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
 }
 
-.hoteleSeleccionado .hotel .caja2 img{
-    scale: 90%;
-    margin: -160px auto auto -190px;
+.reserva .formularioReserva {
+    display: inline-block;
+    width: 45%;
+    height: 550px;
+    overflow: hidden;
 }
-#precioh{
-    position: relative;
-    top: -35px;
-    left: 225px;
-    font-family: 'Poppins','sans-serif';
-    font-weight: 600;
+
+.formularioReserva .cajasTexto{
     color: #023F76;
-    letter-spacing: -1px;
-    font-size: 1.5rem;
-}
-
-/*::::::::::::: FORMULARUI ::::::::::::::*/
-
-form{
-    margin: 0 0 0 0;
-    font-family: 'Poppins','sans-serif'; 
-    width: 100%;
-}
-
-form label {
-    display: block;
-    margin: 15px auto;
-    width: 40%;
-}
-
-#cajasTexto{
-    color:#E48D36;
-    font-size: 0.875rem;
-    font-weight: 400;
-}
-
-#cajasTexto input, textarea{
-    background-color: #F9F7F7;
-
-   
-    border-color:transparent;
     font-family: 'Poppins','sans-serif';
-    border-radius: 5px;
-    border-width: 0.5px;
+    font-weight: 500;
+    font-size: 0.75rem;
+
 }
 
-.inputPadre{
+.formularioReserva label{
     display: block;
-    margin: 15px auto;
-    padding: 10px 5px;
-    width: 40%;   
+    margin: 5px 0 0 85px;
+    padding: 10px 0 10px 0;
+    text-align: left;
 }
+.formularioReserva .inputForm{
+    display: block;
+    width: 70%;    
+    margin: 5px auto;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-color:  transparent;
+    background-color: #F9F7F7;
+}
+
+.cajasTexto input, textarea{
+    
+}
+
+
+
 
 /*::::::::::: ELIMINAR FLECHAS CUADRO DE NUMEROS*/
 input::-webkit-outer-spin-button,
@@ -1333,24 +1329,28 @@ input[type=number] {
 
 /*:::::::::::: BOTON :::::::::::::::::*/
 .formularioReserva .boton{
-    font-size: 0.875rem;
+    font-size: 0.813rem;
     color: white;
     font-weight: bold;
     background: #E48D36;
     border-radius: 5px;
     border-color: transparent;
     width: 200px;
-    padding: 15px 0;
+    padding: 12px 0;
     cursor: pointer;
     display: block;
-    margin: 25px auto;
+    margin: 20px 0 0 75px;
 }
 
 
 .boton:hover{
     transition: 0.5s all;
     transform: scale(1.01); 
-}
+} 
+
+
+
+
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  PAGINA -404

@@ -17,7 +17,7 @@
 <body>
     <header class="headeAzul">
         <h1 class="logoblanco"><a title="logoFooter" href="index.html">
-            <img id="logoBlanco" src="Image/logoblanco copy.svg" alt="logoFooter"></h1></a>
+                <img id="logoBlanco" src="Image/logoblanco copy.svg" alt="logoFooter"></h1></a>
         <nav>
             <a href="index.html">Home</a>
             <a href="destinos.html" style="color:#E48D36">Destinos</a>
@@ -36,7 +36,7 @@
                         <section class="datosCiudad">
                             <p>Ciudad</p>
                             <select id="ciudad" name="ciudad" class="select1" style="width: 147px;">
-                                <option disabled>DESTINO &nbsp; &nbsp; &nbsp; &#62;</option>
+                                <option disabled selected value="DESTINO">DESTINO &nbsp; &nbsp; &nbsp; &#62;</option>
                                 <option value="BARICHARA">BARICHARA</option>
                                 <option value="BOGOTA">BOGOTÁ</option>
                                 <option value="CALI">CALÍ</option>
@@ -94,7 +94,7 @@
                                 src="Image/lupa.svg"></div>
                     </div>
                 </section>
-                
+
 
 
 
@@ -110,7 +110,7 @@
                         </div> -->
             </form>
         </div>
-        <div class ="espacio"></div>
+        <div class="espacio"></div>
         <div class="hoteles">
             <div class="hotel1">
                 <div class="cajaHotelPrincipal">
@@ -142,7 +142,7 @@
                                 <section class="imgCalendarioIN"><img src="Image/Vectorcalendario.svg"></section>
                                 <section class="datosCheckIN">
                                     <p>Check In</p>
-                                    <input  class="cajaIn" type="date" max="2023-02-22" style="width: 100px;"
+                                    <input class="cajaIn" type="date" max="2023-02-22" style="width: 100px;"
                                         onkeydown="return false">
                                 </section>
                             </section>
@@ -249,23 +249,26 @@
     // document.getElementById('infoIN').value = localStorage.getItem("fechaCheckIn");
     let elemIN = document.getElementsByClassName('cajaIn');
     let n;
-    for (n = 0; n < elemIN.length; ++n){
+    for (n = 0; n < elemIN.length; ++n) {
         elemIN[n].value = localStorage.getItem("fechaCheckIn");
     }
 
     let elemOUT = document.getElementsByClassName('cajaOut');
     let x;
-    for(x = 0; x < elemOUT.length; ++x){
+    for (x = 0; x < elemOUT.length; ++x) {
         elemOUT[x].value = localStorage.getItem("fechaCheckOut");
     }
 
-    document.getElementById('ciudad').value = localStorage.getItem("ciudadSeleccion")
 
-    //= 
-
-
+    if (window.localStorage.getItem('ciudadSeleccion') == undefined) {
+        
+        //document.getElementById('ciudad').value = "";
+    } else {
+        document.getElementById('ciudad').value = localStorage.getItem("ciudadSeleccion")
+    }
 
 
 </script>
+
 
 </html>

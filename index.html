@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
-<body onload="clearStorage()">
+<body>
     <header>
         <div>
             <h1 class="logo"><a title="logoInicio" href="index.html">
@@ -65,14 +65,24 @@
             </section>
         </div>
         <form class="formulario">
-            <div id="openModal" class="modalDialog" onclick="javascript:CloseModal();">
-                <div>
-                  <a href="#close" title="Close" class="close" onclick="javascript:CloseModal();">X</a>
-                  <p><span style = "font-size: 15px; font-weight: 200;">POR FAVOR<br></span><span>SELECCIONA UN DESTINO</span></p>
-                  <img src="Image/esperandoRespuesta.svg">
+            <div id="openModal" class="modalDialog" onclick="javascript:CerrarModal();">
+                <div class="modal1">
+                    <a href="#close" title="close" class="close" onclick="javascript:CerrarModal();">X</a>
+                    <p><span style="font-size: 15px; font-weight: 200;">POR FAVOR<br></span><span>SELECCIONA UN
+                            DESTINO</span></p>
+                    <img src="Image/esperandoRespuesta.svg">
                 </div>
-              </div>
-            
+            </div>
+
+            <div id="openModal2" class="modalDialog" onclick="javascript:CerrarModal2();">
+                <div class="modal2">
+                    <a href="#close" title="close" class="close" onclick="javascript:CerrarModal2();">X</a>
+                    <p><span style="font-size: 14px; font-weight: 200;">UPS! NO PUEDES SALIR SIN HABER ENTRADO...</span>
+                            <span> REVISA TU FECHA DE CHECK OUT</span></p>
+                    <img src="Image/verificacionFechas.svg">
+                </div>
+            </div>
+
 
             <section class="cajaPrincipal">
                 <section class="ciudad">
@@ -99,7 +109,7 @@
                     <section class="imgCalendarioIN"><img src="Image/Vectorcalendario.svg"></section>
                     <section class="datosCheckIN">
                         <p>Check In</p>
-                        <input id="fechaIN" class="cajaIn" type="date" max="2023-05-01" style="width: 100px;"
+                        <input id="fechaIN" class="cajaIn" type="date" max="2023-05-01" style="width: 100px;" min="" value=""
                             onkeydown="return false">
                     </section>
                 </div>
@@ -107,7 +117,7 @@
                     <section class="imgCalendarioOut"><img src="Image/Vectorcalendario.svg"></section>
                     <section class="datosCheckOut">
                         <p>Check Out</p>
-                        <input id="fechaOut"  class="cajaOut" type="date" max="2023-05-01" style="width: 100px;"
+                        <input id="fechaOut" class="cajaOut" type="date" max="2023-05-01" style="width: 100px;" min="" value=""
                             onkeydown="return false">
                     </section>
                 </div>
@@ -134,9 +144,10 @@
                         </select>
                     </section>
                 </div>
-                <div class="buscar"type="submit" id="btnBuscar" onclick="funcionBuscar()">
-                    <div  class="imgbuscar">
-                        <img src="Image/lupa.svg"></div>
+                <div class="buscar" type="submit" id="btnBuscar" onclick="funcionBuscar()">
+                    <div class="imgbuscar">
+                        <img src="Image/lupa.svg">
+                    </div>
                 </div>
             </section>
             <!--   TAL VEZ SE INTEGRE...
@@ -266,7 +277,7 @@
             </div>
         </div>
     </main>
-    
+
     <footer>
         <div class="conocenos">
             <p>Conócenos</p>
@@ -319,7 +330,9 @@
         <p class="txtFinal">Copyright - Miviaje.com - 2022</p>
 
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js">
+        
+    </script>
 </body>
 
 </html>

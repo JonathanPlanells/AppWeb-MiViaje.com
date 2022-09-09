@@ -4,38 +4,54 @@ select.addEventListener('change', function sel(event) {
 })
 
 function funcionBuscar() {
-    if (document.getElementById('ciudad').value == "BARRANQUILLA") {
-        document.location.href = "destinos.html", true;
-    } else if (document.getElementById('ciudad').value == "BARICHARA") {
-        document.location.href = "destinos.html", true;
-    } else if (document.getElementById('ciudad').value == "BOGOTA") {
-        document.location.href = "destino-seleccionado.html", true;
-    } else if (document.getElementById('ciudad').value == "CALI") {
-        document.location.href = "destinos.html", true;
-    } else if (document.getElementById('ciudad').value == "CARTAGENA") {
-        document.location.href = "destinos.html", true;
-    } else if (document.getElementById('ciudad').value == "SAN ANDRES") {
-        document.location.href = "destinos.html", true;
-    } else if (document.getElementById('ciudad').value == "SANTA MARTA") {
-        document.location.href = "destinos.html", true;
-    } else if (document.getElementById('ciudad').value == "LETICIA") {
-        document.location.href = "destinos.html", true;
+    if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value) {
+        alert("La fecha de checkout no puede ser antes que la de check in");
     } else {
-        alert("Selecciona un destino")
+        if (document.getElementById('ciudad').value == "BARRANQUILLA") {
+            document.location.href = "destinos.html", true;
+        } else if (document.getElementById('ciudad').value == "BARICHARA") {
+            document.location.href = "destinos.html", true;
+        } else if (document.getElementById('ciudad').value == "BOGOTA") {
+            document.location.href = "destino-seleccionado.html", true;
+        } else if (document.getElementById('ciudad').value == "CALI") {
+            document.location.href = "destinos.html", true;
+        } else if (document.getElementById('ciudad').value == "CARTAGENA") {
+            document.location.href = "destinos.html", true;
+        } else if (document.getElementById('ciudad').value == "SAN ANDRES") {
+            document.location.href = "destinos.html", true;
+        } else if (document.getElementById('ciudad').value == "SANTA MARTA") {
+            document.location.href = "destinos.html", true;
+        } else if (document.getElementById('ciudad').value == "LETICIA") {
+            document.location.href = "destinos.html", true;
+        } else {
+            showModal()
+        }
+        passInformacion()
     }
-    passInformacion()
 };
 
-function passInformacion(){
+function passInformacion() {
     let fechaIN = document.getElementById('fechaIN').value;
     localStorage.setItem("fechaCheckIn", fechaIN);
     let fechaOUT = document.getElementById('fechaOut').value;
     localStorage.setItem("fechaCheckOut", fechaOUT);
-    return false;
+    let destinoSelec = document.getElementById('ciudad').value;
+    localStorage.setItem("ciudadSeleccion", destinoSelec);
+    return true;
 }
 
+//function verificarFecha(){
 
-function clearStorage(){
+function clearStorage() {
     localStorage.clear();
 }
 
+function showModal() {
+    document.getElementById('openModal').style.display = 'block';
+  }
+
+function CloseModal() {
+    document.getElementById('openModal').style.display = 'none';
+  }
+
+CloseModal()

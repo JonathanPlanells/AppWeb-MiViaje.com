@@ -3,7 +3,7 @@
 <html leng="es">
 
 <head>
-    <meta charset="UTF-16">
+    <meta charset="UTF-8">
     <title>MiViaje.com</title>
     <link rel="shortcut icon" href="Image/favicon.png">
     <link rel="stylesheet" href="styles/style.css">
@@ -65,6 +65,15 @@
             </section>
         </div>
         <form class="formulario">
+            <div id="openModal" class="modalDialog" onclick="javascript:CloseModal();">
+                <div>
+                  <a href="#close" title="Close" class="close" onclick="javascript:CloseModal();">X</a>
+                  <p><span style = "font-size: 15px; font-weight: 200;">POR FAVOR<br></span><span>SELECCIONA UN DESTINO</span></p>
+                  <img src="Image/esperandoRespuesta.svg">
+                </div>
+              </div>
+            
+
             <section class="cajaPrincipal">
                 <section class="ciudad">
                     <section class="imgCiudad">
@@ -125,9 +134,9 @@
                         </select>
                     </section>
                 </div>
-                <div class="buscar">
-                    <div type="submit" id="btnBuscar" onclick="funcionBuscar()" class="imgbuscar"><img
-                            src="Image/lupa.svg"></div>
+                <div class="buscar"type="submit" id="btnBuscar" onclick="funcionBuscar()">
+                    <div  class="imgbuscar">
+                        <img src="Image/lupa.svg"></div>
                 </div>
             </section>
             <!--   TAL VEZ SE INTEGRE...
@@ -257,6 +266,7 @@
             </div>
         </div>
     </main>
+    
     <footer>
         <div class="conocenos">
             <p>Conócenos</p>

@@ -36,11 +36,12 @@
                         <section class="datosCiudad">
                             <p>Ciudad</p>
                             <select id="ciudad" name="ciudad" class="select1" style="width: 147px;">
+                                <option disabled>DESTINO &nbsp; &nbsp; &nbsp; &#62;</option>
                                 <option value="BARICHARA">BARICHARA</option>
-                                <option value="BARRANQUILLA" selected>BARRANQUILLA</option>
                                 <option value="BOGOTA">BOGOTÁ</option>
                                 <option value="CALI">CALÍ</option>
                                 <option value="CARTAGENA">CARTAGENA</option>
+                                <option value="MDELLIN">MEDELLIN</option>
                                 <option value="SAN ANDRES">SAN ANDRES</option>
                                 <option value="SANTA MARTA">SANTA MARTA</option>
                                 <option value="LETICIA">LETICIA</option>
@@ -257,6 +258,12 @@
     for(x = 0; x < elemOUT.length; ++x){
         elemOUT[x].value = localStorage.getItem("fechaCheckOut");
     }
+
+    document.getElementById('ciudad').value = localStorage.getItem("ciudadSeleccion")
+
+    //= 
+
+
 
 
 </script>

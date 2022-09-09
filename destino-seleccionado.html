@@ -52,15 +52,16 @@
                         <section class="imgCalendarioIN"><img src="Image/Vectorcalendario.svg"></section>
                         <section class="datosCheckIN">
                             <p>Check In</p>
-                            <input class="cajaIn" type="date" max="2023-05-01" style="width: 100px;"
+                            <input id="infoIN" class="cajaIn" type="date" max="2023-05-01" style="width: 100px;"
                                 onkeydown="return false">
+
                         </section>
                     </div>
                     <div class="checkOut">
                         <section class="imgCalendarioOut"><img src="Image/Vectorcalendario.svg"></section>
                         <section class="datosCheckOut">
                             <p>Check Out</p>
-                            <input class="cajaOut" type="date" max="2023-05-01" style="width: 100px;"
+                            <input id="infoOUT" class="cajaOut" type="date" max="2023-05-01" style="width: 100px;"
                                 onkeydown="return false">
                         </section>
                     </div>
@@ -92,6 +93,10 @@
                                 src="Image/lupa.svg"></div>
                     </div>
                 </section>
+                
+
+
+
                 <!--   TAL VEZ SE INTEGRE...
                         <div class="habitaciones" name="habitaciones" style="width: 5px;">
                             <label>Habitaciones</label>
@@ -136,7 +141,7 @@
                                 <section class="imgCalendarioIN"><img src="Image/Vectorcalendario.svg"></section>
                                 <section class="datosCheckIN">
                                     <p>Check In</p>
-                                    <input class="cajaIn" type="date" max="2023-02-22" style="width: 100px;"
+                                    <input  class="cajaIn" type="date" max="2023-02-22" style="width: 100px;"
                                         onkeydown="return false">
                                 </section>
                             </section>
@@ -239,5 +244,21 @@
 
     </footer>
 </body>
+<script>
+    // document.getElementById('infoIN').value = localStorage.getItem("fechaCheckIn");
+    let elemIN = document.getElementsByClassName('cajaIn');
+    let n;
+    for (n = 0; n < elemIN.length; ++n){
+        elemIN[n].value = localStorage.getItem("fechaCheckIn");
+    }
+
+    let elemOUT = document.getElementsByClassName('cajaOut');
+    let x;
+    for(x = 0; x < elemOUT.length; ++x){
+        elemOUT[x].value = localStorage.getItem("fechaCheckOut");
+    }
+
+
+</script>
 
 </html>

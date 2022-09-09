@@ -9,7 +9,7 @@ function funcionBuscar() {
     } else if (document.getElementById('ciudad').value == "BARICHARA") {
         document.location.href = "destinos.html", true;
     } else if (document.getElementById('ciudad').value == "BOGOTA") {
-        document.location.href = "destinos.html", true;
+        document.location.href = "destino-seleccionado.html", true;
     } else if (document.getElementById('ciudad').value == "CALI") {
         document.location.href = "destinos.html", true;
     } else if (document.getElementById('ciudad').value == "CARTAGENA") {
@@ -21,8 +21,23 @@ function funcionBuscar() {
     } else if (document.getElementById('ciudad').value == "LETICIA") {
         document.location.href = "destinos.html", true;
     } else {
-        console.log("error")
+        alert("Selecciona un destino")
     }
+    passInformacion()
 };
 
+function passInformacion(){
+    let fechaIN = document.getElementById('fechaIN').value;
+    localStorage.setItem("fechaCheckIn", fechaIN);
+    let fechaOUT = document.getElementById('fechaOut').value;
+    localStorage.setItem("fechaCheckOut", fechaOUT);
+    return false;
+}
+
+let homeClick =  document.getElementById('limpiar');
+homeClick.addEventListener("click", clearStorage());
+
+function clearStorage(){
+    localStorage.clear();
+}
 

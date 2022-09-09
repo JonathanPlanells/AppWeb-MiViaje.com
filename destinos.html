@@ -17,9 +17,9 @@
 <body>
     <header class="headeAzul">
         <h1 class="logoblanco"><a title="logoFooter" href="index.html">
-            <img id="logoBlanco" src="Image/logoblanco copy.svg" alt="logoFooter"></h1></a>
+                <img id="logoBlanco" src="Image/logoblanco copy.svg" alt="logoFooter"></h1></a>
         <nav>
-            <a href="index.html">Home</a>
+            <a id ="limpiar" href="index.html">Home</a>
             <a href="destinos.html" style="color:#E48D36">Destinos</a>
             <a href="404.html">MiReserva</a>
             <a href="404.html">Contactenos</a>
@@ -52,15 +52,16 @@
                         <section class="imgCalendarioIN"><img src="Image/Vectorcalendario.svg"></section>
                         <section class="datosCheckIN">
                             <p>Check In</p>
-                            <input class="cajaIn" type="date" max="2023-05-01" style="width: 100px;"
+                            <input id="infoIN" class="cajaIn" type="date" max="2023-05-01" style="width: 100px;"
                                 onkeydown="return false">
+
                         </section>
                     </div>
                     <div class="checkOut">
                         <section class="imgCalendarioOut"><img src="Image/Vectorcalendario.svg"></section>
                         <section class="datosCheckOut">
                             <p>Check Out</p>
-                            <input class="cajaOut" type="date" max="2023-05-01" style="width: 100px;"
+                            <input id="infoOUT" class="cajaOut" type="date" max="2023-05-01" style="width: 100px;"
                                 onkeydown="return false">
                         </section>
                     </div>
@@ -102,6 +103,11 @@
                                 <option value="opcion 4">4 Habitaciones</option> 
                             </select>
                         </div> -->
+                <script>
+                    document.getElementById('infoIN').value = localStorage.getItem("fechaCheckIn");
+                    document.getElementById('infoOUT').value = localStorage.getItem("fechaCheckOut");
+
+                </script>
             </form>
         </div>
         <div>
@@ -111,7 +117,7 @@
                         <section class="destino1">
                             <section class="cajaDestino"><a href="destino-seleccionado.html">
                                     <img class="imgDestino1" src="Image/bogota.jpg">
-    
+
                             </section></a>
                             <section>
                                 <h4><b>Bogotá</b></h4>
@@ -119,7 +125,7 @@
                                 <p>Noche desde $50.000</p>
                             </section>
                         </section>
-    
+
                         <section class="destino2">
                             <section class="cajaDestino"><a href="destino-seleccionado.html">
                                     <img class="imgDestino2" src="Image/Cartagena.png">
@@ -141,11 +147,11 @@
                             </section>
                         </section>
                     </section>
-                    <section> 
+                    <section>
                         <section class="destino4">
                             <section class="cajaDestino"><a href="destino-seleccionado.html">
                                     <img class="imgDestino4" src="Image/SanAndres.jpg">
-    
+
                             </section></a>
                             <section>
                                 <h4><b>San Andres</b></h4>
@@ -153,7 +159,7 @@
                                 <p>Noche desde $65.000</p>
                             </section>
                         </section>
-    
+
                         <section class="destino5">
                             <section class="cajaDestino"><a href="destino-seleccionado.html">
                                     <img class="imgDestino5" src="Image/Cali.png">
@@ -197,18 +203,18 @@
                             </section>
                         </section>
                         <section class="destino9">
-                                <section class="cajaDestino">
-                                    <span>MUY PRONTO <br>PODRÁS VIAJAR <br>A MÁS </span><span
-                                        style="color: #E48D36;">DESTINOS</span><br><br>
-                                    <p style="font-size: 0.75rem; line-height: 15px;">SÍGUENOS EN REDES SOCIALES <br>PARA
-                                        ENTERARTE DE NUESTROS <br>NUEVOS DESTINOS</p>
-                                </section>
+                            <section class="cajaDestino">
+                                <span>MUY PRONTO <br>PODRÁS VIAJAR <br>A MÁS </span><span
+                                    style="color: #E48D36;">DESTINOS</span><br><br>
+                                <p style="font-size: 0.75rem; line-height: 15px;">SÍGUENOS EN REDES SOCIALES <br>PARA
+                                    ENTERARTE DE NUESTROS <br>NUEVOS DESTINOS</p>
+                            </section>
                         </section>
-                    </section> 
+                    </section>
                 </div>
             </div>
 
-            <div class="nuevasAventuras2" style ="top:400px;">
+            <div class="nuevasAventuras2" style="top:400px;">
                 <section><img class="bannerAventuras" src="Image/Valle.jpg"></section>
                 <div class="cardAventuras">
                     <section class="grupoCard1">

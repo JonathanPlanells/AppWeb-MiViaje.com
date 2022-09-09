@@ -34,8 +34,6 @@ function passInformacion(){
     return false;
 }
 
-let homeClick =  document.getElementById('limpiar');
-homeClick.addEventListener("click", clearStorage());
 
 function clearStorage(){
     localStorage.clear();

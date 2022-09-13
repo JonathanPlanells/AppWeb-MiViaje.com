@@ -97,5 +97,5 @@ function CerrarModal2() {
 // LLAMADA DE FUNCION
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 window.onload = ejecutarAlCargarPagina;
-CloseModal()
+CerrarModal()
 CerrarModal2()

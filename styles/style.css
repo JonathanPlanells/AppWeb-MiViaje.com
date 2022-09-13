@@ -1343,8 +1343,11 @@ nav a:hover {
 
 /*:::::::::::HOTEL 1:::::::::::*/
 .hotel1 .caja2 img {
-    scale: 90%;
-    margin: -160px auto auto -190px;
+    width: 150%;
+    height: 100%;
+    margin-left: -25%;
+    
+    
 }
 
 .cajaText {

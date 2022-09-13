@@ -6,31 +6,42 @@ select.addEventListener('change', function sel(event) {
 
 // Condicional para formulario de busqueda
 function funcionBuscar() {
-     // Validando que las fechas del checkOut no sea antes del checkIN
-    if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value) {
-        mostrarModalFechas()
-    } else {
-        if (document.getElementById('ciudad').value == "BARRANQUILLA") {
-            document.location.href = "destinos.html", true;
-        } else if (document.getElementById('ciudad').value == "BARICHARA") {
-            document.location.href = "destinos.html", true;
-        } else if (document.getElementById('ciudad').value == "BOGOTA") {
-            document.location.href = "destino-seleccionado.html", true;
-        } else if (document.getElementById('ciudad').value == "CALI") {
-            document.location.href = "destinos.html", true;
-        } else if (document.getElementById('ciudad').value == "CARTAGENA") {
-            document.location.href = "destinos.html", true;
-        } else if (document.getElementById('ciudad').value == "SAN ANDRES") {
-            document.location.href = "destinos.html", true;
-        } else if (document.getElementById('ciudad').value == "SANTA MARTA") {
-            document.location.href = "destinos.html", true;
-        } else if (document.getElementById('ciudad').value == "LETICIA") {
-            document.location.href = "destinos.html", true;
+    if (document.getElementById('numHab').value > document.getElementById('numAdult').value) {
+        let condicion = window.confirm("esta seguro que quiere hacer esa locura?")
+        console.log(condicion)
+        if (condicion == true) {
+            // Validando que las fechas del checkOut no sea antes del checkIN
+            if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value) {
+                mostrarModalFechas()
+            } else {
+                if (document.getElementById('ciudad').value == "BARRANQUILLA") {
+                    document.location.href = "destinos.html", true;
+                } else if (document.getElementById('ciudad').value == "BARICHARA") {
+                    document.location.href = "destinos.html", true;
+                } else if (document.getElementById('ciudad').value == "BOGOTA") {
+                    document.location.href = "destino-seleccionado.html", true;
+                } else if (document.getElementById('ciudad').value == "CALI") {
+                    document.location.href = "destinos.html", true;
+                } else if (document.getElementById('ciudad').value == "CARTAGENA") {
+                    document.location.href = "destinos.html", true;
+                } else if (document.getElementById('ciudad').value == "SAN ANDRES") {
+                    document.location.href = "destinos.html", true;
+                } else if (document.getElementById('ciudad').value == "SANTA MARTA") {
+                    document.location.href = "destinos.html", true;
+                } else if (document.getElementById('ciudad').value == "LETICIA") {
+                    document.location.href = "destinos.html", true;
+                } else {
+                    mostrarModalDestino() // Modal seleccionar Destino
+                }
+
+                passInformacion() //Ejecutamos la funcion de guardar información para luego utilizarla en los otros html
+            }
         } else {
-            mostrarModalDestino() // Modal seleccionar Destino
+            alert("Entonces cambie las habitaciones")
         }
-        passInformacion() //Ejecutamos la funcion de guardar información para luego utilizarla en los otros html
     }
+
+
 };
 
 // Funcion para guardar y pasar información de un html a otro
@@ -70,7 +81,7 @@ function clearStorage() {
 }
 
 // Funcion para iniciar funciones que necesitemos al iniciar la pagina
-function ejecutarAlCargarPagina(){
+function ejecutarAlCargarPagina() {
     verificarFechaIN();
     clearStorage();
 }
@@ -94,7 +105,6 @@ function CerrarModal() {
 function CerrarModal2() {
     document.getElementById('openModal2').style.display = 'none';
 }
-
 
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

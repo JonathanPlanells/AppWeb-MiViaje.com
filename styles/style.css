@@ -502,7 +502,7 @@ nav a:hover {
     background-color: transparent;
     border: none;
     padding: 3px 1em 0 0;
-    margin: 0;
+    margin: 2px 0 0 0;
     width: 100%;
     color: #023F76;
     font-family: 'Poppins', sans-serif;
@@ -514,8 +514,8 @@ nav a:hover {
 
 .img3H {
     display: inline-block;
-    scale: 60%;
-    margin: 28px 0 0 -5px;
+    scale: 50%;
+    margin: 26px 0 0 -7px;
 }
 
 .select3 {
@@ -525,13 +525,13 @@ nav a:hover {
     background-color: transparent;
     border: none;
     position: relative;
-    top: -23px;
+    top: -26px;
     margin: 0;
     width: 100%;
     color: #023F76;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 0.813rem;
+    font-size: 0.810rem;
     cursor: pointer;
     outline: none;
     margin: 0 0 0 150px;
@@ -1302,14 +1302,14 @@ nav a:hover {
 
 .informacion .img3 {
     display: inline-block;
-    scale: 60%;
-    margin: 28px 0 0 -5px;
+    scale: 55%;
+    margin: 24px 0 0 -7px;
 }
 
 .informacion .select3 {
     display: inline-block;
     position: relative;
-    top: -25px;
+    top: -29px;
     margin: 0 0 0 150px;
 }
 
@@ -1331,7 +1331,7 @@ nav a:hover {
     line-height: 16px;
     background-color: #E48D36;
     border-radius: 10px;
-    top: -70px;
+    top: -75px;
     left: 215px;
 }
 

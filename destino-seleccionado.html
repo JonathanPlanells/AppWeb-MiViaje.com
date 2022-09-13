@@ -26,14 +26,12 @@
         </nav>
     </header>
     <main>
-        <div id="box">
+        <article id="box">
             <form class="formulario">
                 <section class="cajaPrincipal">
                     <section class="ciudad">
-                        <section class="imgCiudad">
-                            <img src="Image/VectoricoCiudad.svg">
-                        </section>
-                        <section class="datosCiudad">
+                        <div class="imgCiudad"><img src="Image/VectoricoCiudad.svg"></div>
+                        <div class="datosCiudad">
                             <p>Ciudad</p>
                             <select id="ciudad" name="ciudad" class="select1" style="width: 147px;">
                                 <option disabled selected value="DESTINO">DESTINO &nbsp; &nbsp; &nbsp; &#62;</option>
@@ -46,148 +44,122 @@
                                 <option value="SANTA MARTA">SANTA MARTA</option>
                                 <option value="LETICIA">LETICIA</option>
                             </select>
-                        </section>
-
+                        </div>
                     </section>
-                    <div class="checkIn">
-                        <section class="imgCalendarioIN"><img src="Image/Vectorcalendario.svg"></section>
-                        <section class="datosCheckIN">
+                    <section class="checkIn">
+                        <div class="imgCalendarioIN"><img src="Image/Vectorcalendario.svg"></div>
+                        <div class="datosCheckIN">
                             <p>Check In</p>
                             <input id="infoIN" class="cajaIn" type="date" max="2023-05-01" style="width: 100px;"
                                 onkeydown="return false">
-
-                        </section>
-                    </div>
-                    <div class="checkOut">
-                        <section class="imgCalendarioOut"><img src="Image/Vectorcalendario.svg"></section>
-                        <section class="datosCheckOut">
+                        </div>
+                    </section>
+                    <section class="checkOut">
+                        <div class="imgCalendarioOut"><img src="Image/Vectorcalendario.svg"></div>
+                        <div class="datosCheckOut">
                             <p>Check Out</p>
                             <input id="infoOUT" class="cajaOut" type="date" max="2023-05-01" style="width: 100px;"
                                 onkeydown="return false">
-                        </section>
-                    </div>
-                    <div class="huespedes">
-                        <section class="imgHuespedes"><img src="Image/icoHuesped.svg ">
-                        </section>
-                        <section class="datosHuespedes">
+                        </div>
+                    </section>
+                    <section class="huespedes">
+                        <div class="imgHuespedes"><img src="Image/icoHuesped.svg "></div>
+                        <div class="datosHuespedes">
                             <p>Huespedes</p>
                             <select id="numAdult" class="select2">
-                                <option value="opcion 1">1 Adulto</option>
-                                <option value="opcion 2" selected>2 Adultos</option>
-                                <option value="opcion 3">3 Adultos</option>
-                                <option value="opcion 4">4 Adultos</option>
+                                <option value="opcion 0">1 Adulto</option>
+                                <option value="opcion 1" selected>2 Adultos</option>
+                                <option value="opcion 2">3 Adultos</option>
+                                <option value="opcion 3">4 Adultos</option>
                             </select>
-                        </section>
-
-                        <section>
-                            <img class="img3H" src="Image/VectoricoCiudad.svg">
+                        </div>
+                        <div>
+                            <img class="img3H" src="Image/icoHab.svg">
                             <select class="select3" style="width: 80px;">
-                                <option value="opcion 0">1 hab</option>
-                                <option value="opcion 1">2 hab</option>
-                                <option value="opcion 2">3 hab</option>
-                                <option value="opcion 3">4 hab</option>
+                                <option value="opcion 0">1 Hab</option>
+                                <option value="opcion 1">2 Hab</option>
+                                <option value="opcion 2">3 Hab</option>
+                                <option value="opcion 3">4 Hab</option>
                             </select>
-                        </section>
-                    </div>
+                        </div>
+                    </section>
                     <div class="buscar">
-                        <div type="submit" id="btnBuscar" onclick="funcionBuscar()" class="imgbuscar"><img
-                                src="Image/lupa.svg"></div>
+                        <div type="submit" id="btnBuscar" onclick="funcionBuscar()" class="imgbuscar"><img src="Image/lupa.svg"></div>
                     </div>
                 </section>
-
-
-
-
-                <!--   TAL VEZ SE INTEGRE...
-                        <div class="habitaciones" name="habitaciones" style="width: 5px;">
-                            <label>Habitaciones</label>
-                            <select class = "select4">
-                                <option value="opcion 1">1 Habitacion</option>
-                                <option value="opcion 2">2 Habitaciones</option>
-                                <option value="opcion 3">3 Habitaciones</option>
-                                <option value="opcion 4">4 Habitaciones</option> 
-                            </select>
-                        </div> -->
             </form>
-        </div>
-        <div class="espacio"></div>
-        <div class="hoteles">
-            <div class="hotel1">
-                <div class="cajaHotelPrincipal">
-                    <div class="caja1">
+        </article>
+
+        <article class="hoteles">
+            <section class="hotel1">
+                <section class="cajaHotelPrincipal">
+                    <section class="caja1">
                         <section class="informacion">
-                            <section class="cajaText">
+                            <div class="cajaText">
                                 <p class="txtRD">HOTEL PLAZA CENTRAL</p>
-                                <section class="estrellas">
+                                <div class="estrellas">
                                     <img src="Image/Estrella.svg">
                                     <img src="Image/Estrella.svg">
                                     <img src="Image/Estrella.svg">
                                     <img src="Image/Estrella.svg">
                                     <img src="Image/Estrella.svg">
-                                </section>
-                                <section class="check"><img src="Image/Check.svg"></section>
-                                <section class="check2"><img src="Image/Check.svg"></section>
-                                <section class="desc">
+                                </div>
+                                <div class="check"><img src="Image/Check.svg"></div>
+                                <div class="check2"><img src="Image/Check.svg"></div>
+                                <div class="desc">
                                     <p class="text2" style="color: black;">Bogotá a 4,02 km del centro.</p>
                                     <p class="text3">Cancelación Gratis</p>
                                     <p class="text5">Pago en efectivo en el hotel</p>
-
-                                </section>
-                            </section>
-
+                                </div>
+                            </div>
                         </section>
-                        <div class="informacion">
-
+                        <section class="informacion">
                             <section class="checkIn">
-                                <section class="imgCalendarioIN"><img src="Image/Vectorcalendario.svg"></section>
-                                <section class="datosCheckIN">
+                                <div class="imgCalendarioIN"><img src="Image/Vectorcalendario.svg"></div>
+                                <div class="datosCheckIN">
                                     <p>Check In</p>
                                     <input class="cajaIn" type="date" max="2023-02-22" style="width: 100px;"
                                         onkeydown="return false">
-                                </section>
+                                </div>
                             </section>
                             <section class="checkOut">
-                                <section class="imgCalendarioOut"><img src="Image/Vectorcalendario.svg"></section>
-                                <section class="datosCheckOut">
+                                <div class="imgCalendarioOut"><img src="Image/Vectorcalendario.svg"></div>
+                                <div class="datosCheckOut">
                                     <p>Check Out</p>
                                     <input class="cajaOut" type="date" max="2023-02-22" style="width: 100px;"
                                         onkeydown="return false">
-                                </section>
+                                </div>
                             </section>
-                            <div class="huespedes">
-                                <section class="imgHuespedes"><img src="Image/icoHuesped.svg ">
-                                </section>
-                                <section class="datosHuespedes">
+                            <section class="huespedes">
+                                <div class="imgHuespedes"><img src="Image/icoHuesped.svg "></div>
+                                <div class="datosHuespedes">
                                     <p>Huespedes</p>
                                     <select class="select2">
-                                        <option value="opcion 1">1 Adulto</option>
-                                        <option value="opcion 2" selected>2 Adultos</option>
-                                        <option value="opcion 3">3 Adultos</option>
-                                        <option value="opcion 4">4 Adultos</option>
-
+                                        <option value="opcion 0">1 Adulto</option>
+                                        <option value="opcion 1" selected>2 Adultos</option>
+                                        <option value="opcion 2">3 Adultos</option>
+                                        <option value="opcion 3">4 Adultos</option>
                                     </select>
-                                </section>
-                                <img class="img3" src="Image/VectoricoCiudad.svg">
-                                <section>
+                                </div>
+                                <img class="img3" src="Image/icoHab.svg">
+                                <div>
                                     <select class="select3" style="width: 80px;">
                                         <option value="opcion 0">1 hab</option>
                                         <option value="opcion 1">2 hab</option>
                                         <option value="opcion 2">3 hab</option>
                                         <option value="opcion 3">4 hab</option>
                                     </select>
-                                </section>
-                            </div>
-                            <a href="form-reserva.html">
-                                <button>RESERVAR AHORA</button></a>
-                        </div>
-                    </div>
-                    <section class="caja2">
-                        <img src="https://images.pexels.com/photos/8082235/pexels-photo-8082235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                                </div>
+                            </section>
+                            <a href="form-reserva.html"><button>RESERVAR AHORA</button></a>
+                        </section>
                     </section>
-
-                </div>
-            </div>
-        </div>
+                    <div class="caja2">
+                        <img src="https://images.pexels.com/photos/8082235/pexels-photo-8082235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                    </div>
+                </section>
+            </section>
+        </article>
 
     </main>
     <footer>

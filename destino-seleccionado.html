@@ -71,7 +71,7 @@
                         </section>
                         <section class="datosHuespedes">
                             <p>Huespedes</p>
-                            <select class="select2">
+                            <select id="numAdult" class="select2">
                                 <option value="opcion 1">1 Adulto</option>
                                 <option value="opcion 2" selected>2 Adultos</option>
                                 <option value="opcion 3">3 Adultos</option>
@@ -244,30 +244,7 @@
 
     </footer>
 </body>
-<script>
-    // document.getElementById('infoIN').value = localStorage.getItem("fechaCheckIn");
-    let elemIN = document.getElementsByClassName('cajaIn');
-    let n;
-    for (n = 0; n < elemIN.length; ++n) {
-        elemIN[n].value = localStorage.getItem("fechaCheckIn");
-    }
-
-    let elemOUT = document.getElementsByClassName('cajaOut');
-    let x;
-    for (x = 0; x < elemOUT.length; ++x) {
-        elemOUT[x].value = localStorage.getItem("fechaCheckOut");
-    }
-
-
-    if (window.localStorage.getItem('ciudadSeleccion') == undefined) {
-        
-        //document.getElementById('ciudad').value = "";
-    } else {
-        document.getElementById('ciudad').value = localStorage.getItem("ciudadSeleccion")
-    }
-
-
-</script>
+<script src="script-destino-seleccionado.js"> </script>
 
 
 </html>

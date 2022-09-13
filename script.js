@@ -41,6 +41,10 @@ function passInformacion() {
     localStorage.setItem("fechaCheckOut", fechaOUT); // Guardando en el localStorage la fecha del checkOut
     let destinoSelec = document.getElementById('ciudad').value;
     localStorage.setItem("ciudadSeleccion", destinoSelec); // Guardando en el localStorage la ciudad
+    let adultosSelec = document.getElementById('numAdult').value;
+    localStorage.setItem("numeroAdultos", adultosSelec); // Guardando en el localStorage la num Huespedes
+    let habSelec = document.getElementById('numHab').value;
+    localStorage.setItem("numeroHabitaciones", habSelec);
     return true;
 }
 

@@ -5,43 +5,44 @@ select.addEventListener('change', function sel(event) {
 })
 
 // Condicional para formulario de busqueda
-function funcionBuscar() {
-    if (document.getElementById('numHab').value > document.getElementById('numAdult').value) {
-        let condicion = window.confirm("esta seguro que quiere hacer esa locura?")
-        console.log(condicion)
-        if (condicion == true) {
-            // Validando que las fechas del checkOut no sea antes del checkIN
-            if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value) {
-                mostrarModalFechas()
-            } else {
-                if (document.getElementById('ciudad').value == "BARRANQUILLA") {
-                    document.location.href = "destinos.html", true;
-                } else if (document.getElementById('ciudad').value == "BARICHARA") {
-                    document.location.href = "destinos.html", true;
-                } else if (document.getElementById('ciudad').value == "BOGOTA") {
-                    document.location.href = "destino-seleccionado.html", true;
-                } else if (document.getElementById('ciudad').value == "CALI") {
-                    document.location.href = "destinos.html", true;
-                } else if (document.getElementById('ciudad').value == "CARTAGENA") {
-                    document.location.href = "destinos.html", true;
-                } else if (document.getElementById('ciudad').value == "SAN ANDRES") {
-                    document.location.href = "destinos.html", true;
-                } else if (document.getElementById('ciudad').value == "SANTA MARTA") {
-                    document.location.href = "destinos.html", true;
-                } else if (document.getElementById('ciudad').value == "LETICIA") {
-                    document.location.href = "destinos.html", true;
-                } else {
-                    mostrarModalDestino() // Modal seleccionar Destino
-                }
-
-                passInformacion() //Ejecutamos la funcion de guardar información para luego utilizarla en los otros html
-            }
+function funcionBuscar22() {
+    // Validando que las fechas del checkOut no sea antes del checkIN
+    let flag = true;
+    if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value && flag == true) {
+        mostrarModalFechas()
+    } else {
+        if (document.getElementById('ciudad').value == "BARRANQUILLA") {
+            document.location.href = "destinos.html", true;
+        } else if (document.getElementById('ciudad').value == "BARICHARA") {
+            document.location.href = "destinos.html", true;
+        } else if (document.getElementById('ciudad').value == "BOGOTA") {
+            document.location.href = "destino-seleccionado.html", true;
+        } else if (document.getElementById('ciudad').value == "CALI") {
+            document.location.href = "destinos.html", true;
+        } else if (document.getElementById('ciudad').value == "CARTAGENA") {
+            document.location.href = "destinos.html", true;
+        } else if (document.getElementById('ciudad').value == "SAN ANDRES") {
+            document.location.href = "destinos.html", true;
+        } else if (document.getElementById('ciudad').value == "SANTA MARTA") {
+            document.location.href = "destinos.html", true;
+        } else if (document.getElementById('ciudad').value == "LETICIA") {
+            document.location.href = "destinos.html", true;
         } else {
-            alert("Entonces cambie las habitaciones")
+            mostrarModalDestino() // Modal seleccionar Destino
+        }
+        passInformacion() //Ejecutamos la funcion de guardar información para luego utilizarla en los otros html
+    }
+    // Validando que el numero de habitaciones sea menor o igual al numero de huespedes
+    let result = false;
+    if (document.getElementById('numHab').value > document.getElementById('numAdult').value) {
+        result = window.confirm("El número de habitaciones es mayor al número de huespedes,¿Esta seguro que desea reservar ese numero de habitaciones?")
+        alert(result)
+        if (result == false) {
+            alert("Entonces cambie las habitaciones");
+
+
         }
     }
-
-
 };
 
 // Funcion para guardar y pasar información de un html a otro
@@ -113,3 +114,46 @@ function CerrarModal2() {
 window.onload = ejecutarAlCargarPagina;
 CerrarModal()
 CerrarModal2()
+
+function funcionBuscar() {
+
+    // Validando que las fechas del checkOut no sea antes del checkIN
+    if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value) {
+        mostrarModalFechas()
+    } else {
+        if (document.getElementById('ciudad').value == "BARRANQUILLA") {
+            document.location.href = "destinos.html", true;
+        } else if (document.getElementById('ciudad').value == "BARICHARA") {
+            document.location.href = "destinos.html", true;
+        } else if (document.getElementById('ciudad').value == "BOGOTA") {
+            document.location.href = "destino-seleccionado.html", true;
+        } else if (document.getElementById('ciudad').value == "CALI") {
+            document.location.href = "destinos.html", true;
+        } else if (document.getElementById('ciudad').value == "CARTAGENA") {
+            document.location.href = "destinos.html", true;
+        } else if (document.getElementById('ciudad').value == "SAN ANDRES") {
+            document.location.href = "destinos.html", true;
+        } else if (document.getElementById('ciudad').value == "SANTA MARTA") {
+            document.location.href = "destinos.html", true;
+        } else if (document.getElementById('ciudad').value == "LETICIA") {
+            document.location.href = "destinos.html", true;
+        } else {
+            mostrarModalDestino() // Modal seleccionar Destino
+        }
+        passInformacion() //Ejecutamos la funcion de guardar información para luego utilizarla en los otros html
+    }
+    // Validando que el numero de habitaciones sea menor o igual al numero de huespedes
+    let result;
+    if (document.getElementById('numHab').value > document.getElementById('numAdult').value) {
+        result = window.confirm("El número de habitaciones es mayor al número de huespedes,¿Esta seguro que desea reservar ese numero de habitaciones?")
+        alert(result)
+        if (result == false) {
+            alert("Entonces cambie las habitaciones");
+           
+
+
+        }
+
+
+    }
+}

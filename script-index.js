@@ -7,8 +7,7 @@ select.addEventListener('change', function sel(event) {
 // Condicional para formulario de busqueda
 function funcionBuscar22() {
     // Validando que las fechas del checkOut no sea antes del checkIN
-    let flag = true;
-    if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value && flag == true) {
+    if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value) {
         mostrarModalFechas()
     } else {
         if (document.getElementById('ciudad').value == "BARRANQUILLA") {
@@ -16,7 +15,7 @@ function funcionBuscar22() {
         } else if (document.getElementById('ciudad').value == "BARICHARA") {
             document.location.href = "destinos.html", true;
         } else if (document.getElementById('ciudad').value == "BOGOTA") {
-            document.location.href = "destino-seleccionado.html", true;
+            document.location.href = "bogota.html";
         } else if (document.getElementById('ciudad').value == "CALI") {
             document.location.href = "destinos.html", true;
         } else if (document.getElementById('ciudad').value == "CARTAGENA") {
@@ -39,11 +38,13 @@ function funcionBuscar22() {
         alert(result)
         if (result == false) {
             alert("Entonces cambie las habitaciones");
-
+        
 
         }
     }
 };
+
+
 
 // Funcion para guardar y pasar información de un html a otro
 function passInformacion() {
@@ -126,7 +127,7 @@ function funcionBuscar() {
         } else if (document.getElementById('ciudad').value == "BARICHARA") {
             document.location.href = "destinos.html", true;
         } else if (document.getElementById('ciudad').value == "BOGOTA") {
-            document.location.href = "destino-seleccionado.html", true;
+            document.location.href = "bogota.html", true;
         } else if (document.getElementById('ciudad').value == "CALI") {
             document.location.href = "destinos.html", true;
         } else if (document.getElementById('ciudad').value == "CARTAGENA") {

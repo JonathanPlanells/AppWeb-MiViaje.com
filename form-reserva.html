@@ -25,46 +25,53 @@
         </nav>
     </header>
     <main>
-        <div class = "reserva">
+        <div class = "reserva" >
             <div class="hoteleSeleccionado">
-                <div class ="cajaHotelSelec">
-                   <div class ="imgHotelSelec"></div>
-                   <div></div>
+                <div class ="cajaHotelSelec" id = "hotelSeleccionadoApi">
     
                 </div>
                 
             </div>
             <div class = "formularioReserva">
-                <form >
-                    <div class ="cajasTexto">
+                <form onsubmit="obtenerInfo(event)" >
+                    <div class ="cajasTexto" id ="form_reserva">
                         <!-- CREACIÓN DE FORMULARIO -->
                         <!-- El for relaciona la caja de texto con el titulo -->
-                        <label for = "nombre">NOMBRE</label>
-                        <input type = "text" id = "nombre" class ="inputForm" required>
+                        <label for = "nombrePersona" >NOMBRE</label>
+                        <input type = "text" id = "nombrePersona" name = "nombrePersona" class ="inputForm" required >
     
-                        <label for = "apellido">APELLIDO</label>
-                        <input type = "text" id = "apellido" class ="inputForm" required>
+                        <label for = "apellidoPersona">APELLIDO</label>
+                        <input type = "text" id = "apellidoPersona" name = "apellidoPersona" class ="inputForm" required>
     
-                        <label for = "cedula">NÚMERO DOCUMENTO</label>
-                        <input type ="number" id ="cedula" class ="inputForm" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
-                        
-    
-                        <label for = "email">CORREO ELECTRONICO</label>
-                        <input type = "email" id = "email" class ="inputForm" required
+                        <label for = "correoPersona">CORREO ELECTRONICO</label>
+                        <input type = "email" id = "correoPersona" name = "correoPersona" class ="inputForm" required
                         placeholder="email@domino.com">
     
-                        <label for = "telefono">TELÉFONO</label>
-                        <input type = "tel" id = "telefono" class ="inputForm" required
+                        <label for = "telefonoPersona">TELÉFONO</label>
+                        <input type = "tel" id = "telefonoPersona" name = "telefonoPersona" class ="inputForm" required
                         placeholder="(xx) xxx xxx xxxx" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
-    
-                        <!-- Caja de texto que se puede manipular el tamaño 
-                        se le da un tamaño por medio de columnas (cols) y filas (rows)-->
+                        
+                        <label for = "tipoDocumento">TIPO DE DOCUMENTO</label>
+                        <select class ="inputForm" name = "tipoDocumento" id = "tipoDocumento" required >
+                            <option value="CC">Cedula de Ciudadania</option>
+                            <option value="CE">Cedula de Extranjeria</option>
+                            <option value="PA">Pasaporte</option>
+                        </select>
+
+                        <label for = "numeroDocumento">NÚMERO DOCUMENTO</label>
+                        <input type ="number" id ="numeroDocumento" name = "numeroDocumento" class ="inputForm" required/>
+
+                        
+                        
+                        <!--  Caja de texto que se puede manipular el tamaño 
+                        se le da un tamaño por medio de columnas (cols) y filas (rows)
                         <label for = "mensaje">COMENTARIOS</label>
-                        <textarea cols= "72" rows="4" id = "mensaje" class ="inputForm"></textarea>
+                        <textarea cols= "72" rows="4" id = "mensaje" class ="inputForm"></textarea> -->
                     </div>
                     <section>
                          <!-- Boton -->
                     <input type="submit" value="REALIZAR RESERVA" class="boton">
+                    <input type="reset" value="CANCELAR RESERVA" class="boton2" onclick="location.href='index.html'">
                     </section>
                        
                 </form>
@@ -111,8 +118,8 @@
         </div>
         <p class="txtFinal">Copyright - Miviaje.com - 2022</p>
 
-
+    
     </footer>
 </body>
-
-</html>
+    <script src="script-form-reserva.js"> </script>
+</html> 

@@ -1160,15 +1160,10 @@ nav a:hover {
     justify-content: center;
     width: 100%;
     height: 100%;
-    margin: 200px auto;
+    margin: 200px auto 30px auto;
     padding-top: 30px;
 }
 
-.hotel1,
-.hotel2,
-.hotel3 {
-    margin-bottom: 50px;
-}
 
 .cajaHotelPrincipal {
     background-color: #ffffff;
@@ -1207,7 +1202,7 @@ nav a:hover {
 .cajaHotelPrincipal .caja2 {
     scale: 90%;
     display: inline-block;
-    width: 46%;
+    width: 48%;
     height: 300px;
     overflow: hidden;
     margin: -10px 0 0 -0px;
@@ -1354,19 +1349,24 @@ nav a:hover {
 
 .cajaText {
     scale: 85%;
-    font-size: 1.875rem;
-    color: #023F76;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
     display: inline-block;
     margin-top: auto;
     margin-left: auto;
     position: relative;
 }
+.cajaText .txtHRC{
+    font-size: 1.875rem;
+    color: #023F76;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.cajaText  .precio{
+    margin: 10px auto;
+}
 
-.estrellas {
-    scale: 80%;
-    margin: 3px 0 0 -40px;
+.cajaText  .txtprecio2{
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .hotel1 .check {
@@ -1403,32 +1403,74 @@ nav a:hover {
 //  FORMULARIO RESERVA - HOTEL SELECCIONADO
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
 .reserva {
-    width: 100%;
+    display: block;
+    width: 90%;
     height: 600px;
     text-align: center;
-    margin: 150px auto;
+    margin: 100px auto;
 }
 
 .reserva .hoteleSeleccionado {
     display: inline-block;
     width: 35%;
-    height: 550px;
+    height: 620px;
     overflow: hidden;
+    margin: 40px auto 0 0;
 }
 
 .hoteleSeleccionado .cajaHotelSelec {
+    display: flex;
     margin: 10px auto;
     width: 350px;
-    height: 450px;
+    height: 580px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    
+}
+.hoteleSeleccionado .box-img{
+    width: 100%;
+}
+.cajaHotelSelec .txt_hotel_seleccionado{
+    color: #023F76;
+    font-family: 'Poppins', 'sans-serif';
+    margin-left:20px ;
+}
+.cajaHotelSelec .txt_hotel_seleccionado p{
+    text-align: left;
+    margin-bottom: 5px;
+    
+}
+
+.caja_numero_huespedes_hs{
+    display:inline-flex;
+    background-color: #F9F7F7;
+    padding: 15px;
+    width: 35%;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.img_huesped_hs{
+    position: absolute;
+    scale: 80%;
+    margin:-5px 0 0 -165px;
+}
+.hoteleSeleccionado .imgHotelSelec img{
+    display: flex;
+    width: 90%;
+    padding: 10px;
+    margin: 5px auto;
+    border-radius: 20px;
+   
 }
 
 .reserva .formularioReserva {
-    display: inline-block;
-    width: 45%;
-    height: 550px;
+    display:inline-block;
+    width: 44%;
+    height: 100%;
     overflow: hidden;
+    top:-30px;
 }
 
 .formularioReserva .cajasTexto {
@@ -1436,23 +1478,31 @@ nav a:hover {
     font-family: 'Poppins', 'sans-serif';
     font-weight: 500;
     font-size: 0.75rem;
+    padding-left: 40px;
+    
 }
 
 .formularioReserva label {
-    display: block;
-    margin: 5px 0 0 85px;
+    display: flex;
+    margin: 5px auto;
     padding: 10px 0 10px 0;
     text-align: left;
 }
 
+
 .formularioReserva .inputForm {
     display: block;
-    width: 70%;
+    width: 100%;
     margin: 5px auto;
     padding: 8px 10px;
     border-radius: 5px;
     border-color: transparent;
     background-color: #F9F7F7;
+    box-sizing:border-box
+}
+
+.formularioReserva select{
+    color:gray;
 }
 /*::::::::::: ELIMINAR FLECHAS CUADRO DE NUMEROS*/
 input::-webkit-outer-spin-button,
@@ -1465,21 +1515,28 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 /*:::::::::::: BOTON :::::::::::::::::*/
-.formularioReserva .boton {
+.formularioReserva .boton, .boton2 {
+    display:inline-flex;
     font-size: 0.813rem;
     color: white;
     font-weight: bold;
     background: #E48D36;
-    border-radius: 5px;
+    border-radius: 10px;
     border-color: transparent;
-    width: 200px;
-    padding: 12px 0;
+    width: 180px;
+    padding: 15px 0;
     cursor: pointer;
-    display: block;
-    margin: 20px 0 0 75px;
+    justify-content: center;
+    margin: 20px;
 }
-.boton:hover {
-    transition: 0.5s all;
+.formularioReserva .boton2 {
+    background: #c80b0b;
+    cursor: pointer;
+   
+    
+}
+.boton:hover, .boton2:hover {
+    transition: 0.2s all;
     transform: scale(1.01);
 }
 /*++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1798,6 +1855,9 @@ a {
 
     .App {
         height: 700px;
+    }
+    .hoteleSeleccionado .cajaHotelSelec {
+        width: 90%;
     }
 }
 

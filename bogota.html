@@ -66,7 +66,7 @@
                         <div class="imgHuespedes"><img src="Image/icoHuesped.svg "></div>
                         <div class="datosHuespedes">
                             <p>Huespedes</p>
-                            <select id="numAdult" class="select2">
+                            <select id="numAdult" class="select2" tag="1">
                                 <option value="opcion 0">1 Adulto</option>
                                 <option value="opcion 1" selected>2 Adultos</option>
                                 <option value="opcion 2">3 Adultos</option>
@@ -75,7 +75,7 @@
                         </div>
                         <div>
                             <img class="img3H" src="Image/icoHab.svg">
-                            <select class="select3" style="width: 80px;">
+                            <select id = "numHabiDS"class="select3" style="width: 80px;">
                                 <option value="opcion 0">1 Hab</option>
                                 <option value="opcion 1">2 Hab</option>
                                 <option value="opcion 2">3 Hab</option>
@@ -83,9 +83,10 @@
                             </select>
                         </div>
                     </section>
-                    <div class="buscar">
-                        <div type="submit" id="btnBuscar" onclick="funcionBuscar()" class="imgbuscar"><img src="Image/lupa.svg"></div>
-                    </div>
+                     <!-- BOTON BUSCAR -->
+                <div class="buscar" type="submit" id="btnBuscar" onclick="funcionBuscar()">
+                    <div class="imgbuscar"><img src="Image/lupa.svg"></div>
+                </div>
                 </section>
             </form>
         </article>

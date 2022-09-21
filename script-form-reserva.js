@@ -44,11 +44,19 @@ function obtenerInfo(evt) {
         tipoDocumento: form.tipoDocumento.value,
         numeroDocumento: form.numeroDocumento.value,
         fkHotel:form.fkHotel.value
-     
+        
     }
+    save_name()
     crearReserva(reserva)
 
 }
+function save_name(){
+    let nombre = document.getElementById("nombrePersona").value
+    localStorage.setItem("nombreAdul",nombre)
+    let apellido = document.getElementById("apellidoPersona").value
+    localStorage.setItem("apellidoAdul",apellido)
+}
+
 
 function clearForm(form) {
     form.nombrePersona.value = ""
@@ -70,11 +78,11 @@ async function crearReserva(reserva) {
     })
     const text = await respues.text()
     alert(text)
-    window.location.href ="reserva-satisfactoria.html"
+    window.location.href ="confirmacion-reserva.html"
 }
 
 
-function get_params_url() {
+/* function get_params_url() {
     const params = window.location.search
     const url = new URLSearchParams(params)
     let hotel = JSON.parse(url.get("hotel"))
@@ -87,12 +95,13 @@ function get_params_url() {
 
 }
 
-get_params_url()
+get_params_url() */
 
-function get_idhotel(hotel){
+set_value_hote()
+get_idhotel()
+function get_idhotel(){
     const complemento_reserva = document.getElementById("form_reserva")
-    let div = "<div style = 'display:none';>"
-    const h2 = hotel
+    let div = "<div style = 'display:none;'>"
     div += `
         <label for = "fkHotel">idhotel</label>
         <input type ="text" id = "fkHotel" name ="fkHotel" value ="${localStorage.getItem("id_hotel_sc")}">
@@ -175,6 +184,10 @@ function txtnoche(){
 }
 txtnoche()
 
+
+function confirmacion_reserva(){
+    
+}
 
 
 

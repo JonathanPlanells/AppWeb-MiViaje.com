@@ -19,24 +19,34 @@
                 <img id="logoBlanco" src="Image/logoblanco copy.svg" alt="logoFooter"></h1></a>
         <nav>
             <a href="index.html">Home</a>
-            <a href="destinos.html" style="color:#E48D36">Destinos</a>
-            <a href="mireserva.html">MiReserva</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="mireserva.html"  style="color:#E48D36">MiReserva</a>
             <a href="404.html">Contactenos</a>
         </nav>
     </header>
     <main>
-    </main>
+    <div id = "txt_inicial_mireserva_resultado">
+       
+    </div>
+    
     <div class = "reserva">
         <div class="hoteleSeleccionado">
+            
             <div class ="cajaHotelSelec" id = "hotelSeleccionadoApi">
             </div>
         </div>
-        <div class = "formularioReserva2" id = "confirmacion_reserva">
+        <div class = "formularioReserva" >
+             <!-- CREACIÓN DE FORMULARIO -->
+             <form onsubmit="obtenerInfo(event)"  id = "form_reserva_mireserva" >
+             
+             
            
+            </form>
 
         </div>
 
-    </div>    
+    </div>  
+</main>  
 </body>
 <footer>
     <div class="conocenos">
@@ -77,5 +87,5 @@
 
 
 </footer>
-<script src="script-confirmacion-reserva.js"> </script>
+<script src="script-mi-reerva-resultado.js"> </script>
 </html>

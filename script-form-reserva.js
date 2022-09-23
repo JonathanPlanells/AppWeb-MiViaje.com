@@ -55,6 +55,8 @@ function save_name(){
     localStorage.setItem("nombreAdul",nombre)
     let apellido = document.getElementById("apellidoPersona").value
     localStorage.setItem("apellidoAdul",apellido)
+    let numeroDocu =document.getElementById("numeroDocumento").value
+    localStorage.setItem("numDocum",numeroDocu)
 }
 
 
@@ -77,8 +79,7 @@ async function crearReserva(reserva) {
         body: JSON.stringify(reserva)
     })
     const text = await respues.text()
-    alert(text)
-    window.location.href ="confirmacion-reserva.html"
+    window.location.replace("confirmacion-reserva.html")
 }
 
 

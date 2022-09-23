@@ -50,9 +50,9 @@ function hoteles_disponibles(hoteles) {
                         </section>
                         <section class="huespedes">
                             <div class="imgHuespedes"><img src="Image/icoHuesped.svg "></div>
-                            <div class="datosHuespedes" id ="rrr">
+                            <div class="datosHuespedes">
                                 <p>Huespedes</p>
-                                <select id="idr" class="select2" value = "opcion 2">
+                                <select id="idr" class="select2" value = "">
                                     <option value="opcion 0">1 Adulto</option>
                                     <option value="opcion 1">2 Adultos</option>
                                     <option value="opcion 2">3 Adultos</option>
@@ -81,6 +81,9 @@ function hoteles_disponibles(hoteles) {
     section += "</div>"
     cardHotelDisponible.innerHTML += section
 }
+
+
+
 
 function sendInfo(hotel){
     //window.location.href= `form-reserva.html?idhotel=${hotel.idHoteles}&img=${hotel.imagen}&p=${hotel.costoHabitacion}`
@@ -227,3 +230,13 @@ function funcionBuscar() {
     }
     
 }
+
+
+function clearStorage() {
+    if(localStorage.getItem("flag") == "true"){
+        localStorage.clear();
+    }
+    
+}
+
+clearStorage();

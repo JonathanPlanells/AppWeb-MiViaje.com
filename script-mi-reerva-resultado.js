@@ -156,7 +156,7 @@ function mostrar() {
                                         <div class="caja_seleccion_mireserva">
                                             <div class="txt_caja_seleccion_mireserva">
                                             <img class = "img_huesped_mireserva" src ="Image/icoHuesped.svg">
-                                                <input style ="width:60%;" type="date" id="fechaInicial" class ="checkin_mireserva" min ="${verificarFechaIN()}" name ="checkin" value ="${(localStorage.getItem("fechaCheckIn")) + 1}">
+                                                <input style ="width:60%;" type="date" id="fechaInicial" class ="checkin_mireserva" min ="${verificarFechaIN()}" name ="checkin" value ="${(localStorage.getItem("fechaCheckIn"))}">
                                             </div>
                                         </div>
                                 </div>
@@ -166,7 +166,7 @@ function mostrar() {
                                         <div class="caja_seleccion_mireserva">
                                             <div class="txt_caja_seleccion_mireserva">
                                             <img class = "img_huesped_mireserva" src ="Image/icoHuesped.svg">
-                                                <input style ="width:60%;" type="date" id = "fechaFinal" class ="checkin_mireserva" min ="${verificarFechaIN()}" name ="checkout" value ="${(localStorage.getItem("fechaCheckOut")) + 1}">
+                                                <input style ="width:60%;" type="date" id = "fechaFinal" class ="checkin_mireserva" min ="${verificarFechaIN()}" name ="checkout" value ="${(localStorage.getItem("fechaCheckOut"))}">
                                             </div>
                                         </div>
                                 </div> 

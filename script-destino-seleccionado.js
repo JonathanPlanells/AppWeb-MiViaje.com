@@ -188,8 +188,10 @@ function sendInfo(hotel) {
     window.location.href = `form-reserva.html`
     //`form-reserva.html?hotel=${JSON.stringify(hotel)}`
 }
+let ciudad = localStorage.getItem("ciudadSeleccion")
+
 async function main() {
-    const url = "http://localhost:8080/hoteles/bogota"
+    const url = "http://localhost:8080/hoteles/CARTAGENA"
     const hoteles = await obtenerHoteles(url)
     hoteles_disponibles(hoteles)
 }

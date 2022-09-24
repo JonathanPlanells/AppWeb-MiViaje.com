@@ -158,7 +158,15 @@ function vs(){
     } 
 }
 
-    
+function creacion(){
+    let n = 1
+    localStorage.setItem("numeroAdultos",n)
+    localStorage.setItem("numeroHabitaciones",n)
+    let fechaHoy = new Date().toISOString().slice(0, 10)
+    localStorage.setItem("fechaCheckIn",fechaHoy)
+    localStorage.setItem("fechaCheckOut",fechaHoy)
+
+}
 
 
 function funcionBuscar() {

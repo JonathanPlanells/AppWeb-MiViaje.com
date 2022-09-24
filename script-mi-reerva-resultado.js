@@ -28,6 +28,8 @@ async function mainR() {
     // <-- HUESPEDES -->
     let numHuespedes = info.cantidadPersonas
     localStorage.setItem("numeroAdultos", numHuespedes)
+    // <-- HABITACIONES -->
+    localStorage.setItem("numeroHabitaciones", info.cantidadHabitaciones)
     // <-- NOMBRE -->
     let nombre = info.nombrePersona
     localStorage.setItem("nombre", nombre)
@@ -122,7 +124,7 @@ function mostrar() {
         
                     <img class = "img_huesped_hs" style = "scale:70%; margin:2px 0 0 -168px;" src="Image/icoHab.svg">
                     <p style =" margin-top:12px;"> <span style ="font-size:14px; font-weight: 400; margin-left:30px; ">Habitaciones:</span>  
-                    <span style = "font-size:14px; font-weight: 700;">${"agregar a la tabla"}</span></p>
+                    <span style = "font-size:14px; font-weight: 700;">${localStorage.getItem("numeroHabitaciones")}</span></p>
                 </div>
                 
                 <p style = "margin:20px auto;"><span style = "font-size:18px; font-weight: 700;">$${(((h.costoHabitacion) * 1).toLocaleString('de-DE'))}</span> por noche</p>
@@ -290,7 +292,7 @@ function mostrar() {
             document.getElementById("tipoDocumento").value = localStorage.getItem("tipoDocumento")
             document.getElementById("numeroDocumento").setAttribute("value", localStorage.getItem("numeroDocumento"))
             document.getElementById("cantidadPersonas").value = localStorage.getItem("numeroAdultos")
-            document.getElementById("numhabiciones").value = localStorage.getItem("numeroAdultos")
+            document.getElementById("numhabiciones").value = localStorage.getItem("numeroHabitaciones")
             document.getElementById("idReserva").value = localStorage.getItem("idReservas")
             document.getElementById("token").value = localStorage.getItem("token")
             document.getElementById("fkHotel").value = localStorage.getItem("idHotelReserva")
@@ -349,6 +351,7 @@ function obtenerInfo(evt) {
         fechaInicial: form.fechaInicial.value,
         fechaFinal: form.fechaFinal.value,
         cantidadPersonas: form.cantidadPersonas.value,
+        cantidadHabitaciones:form.numhabiciones.value,
         nombrePersona: form.nombrePersona.value,
         apellidoPersona: form.apellidoPersona.value,
         correoPersona: form.correoPersona.value,

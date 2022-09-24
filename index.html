@@ -35,11 +35,11 @@
         <p class="txtBanner2"><a href="destinos.html">Destinos Populares</p></a>
     <!-- ::::: CARDS / BANNER ::::: -->
         <section class="cardpos">
-            <div class="cardP1"><a href="destinos.html">
+            <div class="cardP1"><a href="bogota.html">
                     <div class="card1"><img class="destinop1" src="Image/bogota.jpg"></div>
                     <div class="txtCard1">
                         <h4><b>Viaja a Bogotá</b></h4>
-                        <p>Desde $50.000 la noche</p>
+                        <p>Desde $150.000 la noche</p>
                     </div></a>
             </div>
             <div class="cardP2"><a href="destinos.html">
@@ -76,6 +76,16 @@
                 <a href="#close" title="close" class="close" onclick="javascript:CerrarModal2();">X</a>
                 <p><span style="font-size: 14px; font-weight: 200;">UPS! NO PUEDES SALIR SIN HABER ENTRADO...</span>
                         <span> REVISA TU FECHA DE CHECK OUT</span></p>
+                <img src="Image/verificacionFechas.svg">
+            </div>
+        </div>
+        <!-- MODAL FECHA CHECK OUT ANTES DE LA CHECK IN -->  
+        <div id="openModal3" class="modalDialog" >
+            <div class="modal3">
+                <input type="button" id = "btn_modal_aceptar" class="btn_modal_aceptar" value = "ACEPTAR" onclick="javascript:aceptar()">
+                <input type="button" id = "btn_modal_cancelar" class="btn_modal_cancelar" value = "CANCELAR" onclick="javascript:cancelar()">
+                <p><span style="font-size: 14px; font-weight: 200;">EL NÚMERO DE HABITACIONES ES MAYOR QUE LOS HUÉSPEDES...</span>
+                    <span > ¿SEGURO DESEAS RESERVAR ESA CANTIDAD DE HABITACIONES?</span></p>     
                 <img src="Image/verificacionFechas.svg">
             </div>
         </div>
@@ -125,20 +135,20 @@
                     <div class="datosHuespedes">
                         <p>Huespedes</p>
                         <select id ="numAdult" class="select2">
-                            <option value="opcion 0">1 Adulto</option>
-                            <option value="opcion 1" selected>2 Adultos</option>
-                            <option value="opcion 2">3 Adultos</option>
-                            <option value="opcion 3">4 Adultos</option>
+                            <option value="1">1 Adulto</option>
+                            <option value="2" selected>2 Adultos</option>
+                            <option value="3">3 Adultos</option>
+                            <option value="4">4 Adultos</option>
                         </select>
                     </div>
                     <!-- HABITACIONES -->
                     <div>
                         <img class="img3H" src="Image/icoHab.svg">
                         <select id ="numHab" class="select3" style="width: 80px;">
-                            <option value="opcion 0">1 hab</option>
-                            <option value="opcion 1">2 hab</option>
-                            <option value="opcion 2">3 hab</option>
-                            <option value="opcion 3">4 hab</option>
+                            <option value="1" selected>1 hab</option>
+                            <option value="2">2 hab</option>
+                            <option value="3">3 hab</option>
+                            <option value="4">4 hab</option>
                         </select>
                     </div>
                 </section>

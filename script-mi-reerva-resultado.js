@@ -1,5 +1,3 @@
-
-
 // :::::  OBTENIENDO INFORMACION RESERVA ::::::
 
 let URL_R = "http://localhost:8080/reservas/mireserva/"
@@ -152,30 +150,27 @@ function mostrar() {
                         <section class="seleccion_fechas_actualizar_mireserva">
                         
                             <div class="caja_principal_seleccion_fechas">
-
                                 
                                 <div class = caja_mi_reserva>
                                     <label for = "checkin" >CHECK-IN</label>
                                         <div class="caja_seleccion_mireserva">
                                             <div class="txt_caja_seleccion_mireserva">
                                             <img class = "img_huesped_mireserva" src ="Image/icoHuesped.svg">
-                                                <input style ="width:60%;" type="date" id="fechaInicial" class ="checkin_mireserva" min ="${verificarFechaIN()}" name ="checkin" value ="${localStorage.getItem("fechaCheckIn")}">
+                                                <input style ="width:60%;" type="date" id="fechaInicial" class ="checkin_mireserva" min ="${verificarFechaIN()}" name ="checkin" value ="${(localStorage.getItem("fechaCheckIn")) + 1}">
                                             </div>
                                         </div>
                                 </div>
-
                                 <div class = caja_mi_reserva> 
                                    
                                     <label for = "checkout" >CHECK-OUT</label>
                                         <div class="caja_seleccion_mireserva">
                                             <div class="txt_caja_seleccion_mireserva">
                                             <img class = "img_huesped_mireserva" src ="Image/icoHuesped.svg">
-                                                <input style ="width:60%;" type="date" id = "fechaFinal" class ="checkin_mireserva" min ="${verificarFechaIN()}" name ="checkout" value ="${localStorage.getItem("fechaCheckOut")}">
+                                                <input style ="width:60%;" type="date" id = "fechaFinal" class ="checkin_mireserva" min ="${verificarFechaIN()}" name ="checkout" value ="${(localStorage.getItem("fechaCheckOut")) + 1}">
                                             </div>
                                         </div>
                                 </div> 
                             
-
                                 <div class = caja_mi_reserva>
                                     <label for = "checkin" >HUESPEDES</label>
                                         <div class="caja_seleccion_mireserva">
@@ -190,7 +185,6 @@ function mostrar() {
                                             </div>
                                         </div>
                                 </div>
-
                                 <div class = caja_mi_reserva> 
                                     <label for = "checkin" >HABITACIONES</label>
                                         <div class="caja_seleccion_mireserva">
@@ -279,7 +273,7 @@ function mostrar() {
             if (mes < 10)
                 mes = '0' + mes //agrega cero si el menor de 10
             let min = ano + "-" + mes + "-" + dia;
-            return min
+            return min + 1
 
         }
         verificarFechaIN()
@@ -326,17 +320,14 @@ function mostrar() {
 
 
     } else {
+        NO_existe_reserva()
+    }
+}
 
-        const no_sistema = document.getElementById("form_reserva_mireserva")
-        let no_sistema_div = "<div>"
-        no_sistema_div += `
-        PUTO COMPRA UNA RESERVA
-        `
-        no_sistema_div += "</div>"
-        no_sistema.innerHTML += no_sistema_div
-
-        alert("No estas en el sistema")
-        window.location.href = "mireserva.html"
+// ::: FUNCION VERIFICAR FECHAS
+function verificar_fechas(){
+    if (localStorage.getItem("fechaCheckIn") > localStorage.getItem("fechaCheckOut")) {
+        mostrarModalFechas()
     }
 }
 
@@ -361,9 +352,13 @@ function obtenerInfo(evt) {
         fkHotel: form.fkHotel.value
 
     }
-    console.table(reserva)
     save_info()
-    update(reserva)
+    if (localStorage.getItem("fechaCheckIn") > localStorage.getItem("fechaCheckOut")) {
+        mostrarModalFechas()   
+    }else{
+        update(reserva)
+    }
+    
 
 }
 function save_info() {
@@ -405,11 +400,34 @@ async function borrar_reserva(id) {
 }
 
 
+function aceptar() {
+    window.location.replace("index.html")
+}
+
+
+//window.onload = clearStorage;
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// FUNCIONES PARA MODALES 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+function mostrarModalFechas() {
+    document.getElementById('openModal2').style.display = 'initial';
+}
+
+function CerrarModal2() {
+    document.getElementById('openModal2').style.display = 'none';
+}
+
+function NO_existe_reserva() {
+    document.getElementById('openModal3').style.display = 'block';
+}
+
+function CerrarModal3() {
+    document.getElementById('openModal3').style.display = 'none';
+}
+
+CerrarModal2()
 
 // Funcion para limpiar el localStorage
 function clearStorage() {
     localStorage.clear();
 }
-
-//window.onload = clearStorage;
-

@@ -39,9 +39,6 @@ async function obtenerHoteles(url) {
 const fechaHoy_3 = new Date().toISOString().slice(0, 10)
 function hoteles_disponibles(hoteles) {
     
-    
-    
-    
     const cardHotelDisponible = document.getElementById('hoteldisponible')
     let section = "<div>"
     for (let i = 0; i < hoteles.length; i++) {
@@ -111,7 +108,6 @@ function hoteles_disponibles(hoteles) {
             </section>
         `
     }
-
     section += "</div>"
     cardHotelDisponible.innerHTML += section
     rellarFormulario()
@@ -124,7 +120,9 @@ function rellarFormulario() {
     // CONDICIONAL PARA SELEC -> DESTINO, SI SE ENTRA DIRECTAMENTE ESCOGER UN DESTINO SIN UTILIZAR FORMULARIO
     if (window.localStorage.getItem('ciudadSeleccion') != undefined) {
         document.getElementById('ciudad').value = localStorage.getItem("ciudadSeleccion")
-    }
+    }else{
+        document.getElementById('ciudad').value = localStorage.getItem("ciudadSeleccion")
+    }   
 
     // ::::: CONDICIONAL PARA RELLENAR HUESPDES SI ESTA DEFINIDO O NO ::::::
 
@@ -191,7 +189,9 @@ function sendInfo(hotel) {
 let ciudad = localStorage.getItem("ciudadSeleccion")
 
 async function main() {
-    const url = "http://localhost:8080/hoteles/CARTAGENA"
+    let url = "http://localhost:8080/hoteles/"
+    url += ciudad
+    console.log(url)
     const hoteles = await obtenerHoteles(url)
     hoteles_disponibles(hoteles)
 }
@@ -226,21 +226,23 @@ function funcionBuscar() {
         mostrarModalFechas()
     } else {
         if (document.getElementById('ciudad').value == "BARRANQUILLA") {
-            document.location.href = "destinos.html", true;
+            document.location.href = "bogota.html", true;
         } else if (document.getElementById('ciudad').value == "BARICHARA") {
-            document.location.href = "destinos.html", true;
+            document.location.href = "bogota.html", true;
         } else if (document.getElementById('ciudad').value == "BOGOTA") {
             document.location.href = "bogota.html", true;
         } else if (document.getElementById('ciudad').value == "CALI") {
-            document.location.href = "destinos.html", true;
+            document.location.href = "bogota.html", true;
         } else if (document.getElementById('ciudad').value == "CARTAGENA") {
-            document.location.href = "destinos.html", true;
+            document.location.href = "bogota.html", true;
         } else if (document.getElementById('ciudad').value == "SAN ANDRES") {
-            document.location.href = "destinos.html", true;
+            document.location.href = "bogota.html", true;
         } else if (document.getElementById('ciudad').value == "SANTA MARTA") {
-            document.location.href = "destinos.html", true;
+            document.location.href = "bogota.html", true;
+        } else if (document.getElementById('ciudad').value == "MEDELLIN") {
+            document.location.href = "bogota.html", true;
         } else if (document.getElementById('ciudad').value == "LETICIA") {
-            document.location.href = "destinos.html", true;
+            document.location.href = "bogota.html", true;
         } else {
             mostrarModalDestino() // Modal seleccionar Destino
         }
@@ -282,6 +284,6 @@ function clearStorage() {
         localStorage.clear();
         window.location.href = "destinos.html"
     }
-}
+} 
 clearStorage();
 

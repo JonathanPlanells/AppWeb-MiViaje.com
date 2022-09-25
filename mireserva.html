@@ -31,6 +31,13 @@
             <form onsubmit="get_data_form(event)" action="mireserva_resultado.html" method="post" >
                 <div class ="cajasTexto_mireserva">
                     <!-- FROMULARIO MIRESERVA -->
+                    <label for = "tipoDocumento">TIPO DE DOCUMENTO</label>
+                    <select class ="inputForm" name = "tipoDocumento" id = "tipoDocumento" required >
+                        <option value="CC">Cedula de Ciudadania</option>
+                        <option value="CE">Cedula de Extranjeria</option>
+                        <option value="PA">Pasaporte</option>
+                    </select>
+                    
                     <label for = "numeroDocumento" >NUMERO DE DOCUMENTO</label>
                     <input type = "text" id = "numeroDocumento" name = "numeroDocumento" class ="inputForm" required >
 

@@ -1,7 +1,7 @@
 // :::::  OBTENIENDO INFORMACION RESERVA ::::::
 
 let URL_R = "http://localhost:8080/reservas/mireserva/"
-URL_R += "?numeroDocumento=" + localStorage.getItem("numeroDocumento") + "&token=" + localStorage.getItem("token")
+URL_R += "?numeroDocumento=" + localStorage.getItem("numeroDocumento") + "&token=" + localStorage.getItem("token") + "&tipoDocumento=" + localStorage.getItem("tipoDocumento")
 
 async function get_info_reserva(url) {
     const respuesta = await fetch(url)

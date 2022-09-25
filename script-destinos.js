@@ -150,7 +150,7 @@ function CerrarModal2() {
 
 function mostrarModalHabitaciones() {
     document.getElementById('openModal3').style.display = 'block';
-   
+    vs() 
 }
 
 function CerrarModal3() {
@@ -175,9 +175,19 @@ function cancelar() {
     CerrarModal3()
     window.location.href = "destinos.html"
 }
-
+function vs(){
+    if(document.getElementById("numero_adultos_destinos").value >= document.getElementById("numero_hab_destinos").value){
+        let HueFlag = 1;
+        localStorage.setItem("HUEvsHAB", HueFlag)
+    }else{
+        let HueFlag = 2;
+        localStorage.setItem("HUEvsHAB", HueFlag)
+        
+    } 
+}
 //+++++++++++++++++++++++++++++++++
 // :::: LLAMADO DE FUNCIONES :::::
 //+++++++++++++++++++++++++++++++++
 
 verificarFechaIN()
+vs()

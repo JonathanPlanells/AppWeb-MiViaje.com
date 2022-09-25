@@ -85,6 +85,7 @@ function CerrarModal3() {
 window.onload = ejecutarAlCargarPagina;
 CerrarModal()
 CerrarModal2()
+
 let decision = ""
 function aceptar() {
     decision = true

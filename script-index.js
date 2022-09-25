@@ -90,7 +90,7 @@ function aceptar() {
     decision = true
     localStorage.setItem("decision", decision)
     CerrarModal3()
-    window.location.href = "bogota.html", true;
+    window.location.href = "destino-seleccionado.html", true;
     localStorage.removeItem('HUEvsHAB');
     localStorage.removeItem('decision');
     
@@ -116,30 +116,46 @@ function vs(){
     } 
 }
 
+
 function creacion(){
     let n = 1
-    localStorage.setItem("numeroAdultos",n)
+    let h = 2
+    localStorage.setItem("numeroAdultos",h)
     localStorage.setItem("numeroHabitaciones",n)
     let fechaHoy = new Date().toISOString().slice(0, 10)
     localStorage.setItem("fechaCheckIn",fechaHoy)
     localStorage.setItem("fechaCheckOut",fechaHoy)
+    
+}
+function bogota(){
     let ciudad = "BOGOTA"
     localStorage.setItem("ciudadSeleccion", ciudad)
+    creacion()
+}
+function cartagena(){
+    let ciudad = "CARTAGENA"
+    localStorage.setItem("ciudadSeleccion", ciudad)
+    creacion()
+}
+function medellin(){
+    let ciudad = "MEDELLIN"
+    localStorage.setItem("ciudadSeleccion", ciudad)
+    creacion()
 }
 
 function funcionBuscar() {
     // Validando que las fechas del checkOut no sea antes del checkIN
     if (document.getElementById('ciudad').value == "BARRANQUILLA") {
-        document.location.href = "bogota.html", true;
+        document.location.href = "destino-seleccionado.html", true;
     } else if (document.getElementById('ciudad').value == "BARICHARA") {
-         document.location.href = "bogota.html", true;
+         document.location.href = "destino-seleccionado.html", true;
     } else if (document.getElementById('ciudad').value == "BOGOTA") {
         if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value) {
             mostrarModalFechas()
             }else if(document.getElementById('numHab').value > document.getElementById('numAdult').value){
                 mostrarModalHabitaciones()  
             }else if(localStorage.getItem("HUEvsHAB") == 1 ){
-                    window.location.href = "bogota.html", true;
+                    window.location.href = "destino-seleccionado.html", true;
             } 
     } else if (document.getElementById('ciudad').value == "CALI") {
         document.location.href = "destinos.html", true;
@@ -149,14 +165,14 @@ function funcionBuscar() {
             }else if(document.getElementById('numHab').value > document.getElementById('numAdult').value){
                 mostrarModalHabitaciones()  
             }else if(localStorage.getItem("HUEvsHAB") == 1 ){
-                    window.location.href = "bogota.html", true;
+                    window.location.href = "destino-seleccionado.htmll", true;
             } 
     } else if (document.getElementById('ciudad').value == "SAN ANDRES") {
-        document.location.href = "bogota.html", true;
+        document.location.href = "destino-seleccionado.html", true;
     } else if (document.getElementById('ciudad').value == "SANTA MARTA") {
-        document.location.href = "bogota.html", true;
+        document.location.href = "destino-seleccionado.html", true;
     } else if (document.getElementById('ciudad').value == "LETICIA") {
-        document.location.href = "bogota.html", true;
+        document.location.href = "destino-seleccionado.html", true;
     } else {
         mostrarModalDestino() // Modal seleccionar Destino
     }

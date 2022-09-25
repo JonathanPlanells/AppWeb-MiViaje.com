@@ -53,7 +53,6 @@ async function mainR() {
 }
 mainR()
 
-
 function mostrar() {
     // :::::  SI EXISTE LA RESERVA SE MUESTRA LA INFORMACION - SI NO SE DEVUELVE ::::::
     if (localStorage.getItem("idHotelReserva") != 0) {
@@ -140,7 +139,6 @@ function mostrar() {
             div += "</div>"
             card_hotel.innerHTML += div
         }
-
         // :::::  FORMULARIO CON LA INFORMAICON DE LA RESERVA ::::::
         function formulario_Actualizar() {
             const formu_actualizar = document.getElementById("form_reserva_mireserva")
@@ -260,8 +258,8 @@ function mostrar() {
             div += "</div>"
             formu_actualizar.innerHTML += div
             rellarFormulario()
-
         }
+        // Funcion para establcer la fecha del Check In y no permitir escoger una fecha anterior
         // Funcion para establcer la fecha del Check In y no permitir escoger una fecha anterior
         function verificarFechaIN() {
             let fecha = new Date(); //Fecha actual
@@ -272,9 +270,8 @@ function mostrar() {
                 dia = '0' + dia; //agrega cero si el menor de 10
             if (mes < 10)
                 mes = '0' + mes //agrega cero si el menor de 10
-            let min = ano + "-" + mes + "-" + dia;
-            return min + 1
-
+            let fechaHoy = ano + "-" + mes + "-" + dia;
+            return fechaHoy
         }
         verificarFechaIN()
         // ::::: FUNCION PARA RELLANR EL FORMULARIO CON LOS DATOS DE LA RESERVA ::::::
@@ -292,11 +289,8 @@ function mostrar() {
             document.getElementById("fkHotel").value = localStorage.getItem("idHotelReserva")
 
         }
-
-
         // :::::  LLAMADO DE FUNCIONES ::::::
         formulario_Actualizar()
-
         // :::::: FUNCION PARA CONOCER EL NUMERO DE NOCHES ENTRE LAS FECHAS DE RESERVA :::::
         function numeroNoches() {
             let fechainicio = new Date(localStorage.getItem("fechaCheckIn"))
@@ -317,15 +311,13 @@ function mostrar() {
             }
             return txt
         }
-
-
     } else {
-        NO_existe_reserva()
+        no_existe_reserva()
     }
 }
 
 // ::: FUNCION VERIFICAR FECHAS
-function verificar_fechas(){
+function verificar_fechas() {
     if (localStorage.getItem("fechaCheckIn") > localStorage.getItem("fechaCheckOut")) {
         mostrarModalFechas()
     }
@@ -342,7 +334,7 @@ function obtenerInfo(evt) {
         fechaInicial: form.fechaInicial.value,
         fechaFinal: form.fechaFinal.value,
         cantidadPersonas: form.cantidadPersonas.value,
-        cantidadHabitaciones:form.numhabiciones.value,
+        cantidadHabitaciones: form.numhabiciones.value,
         nombrePersona: form.nombrePersona.value,
         apellidoPersona: form.apellidoPersona.value,
         correoPersona: form.correoPersona.value,
@@ -354,11 +346,11 @@ function obtenerInfo(evt) {
     }
     save_info()
     if (localStorage.getItem("fechaCheckIn") > localStorage.getItem("fechaCheckOut")) {
-        mostrarModalFechas()   
-    }else{
+        mostrarModalFechas()
+    } else {
         update(reserva)
     }
-    
+
 
 }
 function save_info() {
@@ -417,15 +409,16 @@ function CerrarModal2() {
     document.getElementById('openModal2').style.display = 'none';
 }
 
-function NO_existe_reserva() {
-    document.getElementById('openModal3').style.display = 'block';
+function no_existe_reserva() {
+    document.getElementById('openModal4').style.display = 'block';
 }
 
 function CerrarModal3() {
-    document.getElementById('openModal3').style.display = 'none';
+    document.getElementById('openModal4').style.display = 'none';
 }
 
 CerrarModal2()
+CerrarModal3()
 
 // Funcion para limpiar el localStorage
 function clearStorage() {

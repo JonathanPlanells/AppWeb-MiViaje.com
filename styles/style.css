@@ -138,6 +138,7 @@ table {
     border-spacing: 0;
 }
 
+
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  FUENTES
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -206,7 +207,7 @@ nav a:hover {
 
 .cajaBanner {
     width: 100%;
-    height: 600px;
+    height: 520px;
     overflow: hidden;
     margin: 20px 0 0 0px;
     z-index: 1;
@@ -225,7 +226,7 @@ nav a:hover {
     font-weight: bold;
     color: #023F76;
     position: absolute;
-    top: 180px;
+    top: 130px;
     left: 90px;
     letter-spacing: -2px;
     text-shadow: 10px 10px 40px #ffffff;
@@ -235,7 +236,7 @@ nav a:hover {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     position: absolute;
-    top: 250px;
+    top: 200px;
     left: 90px;
     text-shadow: 10px 10px 40px #ffffff;
 }
@@ -248,6 +249,14 @@ nav a:hover {
 .cardP1 a {
     text-decoration: none;
 }
+.cardpos{
+    display: flex;
+    height: 540px;
+    background-image: url("/Image/Banner1.jpg");
+    background-size: cover;
+    background-position: 0 -100px ;
+    align-content: center;
+}
 .cardP1,
 .cardP2,
 .cardP3 {
@@ -259,9 +268,7 @@ nav a:hover {
     border-radius: 20px 20px 10px 10px;
 }
 .cardP1 {
-    position: absolute;
-    top: 300px;
-    left: 80px;
+    margin: 240px 0 0 80px;
 }
 .card1 {
     width: 151PX;
@@ -295,9 +302,7 @@ nav a:hover {
     text-decoration: none;
 }
 .cardP2 {
-    position: absolute;
-    top: 300px;
-    left: 270px;
+    margin: 240px 0 0 20px;
 }
 .card2 {
     width: 150PX;
@@ -310,9 +315,7 @@ nav a:hover {
     text-decoration: none;
 }
 .cardP3 {
-    position: absolute;
-    top: 300px;
-    left: 460px;
+    margin: 240px 0 0 20px;
 }
 .card3 {
     width: 151PX;
@@ -324,10 +327,28 @@ nav a:hover {
 /*::::::::: HOVER CARDS :::::::::::*/
 .cardP3:hover,
 .cardP1:hover,
-.cardP2:hover {
+.cardP2:hover,
+.ciculo_destinos:hover,.ciculo_destinos img:hover {
     transform: scale(1.03);
     transition: 0.5s all;
 }
+
+/* ::: BOTON DESTINOS ::::*/
+.ciculo_destinos{
+    display: flex;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 430px 0 0 20px;
+    border-radius: 60px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.ciculo_destinos img{
+    scale: 45%;
+    margin-left: 7px;
+}
+
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  CAJA FORMULARIO RESERVA
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -628,7 +649,10 @@ nav a:hover {
 //  NUEVAS AVENTURAS
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
 .nuevasAventuras {
-    background-color: #ffffff;
+    background-image: url("/Image/valle.png");
+    background-position:0;
+    background-size:cover;
+    background-repeat: no-repeat;
     text-align: center;
     display: flex;
     overflow: hidden;
@@ -643,10 +667,7 @@ nav a:hover {
 }
 /* ::::::::::: TEXTO :::::::::::*/
 .textAventuras {
-    scale: 90%;
-    position: absolute;
-    top: 1300px;
-    left: 130px;
+    margin:140px 0 0 0;
 }
 .textAventuras .txt1Aventuras {
     font-size: 1.75rem;
@@ -687,24 +708,16 @@ nav a:hover {
 .btnAventuras2,
 .btnAventuras3,
 .btnAventuras4 {
+    position: absolute;
     background: #023F76;
     width: 150px;
     height: 50px;
     border-radius: 7px;
     cursor: pointer;
+    margin:-20px 0 0 110px;
+    
 }
-.btnAventuras2 {
-    position: absolute;
-    margin: 580px 0 0 90px;
-}
-.btnAventuras3 {
-    position: absolute;
-    margin: 610px 0 0 340px;
-}
-.btnAventuras4 {
-    position: absolute;
-    margin: 560px 0 0 589px;
-}
+
 .btnAventuras2 .txtbtn,
 .btnAventuras3 .txtbtn,
 .btnAventuras4 .txtbtn {
@@ -725,9 +738,16 @@ nav a:hover {
 }
 /*::::::::::: CARDS :::::::::*/
 .cardAventuras {
-    position: absolute;
-    top: 880px;
-    left: 400px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+   
+}
+.grupoCard1,
+.grupoCard3{
+    margin-top: -40px;
 }
 .cardAventuras .cardP1NA,
 .cardP2NA,
@@ -738,30 +758,11 @@ nav a:hover {
     overflow: hidden;
     box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
     border-radius: 20px 20px 10px 10px;
+    margin:90px 0 0 60px;
 }
-.cardAventuras .cardP1NA {
-    position: absolute;
-    top: 350px;
-    left: 40px;
-}
-.cardAventuras .cardP2NA {
-    position: absolute;
-    top: 380px;
-    left: 290px;
-}
-.cardAventuras .cardP3NA {
-    position: absolute;
-    top: 330px;
-    left: 540px;
-}
-.cardAventuras .card1NA,
-.card2NA,
-.card3NA {
-    width: 120%;
-    height: 110%;
-    overflow: hidden;
-    border-radius: 10px 10px 4px 4px;
-}
+
+
+/*::::: IMAGENES ::::::*/
 .cardAventuras .card1NA {
     margin: -10px;
 }
@@ -770,8 +771,8 @@ nav a:hover {
     margin: -20px 0 0 -40px;
 }
 .cardAventuras .destinop2 {
-    width: 160%;
-    margin: 20px 0px 0 -50px;
+    width: 120%;
+    margin:0 0px 0 -10px;
 }
 .cardAventuras .destinop1 {
     width: 200%;
@@ -791,6 +792,7 @@ nav a:hover {
     height: 720px;
     overflow: hidden;
     text-align: center;
+    background-image: url("/Image/Fondo.svg");
 }
 .App .fondoApp {
     position: absolute;
@@ -873,6 +875,9 @@ nav a:hover {
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  FORMULARIO BSUQUEDA
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+    
+
 #box {
     position: fixed;
     background-color: #023F76;
@@ -891,9 +896,10 @@ nav a:hover {
 //  DESTINOS - COLUMNA 1
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
 .cajaPrincipalDestinos {
-    width: 100%;
-    height: 1150px;
-
+    width: 1000px;
+    height: 1250px;
+    margin: 0 auto;
+    
 }
 
 .destinos .tituloDestinos {
@@ -909,6 +915,7 @@ nav a:hover {
     width: 100%;
     height: 150px;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     margin: 200px 0 0 -10px;
@@ -940,7 +947,7 @@ nav a:hover {
     width: 250PX;
     height: 280px;
     overflow: hidden;
-    display: inline-block;
+    flex-direction: row;
     margin-inline-start: 20px;
     margin: 30px 0 0 35px;
     box-shadow: 0px 0px 15px 0.2px rgba(0, 0, 0, 0.2);
@@ -1004,7 +1011,7 @@ nav a:hover {
 //  NUEVAS AVENTURAS
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
 .nuevasAventuras2 .cardAventuras {
-    margin: 290px 0 0 0;
+    margin: 400px 0 0 0;
 }
 
 .nuevasAventuras2 {
@@ -1020,7 +1027,7 @@ nav a:hover {
 .textAventuras2 {
     scale: 100%;
     position: absolute;
-    top: 1600px;
+    top: 1700px;
     left: 130px;
 }
 
@@ -1053,8 +1060,13 @@ nav a:hover {
     justify-content: center;
     width: 100%;
     height: 100%;
-    margin: 200px auto 30px auto;
-    padding-top: 30px;
+    margin: 200px auto 0px auto;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background-image: url('/Image/Fondo.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 110%;
 }
 .cajaHotelPrincipal {
     background-color: #ffffff;
@@ -1485,17 +1497,38 @@ input[type=number] {
 #txt_inicial_mireserva_resultado {
     margin: -50px 0 100px 0;
 }
-.mireserva {
-    width: 40%;
-    margin: -100px auto;
+.mi_reserva_body{
+    background-image: url('/Image/Fondo.svg');
+    
 }
-
+.mireserva {
+    display:flex;
+    width: 90%;
+    margin: -50px auto;
+    align-items: center;
+    align-content: center;
+    
+}
+.olivde_codigo{
+    margin-bottom: 100%;
+}
 .formulario_mi_reserva {
     display: block;
-    width: 90%;
-    height: 350px;
+    width: 50%;
+    height: 600px;
     text-align: center;
-    margin: -50px auto;
+    margin:10px auto 0 10%;
+}
+.mireserva_box_img{
+    width: 70%;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+}
+.mireserva_box_img img{
+    margin: -30px auto auto -100px;
+    scale: 40%;
+    transform: scaleX(-1);
 }
 
 .cajasTexto_mireserva {
@@ -1505,8 +1538,8 @@ input[type=number] {
     font-size: 0.75rem;
     padding-left: 40px;
     margin: 250px auto;
-}
 
+}
 .reserva .formulario_mi_reserva {
     display: inline-block;
     width: 44%;
@@ -1515,22 +1548,21 @@ input[type=number] {
     top: -30px;
 }
 
-
-
 .formulario_mi_reserva label {
     display: flex;
     margin: 5px auto;
-    padding: 10px 0 10px 0;
+    padding: 5px 0 10px 0;
     text-align: left;
-    font-size: 14px;
+    font-size: 0.75;
 }
+
 
 
 .formulario_mi_reserva .inputForm {
     display: block;
     width: 100%;
     margin: 5px auto;
-    padding: 8px 10px;
+    padding: 6px 10px;
     border-radius: 5px;
     border-color: #023F76;
     background-color: #F9F7F7;
@@ -1699,7 +1731,7 @@ input[type=number] {
     font-size: 11px;
     width: 45%;
     margin: -45px 0 0 -10px;
-    opacity: 40%;
+    opacity: 90%;
     background: #c80b0b;
 }
 
@@ -1742,13 +1774,17 @@ input[type=number] {
 }
 
 .caja404 {
+    width: 100%;
     display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
     justify-content: center;
 }
 
 .p404 .txt404 {
-    display: inline-block;
-    width: 400px;
+    
+    width: 50%;
     height: 400px;
     margin: 200px 0 0 0;
     text-align: center;
@@ -1756,10 +1792,13 @@ input[type=number] {
 }
 
 .p404 .img404 {
-    display: inline-block;
-    width: 450px;
-    height: 400px;
-    margin: 200px 0 0 0;
+    width:50%;
+    margin: 70px 0 0 -180px;
+}
+.img404 img{
+    display: flex;
+    scale: 90%;
+
 }
 
 .p404 .txt404 .txt1 {
@@ -1821,7 +1860,7 @@ input[type=number] {
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  MODALES
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
-.modalDialog {
+.modalDialog, .modalDialog2 {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -1830,56 +1869,49 @@ input[type=number] {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(2, 63, 118, 0.6);
+    background: rgba(2, 63, 118, 0.7);
     z-index: 99999;
     display: none;
     color: #023F76;
+    
 
 }
 .modalDialog2 {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    font-family: 'Poppins', sans-serif;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     background: rgba(2, 63, 118, 1.6);
-    z-index: 99999;
-    display: none;
-    color: #023F76;
-
 }
 
 
 .modalDialog .modal1 {
-    width: 400px;
-    height: 100px;
+    width: 300px;
+    height: 220px;
     position: relative;
-    margin: 350px auto;
+    margin: 15% auto;
     padding: 20px;
     border-radius: 20px;
     background: #fff;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
     overflow: hidden;
 }
-
 .modalDialog .modal1 p {
-    margin: 35px auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -150px 0 0 0px;
+    justify-content: center;
+    
 }
 
 .modalDialog span {
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 500;
     display: flex;
-    margin: 0px auto 0 130px;
+    margin: 0px auto;
+    text-align: center;
 }
 
 .modalDialog img {
-    scale: 20%;
+    scale: 27%;
     display: flex;
-    margin: -290px auto 0 -190px;
+    margin: -160px auto 0 -100px;
 }
 
 .modalDialog .close {
@@ -1887,10 +1919,10 @@ input[type=number] {
     color: #E48D36;
     line-height: 25px;
     position: absolute;
-    right: 10px;
+    right: 15px;
     text-align: center;
-    top: -15px;
-    width: 24px;
+    top: -10px;
+    width: 30px;
     text-decoration: none;
     font-weight: bold;
     transform: translateY(100%);
@@ -1903,61 +1935,82 @@ input[type=number] {
 }
 
 .modalDialog .modal2 {
-    width: 500px;
-    height: 105px;
+    width: 400px;
+    height: 230px;
     position: relative;
-    margin: 350px auto;
+    margin: 15% auto;
     padding: 20px;
-    border-radius: 20px;
-    background: #fff;
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
-    overflow: hidden;
-
+    border-radius: 30px;
+    background:#fff;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
 }
 
 .modalDialog .modal2 p {
-    margin: 30px auto 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -110px 0 0 0px;
+    justify-content: center;  
 }
 
 .modalDialog .modal2 span {
-    font-size: 19px;
+    font-size: 21px;
     font-weight: 500;
     display: flex;
-    margin: 0px auto 0 120px;
-    line-height: 20px;
+    margin: 0px auto;
+    text-align: center;
+    
 }
 
 .modalDialog .modal2 img {
-    scale: 25%;
+    scale: 30%;
     display: flex;
-    margin: -210px auto 0 -190px;
+    margin: -120px auto 0 -60px;
 }
 
 .modalDialog .modal3 {
     
-    width: 650px;
-    height: 180px;
+    width: 540px;
+    height: 300px;
     position: relative;
-    margin: 300px auto;
+    margin: 15% auto;
     padding: 20px;
     border-radius: 20px;
     background: #fff;
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
-    overflow: hidden;   
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
+   
+}
+.modalDialog .modal3 span {
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    margin: 5px auto;
+    text-align: center;
+    
 }
 
+.modalDialog .modal3 img {
+    scale: 30%;
+    display: flex;
+    margin: -150px auto 0 -150px;
+}
 .modalDialog .modal3 p {
-    margin: 30px auto 0 50px;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -150px 0 0 20px;
+    justify-content: center; 
+    line-height: 18px;
+    
 }
 
 .modalDialog .btn_modal_aceptar, .modalDialog .btn_modal_cancelar{
     z-index: 1000;
     cursor: pointer;
     position: absolute;
-    margin: 130px 0 0 450px;
+    margin: -60px 0 0 120px;
     width: 150px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 60px;
     border: none;
     background-color: #E48D36;
     color: #fff;
@@ -1977,52 +2030,56 @@ input[type=number] {
     transition: 0.2s all;
     opacity: 100%;
 }
-.modalDialog .modal3 span {
-    font-size: 16px;
-    font-weight: 500;
-    display: flex;
-    margin: 10px auto 0 120px;
-    line-height: 20px;
-}
-
-.modalDialog .modal3 img {
-    scale: 20%;
-    display: flex;
-    margin: -320px auto 0 -290px;
-}
 
 
+/* ::::::: MODAL NO HAY RESERVA ::::: */
 .modalDialog2 .modal4 {
-    
-    width: 650px;
-    height: 180px;
+    width: 700px;
+    height: 280px;
     position: relative;
-    margin: 220px auto;
+    margin: 15% auto;
     padding: 20px;
     border-radius: 20px;
     background: #fff;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
-    overflow: hidden;   
+ 
 }
 
 .modalDialog2 .modal4 p {
-    margin: 30px auto 0 50px;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -450px 0 0 220px;
+    justify-content: center; 
+    line-height: 18px;
+}
+.modalDialog2 .modal4 span {
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    margin: 5px auto;
+    text-align: center;
 }
 
+.modalDialog2 .modal4 img {
+    scale: 30%;
+    display: flex;
+    margin: -270px auto 0 -320px;
+}
 .modalDialog2 .btn_modal_aceptar, .modalDialog2 .btn_modal_cancelar{
     z-index: 1000;
     cursor: pointer;
     position: absolute;
-    margin: 130px 0 0 450px;
+    margin: 30px 0 0 380px;
     width: 150px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 60Px;
     border: none;
     background-color: #E48D36;
     color: #fff;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    opacity: 90%;
+    opacity: 100%;
 
 }
 
@@ -2036,19 +2093,7 @@ input[type=number] {
     transition: 0.2s all;
     opacity: 100%;
 }
-.modalDialog2 .modal4 span {
-    font-size: 16px;
-    font-weight: 500;
-    display: flex;
-    margin: 10px auto 0 120px;
-    line-height: 20px;
-}
 
-.modalDialog2 .modal4 img {
-    scale: 20%;
-    display: flex;
-    margin: -320px auto 0 -290px;
-}
 .logoBlanco_modal{
     position: absolute;
     z-index: 100;
@@ -2070,9 +2115,11 @@ footer {
     background-color: #023F76;
     width: 100%;
     height: 260px;
-    position: absolute;
+    position:absolute;
     left:0px;
     bottom:0px;
+    margin-top: auto;
+    display: inline;
 }
 
 .logoFooter {
@@ -2173,9 +2220,21 @@ a {
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  QUERIES
 +++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media screen  and (max-height: 800px){
+    #footer_mireserva{
+        display:none;
+    }
+} ;
+    
 @media screen and (max-width: 1200px) {
     .txtBanner {
         margin-top: -60px;
+    }
+    .cajaPrincipalDestinos {
+        width: 80%;
+    }
+    .formulario_mi_reserva {
+        width: 60%;
     }
 
     .txtBanner2 {

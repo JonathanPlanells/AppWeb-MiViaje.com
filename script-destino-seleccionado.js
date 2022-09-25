@@ -240,36 +240,57 @@ function funcionBuscar() {
     // Validando que las fechas del checkOut no sea antes del checkIN
     if (document.getElementById('ciudad').value == "BARRANQUILLA") {
         document.location.href = "destino-seleccionado.html", true;
+
     } else if (document.getElementById('ciudad').value == "BARICHARA") {
          document.location.href = "destino-seleccionado.html", true;
+
     } else if (document.getElementById('ciudad').value == "BOGOTA") {
         if (document.getElementById('infoIN').value > document.getElementById('infoOUT').value) {
             mostrarModalFechas()
             }else if(document.getElementById('numHabiDS').value > document.getElementById('numAdult').value){
-                mostrarModalHabitaciones()  
+                if(localStorage.getItem("decision") == false || localStorage.getItem("decision") == undefined){
+                    mostrarModalHabitaciones()  
+                } else{
+                    window.location.href = "destino-seleccionado.html", true;
+                }
             }else if(localStorage.getItem("HUEvsHAB") == 1 ){
                     window.location.href = "destino-seleccionado.html", true;
             } 
+
     } else if (document.getElementById('ciudad').value == "CALI") {
         document.location.href = "destinos.html", true;
+
+    //CARTAGENA 
     } else if (document.getElementById('ciudad').value == "CARTAGENA") {
         if (document.getElementById('infoIN').value > document.getElementById('infoOUT').value) {
             mostrarModalFechas()
             }else if(document.getElementById('numHabiDS').value > document.getElementById('numAdult').value){
-                mostrarModalHabitaciones()  
+                if(localStorage.getItem("decision") == false || localStorage.getItem("decision") == undefined){
+                    mostrarModalHabitaciones()  
+                }else{
+                    window.location.href = "destino-seleccionado.html", true;
+                }
             }else if(localStorage.getItem("HUEvsHAB") == 1 ){
                     window.location.href = "destino-seleccionado.html", true;
             } 
+
     } else if (document.getElementById('ciudad').value == "SAN ANDRES") {
         document.location.href = "destino-seleccionado.html", true;
+
     } else if (document.getElementById('ciudad').value == "SANTA MARTA") {
         document.location.href = "destino-seleccionado.html", true;
+        
+    } else if (document.getElementById('ciudad').value == "MEDELLIN") {
+        document.location.href = "destino-seleccionado.html", true;
+
     } else if (document.getElementById('ciudad').value == "LETICIA") {
         document.location.href = "destino-seleccionado.html", true;
+    
     } else {
         mostrarModalDestino() // Modal seleccionar Destino
     }
     passInformacion() //Ejecutamos la funcion de guardar información para luego utilizarla en los otros html
+    localStorage.removeItem("decision")
 }
 
 
@@ -317,6 +338,8 @@ function aceptar() {
     localStorage.setItem("decision", decision)
     CerrarModal3()
     window.location.href = "destino-seleccionado.html", true;
+    let e = 1;
+    localStorage.setItem("HUEvsHAB",e)
 }
 function cancelar() {
     decision = false
@@ -337,4 +360,5 @@ function clearStorage() {
     }
 } 
 clearStorage();
+
 

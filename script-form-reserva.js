@@ -154,8 +154,8 @@ function set_value_hote(hotel) {
         <p style = "margin:20px auto;"><span style = "font-size:18px; font-weight: 700;">$${(localStorage.getItem("precioHab")*1).toLocaleString('de-DE')}</span> <span style="font-size:14px">por noche y habitación</span></p>
 
         <p style = "text-align: right; padding-right:20px;">
-            <span style = "color: #E48D36;font-size:13px">TOTAL POR </span> ${numeroNoches().toLocaleString('de-DE')} 
-            <span style = "color: #E48D36; font-size:13px">${txtnoche()} Y </span> ${localStorage.getItem("numeroHabitaciones")}<span style = "color: #E48D36;font-size:13px"> ${txthabi()}</span> </p>
+            <span style = "font-size:13px">TOTAL POR </span> <span style ="color: #E48D36;">${numeroNoches().toLocaleString('de-DE')} </span>
+            <span style = " font-size:13px">${txtnoche()} Y </span> <span style = "color: #E48D36;font-size:13px">${localStorage.getItem("numeroHabitaciones")}</span> ${txthabi()}</span> </p>
 
         <p style = "margin:5px 0 0 0; text-align: right; padding-right:20px;">$
         <span style ="font-size:25px; font-weight: 700;"> ${((localStorage.getItem("precioHab")*1) * numeroNoches() * localStorage.getItem("numeroHabitaciones")).toLocaleString('de-DE')}</span><p>

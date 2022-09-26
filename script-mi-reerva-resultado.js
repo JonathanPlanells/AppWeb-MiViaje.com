@@ -130,11 +130,11 @@ function mostrar() {
                     <span style = "font-size:14px; font-weight: 700;">${localStorage.getItem("numeroHabitaciones")}</span></p>
                 </div>
                 
-                <p style = "margin:25px auto;"><span style = "font-size:18px; font-weight: 700;">$${(((h.costoHabitacion) * 1).toLocaleString('de-DE'))}</span> por noche</p>
+                <p style = "margin:30px auto;"><span style = "font-size:18px; font-weight: 700;">$${(((h.costoHabitacion) * 1).toLocaleString('de-DE'))}</span> por noche</p>
         
                 <p style ="margin-top:-10px">
                         <span style = "color: #E48D36; font-size:13px; ">TOTAL POR </span> ${numeroNoches().toLocaleString('de-DE')} 
-                        <span style = "color: #E48D36; font-size:13px">${txtnoche()} Y </span> ${localStorage.getItem("numeroHabitaciones")}<span style = "color: #E48D36;font-size:13px"> ${txthabi()}</span> </p>
+                        <span style = "color: #E48D36; font-size:13px">${txtnoche()}<br> Y </span> ${localStorage.getItem("numeroHabitaciones")}<span style = "color: #E48D36;font-size:13px"> ${txthabi()}</span> </p>
 
                         <p style = "margin:10px 0 0 0; ">$
                         <span style ="font-size:25px; font-weight: 700;"> ${((localStorage.getItem("precioHab")*1) * numeroNoches() * localStorage.getItem("numeroHabitaciones")).toLocaleString('de-DE')}</span><p>
@@ -367,7 +367,12 @@ function save_info() {
     localStorage.setItem("fechaCheckIn", fechaIN)
     let fechaOUT = document.getElementById("fechaFinal").value
     localStorage.setItem("fechaCheckOut", fechaOUT)
-
+    let numHabi = document.getElementById("numhabiciones").value
+    localStorage.setItem("numHabiciones",numHabi)
+    let canPersonas = document.getElementById("cantidadPersonas").value
+    localStorage.setItem("numeroAdultos",canPersonas)
+    localStorage.setItem("numeroHabitaciones",numHabi)
+    
 }
 
 // :::: METODOS DE ACTUALIZACION Y BORRADO DE RESERVAS
@@ -423,7 +428,7 @@ function modal_elimicion(){
             <div class ="txt_modal_eliminacion_reserva">
                 <p class ="ups_cancelacion_reserva">!UPS!</p> 
                 <p class = "nombre_persona_cancelacion_reserva">${(localStorage.getItem("nombre").toUpperCase())} ${(localStorage.getItem("apellido").toUpperCase())}</p>
-                <p class = "nombre_persona_cancelacion_reserva">TU RESERVA HA SIDO <br>CANCELADA<span style="font-size: 17px;">*</span></p>
+                <p class = "nombre_persona_cancelacion_reserva">TU RESERVA HA SIDO <br><span style ="color:#DE1919">CANCELADA</span<span style="font-size: 17px;">*</span></p>
                 <p class ="txt1_eliminada" style="margin-top:20px ;">LAMENTAMOS QUE HAYAS CANCELADO TU RESERVA,</p> 
                 <p class ="txt1_eliminada" style="font-weight: 600; margin-top:5px;">ESPERAMOS VERTE PRONTO DE NUEVO</p>
                 <p class ="txt3_eliminada" style="font-style:italic ;">*Después de cancelada la reserva no se puede modificar, si deseas obtener la misma reserva te invitamos a que la realices de nuevo en las fechas deseadas.</p>

@@ -1421,6 +1421,7 @@ nav a:hover {
 .hoteleSeleccionado .imgHotelSelec img {
     display: flex;
     width: 90%;
+    height:205px;
     padding: 10px;
     margin: 5px auto;
     border-radius: 20px;
@@ -1859,7 +1860,7 @@ input[type=number] {
     display: flex;
     font-size: 11px;
     width: 45%;
-    margin: -20px 0 0 170px;
+    margin: -45px 0 0 170px;
     opacity: 90%;
     background: #c80b0b;
 }
@@ -2246,7 +2247,7 @@ input[type=number] {
     width: 700px;
     height: 580px;
     position: relative;
-    margin: -3% auto;
+    margin: -5% auto;
     padding: 20px;
     border-radius: 20px;
     background: #fff;
@@ -2455,9 +2456,14 @@ a {
     }
 }
 
+@media screen and (min-height: 750px){
+    .modalDialog2 .modal5{
+        margin: 4% auto;
+    }
+}
 @media screen and (min-height: 800px){
     .modalDialog2 .modal5{
-        margin: 5% auto;
+        margin: 3% auto;
     }
 }
 

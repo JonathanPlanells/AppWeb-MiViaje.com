@@ -130,16 +130,16 @@ function mostrar() {
                     <span style = "font-size:14px; font-weight: 700;">${localStorage.getItem("numeroHabitaciones")}</span></p>
                 </div>
                 
-                <p style = "margin:20px auto;"><span style = "font-size:18px; font-weight: 700;">$${(((h.costoHabitacion) * 1).toLocaleString('de-DE'))}</span> por noche</p>
+                <p style = "margin:25px auto;"><span style = "font-size:18px; font-weight: 700;">$${(((h.costoHabitacion) * 1).toLocaleString('de-DE'))}</span> por noche</p>
         
-                <p style = "text-align: right; margin: 65px 0 0 0; padding-right:20px;">
-                    <span style = "color: #E48D36;">Total por </span> ${numeroNoches()} 
-                    <span style = "color: #E48D36;">${txtnoche()}</span></p>
-                    
-        
-                <p style = "text-align: right; padding-right:20px; margin: 5px 0 0 0;">$
-                <span style ="font-size:25px; font-weight: 700;"> ${((((h.costoHabitacion) * 1) * numeroNoches()).toLocaleString('de-DE'))}</span><p>
-                <input type="reset" value="CANCELAR RESERVA" class="boton_cancelar" onclick="borrar_reserva(${localStorage.getItem("idReservas")})">
+                <p style ="margin-top:-10px">
+                        <span style = "color: #E48D36; font-size:13px; ">TOTAL POR </span> ${numeroNoches().toLocaleString('de-DE')} 
+                        <span style = "color: #E48D36; font-size:13px">${txtnoche()} Y </span> ${localStorage.getItem("numeroHabitaciones")}<span style = "color: #E48D36;font-size:13px"> ${txthabi()}</span> </p>
+
+                        <p style = "margin:10px 0 0 0; ">$
+                        <span style ="font-size:25px; font-weight: 700;"> ${((localStorage.getItem("precioHab")*1) * numeroNoches() * localStorage.getItem("numeroHabitaciones")).toLocaleString('de-DE')}</span><p>
+                        
+                        <input type="reset" value="CANCELAR RESERVA" class="boton_cancelar" onclick="borrarMain()">
             </div>
             `
             div += "</div>"
@@ -302,13 +302,22 @@ function mostrar() {
             return diferenciaDia
         }
         // :::: FUNCION PARA CAMBIAR TEXTO NOCHES O NOCHE
-        function txtnoche() {
-            let txt = "noches"
-            if (numeroNoches() == 1) {
-                txt = "noche"
+        function txtnoche(){
+            let txt = "NOCHES"
+            if(numeroNoches() == 1){
+                txt = "NOCHE"
             }
             return txt
         }
+        txtnoche()
+        function txthabi(){
+            let txt = "HABITACIONES"
+            if(localStorage.getItem("numeroHabitaciones") == 1){
+                txt = "HABITACIÓN"
+            }
+            return txt
+        }
+        txthabi()
         
         // :::::  LLAMADO DE FUNCIONES ::::::
         formulario_Actualizar()
@@ -377,6 +386,15 @@ async function update(reserva) {
     })
     const text = await resp.text()
     window.location.replace("mireserva.html") // SI ES EXITOSA SE REDIRIGE A LA PAGINA DE CONFIRMACIÓN RESERVA
+}
+function borrarMain(){
+    let text;
+    if (confirm("Seguro quieres cancelar la reserva") == true) {
+        borrar_reserva(localStorage.getItem("idReservas"))
+      } else {
+        alert("Entonces disfruta tu viaje");
+      }
+    
 }
 
 // ::: METODO DE ACTUALIZACION RESERVA

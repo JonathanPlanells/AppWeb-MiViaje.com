@@ -1486,7 +1486,7 @@ input[type=number] {
     color: white;
     font-weight: bold;
     background: #E48D36;
-    border-radius: 10px;
+    border-radius: 60px;
     border-color: transparent;
     width: 180px;
     padding: 15px 0;
@@ -1733,7 +1733,7 @@ input[type=number] {
     width: 80%;
     height: 170px;
     overflow: hidden;
-    background-color: #F9F7F7;
+    background-color: #fff;
     border-radius: 8px;
     margin: 10px 0 0 35px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
@@ -1746,7 +1746,7 @@ input[type=number] {
     width: 100%;
     height: 35px;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: #F9F7F7;
 }
 
 .caja_mi_reserva {
@@ -1859,7 +1859,7 @@ input[type=number] {
     display: flex;
     font-size: 11px;
     width: 45%;
-    margin: -45px 0 0 -10px;
+    margin: -20px 0 0 170px;
     opacity: 90%;
     background: #c80b0b;
 }
@@ -2325,7 +2325,7 @@ input[type=number] {
 
 .logoBlanco_modal5 {
     position: static;
-    margin: 40px 0 0 40px;
+    margin: 40px 0 0 20px;
 
 }
 

@@ -166,7 +166,7 @@ function funcionBuscar() {
             }else if(document.getElementById('numHab').value > document.getElementById('numAdult').value){
                 mostrarModalHabitaciones()  
             }else if(localStorage.getItem("HUEvsHAB") == 1 ){
-                    window.location.href = "destino-seleccionado.htmll", true;
+                    window.location.href = "destino-seleccionado.html", true;
             } 
     } else if (document.getElementById('ciudad').value == "SAN ANDRES") {
         document.location.href = "destino-seleccionado.html", true;

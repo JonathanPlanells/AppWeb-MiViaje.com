@@ -26,7 +26,6 @@ function devolver() {
             return txt
         }
         
-
         function token_reserva(token) {
             const complemento_reserva = document.getElementById("confirmacion_reserva")
             let t = token

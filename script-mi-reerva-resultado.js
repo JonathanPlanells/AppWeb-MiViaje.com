@@ -231,7 +231,7 @@ function mostrar() {
                             <div class = caja_mi_reserva3> 
                                 <label for = "telefonoPersona">TELÉFONO</label>
                                 <input type = "tel" id = "telefonoPersona" name = "telefonoPersona" class ="inputForm" required
-                                placeholder="(xx) xxx xxx xxxx" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                                placeholder="(xx) xxx xxx xxxx"  />
                                 </div>                                
                             <div class = caja_mi_reserva3> 
                                 <label for = "tipoDocumento">TIPO DE DOCUMENTO</label>
@@ -385,7 +385,7 @@ async function update(reserva) {
         body: JSON.stringify(reserva) // ENVIO DE INFORMACION FORMATO STRING CONVERTIDO A JSON
     })
     const text = await resp.text()
-    window.location.replace("mireserva.html") // SI ES EXITOSA SE REDIRIGE A LA PAGINA DE CONFIRMACIÓN RESERVA
+    window.location.replace("confirmacion-reserva.html") // SI ES EXITOSA SE REDIRIGE A LA PAGINA DE CONFIRMACIÓN RESERVA
 }
 function borrarMain(){
     let text;
@@ -473,7 +473,7 @@ function CerrarModal5() {
 // ::: FUNCION BOTON ACEPTAR - MODAL NO EXISTE RESERVA
 function aceptar() {
     clearStorage()
-    window.location.replace("index.html")
+    window.location.replace("mireserva.html")
 }
 
 CerrarModal2()

@@ -147,9 +147,21 @@ function medellin(){
 function funcionBuscar() {
     // Validando que las fechas del checkOut no sea antes del checkIN
     if (document.getElementById('ciudad').value == "BARRANQUILLA") {
-        document.location.href = "destino-seleccionado.html", true;
+        if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value) {
+            mostrarModalFechas()
+            }else if(document.getElementById('numHab').value > document.getElementById('numAdult').value){
+                mostrarModalHabitaciones()  
+            }else if(localStorage.getItem("HUEvsHAB") == 1 ){
+                    window.location.href = "destino-seleccionado.html", true;
+            } 
     } else if (document.getElementById('ciudad').value == "BARICHARA") {
-         document.location.href = "destino-seleccionado.html", true;
+        if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value) {
+            mostrarModalFechas()
+            }else if(document.getElementById('numHab').value > document.getElementById('numAdult').value){
+                mostrarModalHabitaciones()  
+            }else if(localStorage.getItem("HUEvsHAB") == 1 ){
+                    window.location.href = "destino-seleccionado.html", true;
+            } 
     } else if (document.getElementById('ciudad').value == "BOGOTA") {
         if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value) {
             mostrarModalFechas()
@@ -159,7 +171,13 @@ function funcionBuscar() {
                     window.location.href = "destino-seleccionado.html", true;
             } 
     } else if (document.getElementById('ciudad').value == "CALI") {
-        document.location.href = "destinos.html", true;
+        if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value) {
+            mostrarModalFechas()
+            }else if(document.getElementById('numHab').value > document.getElementById('numAdult').value){
+                mostrarModalHabitaciones()  
+            }else if(localStorage.getItem("HUEvsHAB") == 1 ){
+                    window.location.href = "destino-seleccionado.html", true;
+            } 
     } else if (document.getElementById('ciudad').value == "CARTAGENA") {
         if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value) {
             mostrarModalFechas()
@@ -169,11 +187,29 @@ function funcionBuscar() {
                     window.location.href = "destino-seleccionado.html", true;
             } 
     } else if (document.getElementById('ciudad').value == "SAN ANDRES") {
-        document.location.href = "destino-seleccionado.html", true;
+        if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value) {
+            mostrarModalFechas()
+            }else if(document.getElementById('numHab').value > document.getElementById('numAdult').value){
+                mostrarModalHabitaciones()  
+            }else if(localStorage.getItem("HUEvsHAB") == 1 ){
+                    window.location.href = "destino-seleccionado.html", true;
+            } 
     } else if (document.getElementById('ciudad').value == "SANTA MARTA") {
-        document.location.href = "destino-seleccionado.html", true;
+        if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value) {
+            mostrarModalFechas()
+            }else if(document.getElementById('numHab').value > document.getElementById('numAdult').value){
+                mostrarModalHabitaciones()  
+            }else if(localStorage.getItem("HUEvsHAB") == 1 ){
+                    window.location.href = "destino-seleccionado.html", true;
+            } 
     } else if (document.getElementById('ciudad').value == "LETICIA") {
-        document.location.href = "destino-seleccionado.html", true;
+        if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value) {
+            mostrarModalFechas()
+            }else if(document.getElementById('numHab').value > document.getElementById('numAdult').value){
+                mostrarModalHabitaciones()  
+            }else if(localStorage.getItem("HUEvsHAB") == 1 ){
+                    window.location.href = "destino-seleccionado.html", true;
+            } 
     } else {
         mostrarModalDestino() // Modal seleccionar Destino
     }

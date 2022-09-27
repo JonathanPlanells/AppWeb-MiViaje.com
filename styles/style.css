@@ -1637,7 +1637,12 @@ input[type=number] {
 }
 
 .olivde_codigo {
-    margin-bottom: 100%;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.olivde_codigo:hover{
+    color: #E48D36;
 }
 
 .formulario_mi_reserva {
@@ -2003,11 +2008,9 @@ input[type=number] {
     bottom: 0;
     left: 0;
     background: rgba(2, 63, 118, 0.7);
-    z-index: 99999;
     display: none;
     color: #023F76;
-
-
+    z-index: 100;
 }
 
 .modalDialog2 {
@@ -2330,6 +2333,222 @@ input[type=number] {
     margin: 40px 0 0 20px;
 
 }
+
+
+/*::::: MODAL CONFIRMACION RESERVA :::::::*/
+
+.modalDialog .modal6 {
+
+    width: 540px;
+    height: 300px;
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
+
+}
+
+.modalDialog .modal6 span {
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    margin: 2px auto;
+    text-align: center;
+
+}
+
+.modalDialog .modal6 img {
+    scale: 60%;
+    display: flex;
+    margin: -40px auto 0 80px;
+}
+
+.modalDialog .modal6 p {
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -30px 0 0 20px;
+    justify-content: center;
+    line-height: 18px;
+
+}
+
+.modalDialog .modal6 .btn_modal_aceptar,
+.modalDialog .modal6 .btn_modal_cancelar {
+    z-index: 1000;
+    cursor: pointer;
+    position: absolute;
+    margin: 40px 0 0 120px;
+    width: 150px;
+    height: 40px;
+    border-radius: 60px;
+    border: none;
+    background-color: #E48D36;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    opacity: 90%;
+
+}
+
+.modalDialog .modal6 .btn_modal_cancelar {
+    background-color: #c80b0b;
+    margin-left: 290px;
+}
+
+.modalDialog .modal6 .btn_modal_cancelar:hover,
+.modalDialog .modal6 .btn_modal_aceptar:hover {
+    transform: scale(1.01);
+    transition: 0.2s all;
+    opacity: 100%;
+}
+
+/*::::: MODAL RECUPERACION TOKEN :::::::*/
+
+.modal7 .close{
+    margin: 100px 0 0 660px;
+    color: #023F76;
+    transform: scaleX(110%);
+    font-weight: 800;
+}
+.modal7 .close:hover{
+    color: #E48D36;
+}
+.modalDialog2 .modal7 {
+    z-index: 3;
+    width: 700px;
+    height: 410px;
+    position: relative;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+}
+.form_recuperar_token{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 0 -320px;
+    z-index: 4;
+    width: 290px;
+    font-size: 12px;
+}
+.form_recuperar_token label{
+    margin: 15px 0 0 0;
+}
+.form_recuperar_token .inputForm{
+    padding: 10px 5px 10px 15px;
+    border-color: rgba(3, 1, 139, 0.15);
+    border-width: 1px;
+    background-color: #F9F7F7;
+    width: 100%;
+    margin: 10px 0 0 0;
+    border-radius: 10px;
+    
+}
+.form_recuperar_token select{
+    width: 106%;
+    padding: 10px 5px 10px 10px;
+    border-color: rgba(3, 1, 139, 0.15);
+    background-color: #F9F7F7;
+    margin: 10px 0 0 0;
+    border-radius: 10px;
+
+}
+.modal7 .txt_modal_eliminacion_reserva {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: -100px 0 0 0;
+
+}
+
+.modal7 p {
+    font-family: 'Poppins';
+    font-style: normal;
+}
+
+.modal7 .ups_recuperacion_token {
+    font-size: 25px;
+    color: #E48D36;
+    font-weight: 700;
+    margin: 20px 0 0 0;
+    
+}
+.modal7 .nombre_persona_cancelacion_reserva{
+    font-size: 15px;
+    color: #023F76;
+    text-align: center;
+    line-height: 5px;
+    margin: 15px 0 0 0;
+    font-weight: 700;
+}
+.modal7 .txt1_eliminada{
+    color: #E48D36;;
+    font-weight: 300;
+}
+.modal7 .txt3_eliminada{
+    margin-top: 20px;
+    width: 80%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 13px;
+    color: #236299;
+}
+.modalDialog2 .modal7 img {
+    scale: 35%;
+    display: block;
+    margin: -180px auto 0 -320px;
+}
+.token_encontrado{
+    margin: 60px 0 0 0px;
+    z-index: 100;
+    text-align: center;
+    scale: 130%;
+    
+}
+.modalDialog2 .modal7 .btn_modal_aceptar , 
+.modalDialog2 .modal7 .btn_modal_cancelar, 
+.modalDialog2 .modal7 .btn_modal_cancelar2{
+    cursor: pointer;
+    position: absolute;
+    margin: 114px  0 0 380px;
+    width: 255px;
+    height: 40px;
+    border-radius: 60Px;
+    border: none;
+    background-color: #E48D36;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    opacity: 100%;
+}
+
+.modalDialog2 .modal7 .btn_modal_cancelar2{
+    background-color: #c80b0b;
+    margin: 185px  0 0 380px;
+}
+.modalDialog2 .modal7 .btn_modal_cancelar{
+    background-color: #c80b0b;
+    margin: 420px  0 0 0px;
+}
+
+.modalDialog2 .modal7 .btn_modal_aceptar:hover {
+    transform: scale(1.01);
+    transition: 0.2s all;
+    opacity: 100%;
+}
+
+.logoBlanco_modal6 {
+    position: static;
+    margin: 40px 0 0 20px;
+
+}
+
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 //  FOOTER

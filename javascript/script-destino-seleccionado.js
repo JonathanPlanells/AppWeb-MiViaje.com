@@ -57,8 +57,8 @@ function hoteles_disponibles(hoteles) {
                         <div class="cajaText">
                             <p class="txtHRC">${h.nombreHotel}</p>
                             <div class ="beneficios_hotel">
-                                <div class="check"><img src="Image/Check.svg"></div>
-                                <div class="check2"><img src="Image/Check.svg"></div>
+                                <div class="check"><img src="../Image/Check.svg"></div>
+                                <div class="check2"><img src="../Image/Check.svg"></div>
                                 <div class="desc">
                                     <p class="text2">Beneficios de MiViaje.com</p>
                                     <p class="text3">Cancelacion Gratuita</p>
@@ -190,7 +190,7 @@ function sendInfo(hotel) {
     localStorage.setItem("namehotel", nombre_H)
     let img_H = hotel.imagen
     localStorage.setItem("imgHotelDS", img_H)
-    window.location.href = `form-reserva.html`
+    window.location.href = `../html/form-reserva.html`
     //`form-reserva.html?hotel=${JSON.stringify(hotel)}`
 }
 let ciudad = localStorage.getItem("ciudadSeleccion")
@@ -218,6 +218,7 @@ function verificarFechaIN() {
     let fechaHoy = new Date().toISOString().slice(0, 10)
   
     document.getElementById('infoOUT').min = ano + "-" + mes + "-" + + (dia+1);
+    document.getElementById('infoOUT').value = ano + "-" + mes + "-" + + (dia+1);
     document.getElementById('infoIN').min = ano + "-" + mes + "-" + dia;
     
 }
@@ -246,10 +247,10 @@ function filtracionAvanzada(){
             if(localStorage.getItem("decision") == false || localStorage.getItem("decision") == undefined){
                 mostrarModalHabitaciones()  
             } else{
-                window.location.href = "destino-seleccionado.html", true;
+                window.location.href = "../html/destino-seleccionado.html", true;
             }
         }else if(localStorage.getItem("HUEvsHAB") == 1 ){
-                window.location.href = "destino-seleccionado.html", true;
+                window.location.href = "../html/destino-seleccionado.html", true;
         } 
 }
 
@@ -325,7 +326,7 @@ function aceptar() {
     decision = true
     localStorage.setItem("decision", decision)
     CerrarModal3()
-    window.location.href = "destino-seleccionado.html", true;
+    window.location.href = "../html/destino-seleccionado.html", true;
     let e = 1;
     localStorage.setItem("HUEvsHAB",e)
 }
@@ -334,17 +335,17 @@ function cancelar() {
     localStorage.setItem("decision", decision)
     alert("Entonces cambie las habitaciones");
     CerrarModal3()
-    window.location.href = "destinos.html"
+    window.location.href = "../html/destinos.html"
 }
 
 if(localStorage.getItem("numeroAdultos") == undefined){
-    location.href = "index.html"
+    location.href = "../index.html"
 }
 
 function clearStorage() {
     if (localStorage.getItem("flag") == "true") {
         localStorage.clear();
-        window.location.href = "destinos.html"
+        window.location.href = "../html/destinos.html"
     }
 } 
 clearStorage();

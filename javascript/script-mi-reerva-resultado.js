@@ -121,11 +121,11 @@ function mostrar() {
                     <p style = "font-size: 14px; font-weight: 700;">${localStorage.getItem("fechaCheckOut")}</p>
                 </div>
                 <div style ="margin-top:20px;">
-                    <img src="Image/icoHuesped.svg " class = "img_huesped_hs">
+                    <img src="../Image/icoHuesped.svg " class = "img_huesped_hs">
                     <p> <span style ="font-size:14px; font-weight: 400;margin:0 0 0 30px;"> Huespedes:</span> 
                     <span style = "font-weight: 700; font-size:14px;">${localStorage.getItem("numeroAdultos")}</span></p>
         
-                    <img class = "img_huesped_hs" style = "scale:70%; margin:2px 0 0 -168px;" src="Image/icoHab.svg">
+                    <img class = "img_huesped_hs" style = "scale:70%; margin:2px 0 0 -168px;" src="../Image/icoHab.svg">
                     <p style =" margin-top:12px;"> <span style ="font-size:14px; font-weight: 400; margin-left:30px; ">Habitaciones:</span>  
                     <span style = "font-size:14px; font-weight: 700;">${localStorage.getItem("numeroHabitaciones")}</span></p>
                 </div>
@@ -157,7 +157,7 @@ function mostrar() {
                                     <label for = "checkin" >CHECK-IN</label>
                                         <div class="caja_seleccion_mireserva">
                                             <div class="txt_caja_seleccion_mireserva">
-                                            <img class = "img_huesped_mireserva" src ="Image/icoHuesped.svg">
+                                            <img class = "img_huesped_mireserva" src ="../Image/icoHuesped.svg">
                                                 <input style ="width:60%;" type="date" id="fechaInicial" class ="checkin_mireserva" min ="${verificarFechaIN()}" name ="checkin" value ="${(localStorage.getItem("fechaCheckIn"))}">
                                             </div>
                                         </div>
@@ -167,7 +167,7 @@ function mostrar() {
                                     <label for = "checkout" >CHECK-OUT</label>
                                         <div class="caja_seleccion_mireserva">
                                             <div class="txt_caja_seleccion_mireserva">
-                                            <img class = "img_huesped_mireserva" src ="Image/icoHuesped.svg">
+                                            <img class = "img_huesped_mireserva" src ="../Image/icoHuesped.svg">
                                                 <input style ="width:60%;" type="date" id = "fechaFinal" class ="checkin_mireserva" min ="${verificarFechaIN()}" name ="checkout" value ="${(localStorage.getItem("fechaCheckOut"))}">
                                             </div>
                                         </div>
@@ -177,7 +177,7 @@ function mostrar() {
                                     <label for = "checkin" >HUESPEDES</label>
                                         <div class="caja_seleccion_mireserva">
                                             <div class="txt_caja_seleccion_mireserva">   
-                                                <img class = "img_huesped_mireserva" src ="Image/icoHuesped.svg">
+                                                <img class = "img_huesped_mireserva" src ="../Image/icoHuesped.svg">
                                                 <select id ="cantidadPersonas" class="adul_selecionar_mireserva">
                                                     <option value="1">1 ADULTO</option>
                                                     <option value="2">2 ADULTOS</option>
@@ -191,7 +191,7 @@ function mostrar() {
                                     <label for = "checkin" >HABITACIONES</label>
                                         <div class="caja_seleccion_mireserva">
                                             <div class="txt_caja_seleccion_mireserva">
-                                            <img class = "img_huesped_mireserva" src ="Image/icoHuesped.svg">
+                                            <img class = "img_huesped_mireserva" src ="../Image/icoHuesped.svg">
                                                 <select id ="numhabiciones" class="hab_selecionar_mireserva">
                                                     <option value="1">1 HABITACION</option>
                                                     <option value="2">2 HABITACIONES</option>
@@ -390,15 +390,15 @@ async function update(reserva) {
         body: JSON.stringify(reserva) // ENVIO DE INFORMACION FORMATO STRING CONVERTIDO A JSON
     })
     const text = await resp.text()
-    window.location.replace("confirmacion-reserva.html") // SI ES EXITOSA SE REDIRIGE A LA PAGINA DE CONFIRMACIÓN RESERVA
+    window.location.replace("../html/confirmacion-reserva.html") // SI ES EXITOSA SE REDIRIGE A LA PAGINA DE CONFIRMACIÓN RESERVA
 }
 function borrarMain(){
-    let text;
-    if (confirm("Seguro quieres cancelar la reserva") == true) {
+    confirmacionEliminacionReserva()
+    /* if (confirm("Seguro quieres cancelar la reserva") == true) {
         borrar_reserva(localStorage.getItem("idReservas"))
       } else {
         alert("Entonces disfruta tu viaje");
-      }
+      } */
     
 }
 
@@ -422,9 +422,9 @@ function modal_elimicion(){
     const modal_elimnacion = document.getElementById("openModal5")
     let div = "<div>"
     div += 
-        `<img class="logoBlanco_modal5" src="Image/logoblanco copy.svg">
+        `<img class="logoBlanco_modal5" src="../Image/logoblanco copy.svg">
         <div class="modal5">
-            <a href="index.html"><img src="Image/cancelacion_reserva.svg"></a>
+            <img src="../Image/cancelacion_reserva.svg">
             <div class ="txt_modal_eliminacion_reserva">
                 <p class ="ups_cancelacion_reserva">!UPS!</p> 
                 <p class = "nombre_persona_cancelacion_reserva">${(localStorage.getItem("nombre").toUpperCase())} ${(localStorage.getItem("apellido").toUpperCase())}</p>
@@ -441,8 +441,6 @@ function modal_elimicion(){
     div += "</div>"
     modal_elimnacion.innerHTML += div
 }
-
-
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // FUNCIONES PARA MODALES 
@@ -475,10 +473,33 @@ function CerrarModal5() {
     document.getElementById('openModal5').style.display = 'none';
 }
 
+// MODAL SI NO ELIMNAR RESERVA
+function confirmacionEliminacionReserva() {
+    document.getElementById('openModal6').style.display = 'block';
+}
+
+function CerrarModal6() {
+    document.getElementById('openModal6').style.display = 'none';
+}
+
+
 // ::: FUNCION BOTON ACEPTAR - MODAL NO EXISTE RESERVA
 function aceptar() {
     clearStorage()
-    window.location.replace("mireserva.html")
+    window.location.replace("../html/mireserva.html")
+}
+
+
+// ::::::: DECISIONES MODAL HABITACIONES MAYOR A HUESPEDES
+let decision = ""
+function aceptar2() {
+    CerrarModal6()
+    borrar_reserva(localStorage.getItem("idReservas"))
+    
+}
+
+function cancelar() {
+    CerrarModal6()
 }
 
 CerrarModal2()

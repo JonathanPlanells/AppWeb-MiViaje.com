@@ -42,8 +42,8 @@ function devolver() {
                     <p class = "modifica_reserva">Modifica o cancela tu reserva en nuestra<br> pestaña <span style = "color: #023F76;"> MiReserva*.</span></p>
                     <p class = "recuerda_reserva"> *Recuerda que necesitas tu número de reserva <br>y el número de documento para realizar modificaciones.</p>
                     <div class ="btn_confirmacion_reserva"> 
-                        <button class = "btn_nuevo_destino" onclick = "window.location.href='destinos.html'">RESERVAR UN NUEVO DESTINO</button> 
-                        <button class = "btn_mi_reserva" onclick = "window.location.href='mireserva.html'">MIRESERVA</button>
+                        <button class = "btn_nuevo_destino" onclick = "window.location.href='../html/destinos.html'">RESERVAR UN NUEVO DESTINO</button> 
+                        <button class = "btn_mi_reserva" onclick = "window.location.href='../html/mireserva.html'">MIRESERVA</button>
                     </div>
                 </div>    
         `
@@ -70,11 +70,11 @@ function devolver() {
                             <p style = "font-size: 15px; font-weight: 700;">${localStorage.getItem("fechaCheckOut")}</p>
                         </div>
                         <div style ="margin-top:20px;">
-                            <img src="Image/icoHuesped.svg" class = "img_huesped_hs">
+                            <img src="../Image/icoHuesped.svg" class = "img_huesped_hs">
                             <p> <span style ="font-size:15px; font-weight: 400;margin:0 0 0 30px;"> Huespedes:</span> 
                             <span style = "font-weight: 700;">${localStorage.getItem("numeroAdultos")}</span></p>
 
-                            <img  src="Image/icoHab.svg" class = "img_huesped_hs" style = "scale:70%; margin:2px 0 0 -168px;">
+                            <img  src="../Image/icoHab.svg" class = "img_huesped_hs" style = "scale:70%; margin:2px 0 0 -168px;">
                             <p style = "margin-top:12px;"> <span style ="font-size:15px; font-weight: 400; margin-left:30px;">Habitaciones:</span>  
                             <span style = "font-size:16px; font-weight: 700;">${localStorage.getItem("numeroHabitaciones")}</span></p>
                         </div>

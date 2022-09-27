@@ -80,7 +80,7 @@ async function crearReserva(reserva) {
         body: JSON.stringify(reserva)
     })
     const text = await respues.text()
-    window.location.replace("confirmacion-reserva.html")
+    window.location.replace("../html/confirmacion-reserva.html")
 }
 
 
@@ -142,11 +142,11 @@ function set_value_hote(hotel) {
             <p style = "font-size: 15px; font-weight: 700;">${localStorage.getItem("fechaCheckOut")}</p>
         </div>
         <div style ="margin-top:20px;">
-            <img src="Image/icoHuesped.svg " class = "img_huesped_hs">
+            <img src="../Image/icoHuesped.svg " class = "img_huesped_hs">
             <p> <span style ="font-size:15px; font-weight: 400;margin:0 0 0 30px;"> Huespedes:</span> 
             <span style = "font-weight: 700;">${localStorage.getItem("numeroAdultos")}</span></p>
 
-            <img class = "img_huesped_hs" style = "scale:70%; margin:2px 0 0 -168px;" src="Image/icoHab.svg">
+            <img class = "img_huesped_hs" style = "scale:70%; margin:2px 0 0 -168px;" src="../Image/icoHab.svg">
             <p style =" margin-top:12px;"> <span style ="font-size:15px; font-weight: 400; margin-left:30px; ">Habitaciones:</span>  
             <span style = "font-size:16px; font-weight: 700;">${localStorage.getItem("numeroHabitaciones")}</span></p>
         </div>
@@ -183,7 +183,7 @@ localStorage.setItem("flag",flag)
 
 function devolver(){
     if(localStorage.getItem("fechaCheckOut") == undefined){
-        window.location.href = "destinos.html"
+        window.location.href = "../html/destinos.html"
     }
 }
 devolver()

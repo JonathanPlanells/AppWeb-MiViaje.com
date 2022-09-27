@@ -99,10 +99,10 @@ function filtracionAvanzada(){
             if(localStorage.getItem("decision") == false || localStorage.getItem("decision") == undefined){
                 mostrarModalHabitaciones()  
             } else{
-                window.location.href = "destino-seleccionado.html", true;
+                window.location.href = "../html/destino-seleccionado.html", true;
             }
         }else if(localStorage.getItem("HUEvsHAB") == 1 ){
-                window.location.href = "destino-seleccionado.html", true;
+                window.location.href = "../html/destino-seleccionado.html", true;
         } 
 }
 
@@ -168,7 +168,7 @@ function aceptar() {
     decision = true
     localStorage.setItem("decision", decision)
     CerrarModal3()
-    window.location.href = "destino-seleccionado.html", true;
+    window.location.href = "../html/destino-seleccionado.html", true;
     let e = 1;
     localStorage.setItem("HUEvsHAB",e)
     
@@ -179,7 +179,7 @@ function cancelar() {
     localStorage.setItem("decision", decision)
     alert("Entonces cambie las habitaciones");
     CerrarModal3()
-    window.location.href = "destinos.html"
+    window.location.href = "../html/destinos.html"
 }
 function vs(){
     if(document.getElementById("numero_adultos_destinos").value >= document.getElementById("numero_hab_destinos").value){

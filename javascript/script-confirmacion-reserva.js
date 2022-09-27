@@ -1,7 +1,7 @@
 
 function devolver() {
     if (localStorage.getItem("numDocum") == null) {
-        window.location.href = "index.html"
+        window.location.href = "../index.html"
     } else {
 
         let URLT = "http://localhost:8080/reservas/token/"

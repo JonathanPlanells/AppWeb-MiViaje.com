@@ -35,6 +35,13 @@ async function obtenerHoteles(url) {
     const hoteles = await respuesta.json()
     return hoteles
 }
+async function main() {
+    let url = "http://localhost:8080/hoteles/"
+    url += ciudad
+    //console.log(url)
+    const hoteles = await obtenerHoteles(url)
+    hoteles_disponibles(hoteles)
+}
 
 const fechaHoy_3 = new Date().toISOString().slice(0, 10)
 function hoteles_disponibles(hoteles) {
@@ -188,13 +195,7 @@ function sendInfo(hotel) {
 }
 let ciudad = localStorage.getItem("ciudadSeleccion")
 
-async function main() {
-    let url = "http://localhost:8080/hoteles/"
-    url += ciudad
-    //console.log(url)
-    const hoteles = await obtenerHoteles(url)
-    hoteles_disponibles(hoteles)
-}
+
 
 // Funcion para iniciar funciones que necesitemos al iniciar la pagina
 function ejecutarAlCargarPagina() {
@@ -215,8 +216,10 @@ function verificarFechaIN() {
     if (mes < 10)
         mes = '0' + mes //agrega cero si el menor de 10
     let fechaHoy = new Date().toISOString().slice(0, 10)
+  
+    document.getElementById('infoOUT').min = ano + "-" + mes + "-" + + (dia+1);
     document.getElementById('infoIN').min = ano + "-" + mes + "-" + dia;
-    document.getElementById('infoOUT').min = ano + "-" + mes + "-" + dia;
+    
 }
 
 // :::: GUARDAR INFORMACION LOCALSTORAGE - PASAR A OTRO HTML ::::

@@ -68,10 +68,10 @@ function verificarFechaIN() {
     if (mes < 10)
         mes = '0' + mes //agrega cero si el menor de 10
     let fechaHoy = ano + "-" + mes + "-" + dia;
-    document.getElementById('infoOUT').min = ano + "-" + mes + "-" + dia;
+    document.getElementById('infoOUT').min = ano + "-" + mes + "-" + + (dia+1);
     document.getElementById('infoIN').min = ano + "-" + mes + "-" + dia;
-    document.getElementById("infoOUT").value = new Date().toISOString().slice(0, 10)
     document.getElementById("infoIN").value = new Date().toISOString().slice(0, 10)
+    document.getElementById("infoOUT").value = ano + "-" + mes + "-" + (dia + 1)
    
 }
 

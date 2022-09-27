@@ -270,6 +270,7 @@ nav a:hover {
     background-size: cover;
     background-position: 0 -100px;
     align-content: center;
+    width: 100%;
 }
 
 .cardP1,
@@ -2469,7 +2470,7 @@ a {
 
 @media screen and (max-width: 1200px) {
     .txtBanner {
-        margin-top: -60px;
+        margin: 70px 0 0 -60px;
     }
 
     .cajaPrincipalDestinos {
@@ -2478,33 +2479,33 @@ a {
 
     .formulario_mi_reserva {
         width: 60%;
+        margin: 100px 0 0 0;
     }
 
     .txtBanner2 {
-        margin-top: -60px;
+        margin: 70px 0 0 -60px;
     }
 
     .cardP1,
     .cardP2,
     .cardP3 {
-        position: absolute;
-        top: 240px;
+        margin:230px 0 0 20px;
+        
+    }
+    .cardpos{
+        margin:80px 0 0 0px;
     }
 
     .formulario {
-        margin-top: -220px;
+        margin-top: -150px;
     }
 
     .bannerAventuras {
         margin: -450px 0 0 0;
     }
 
-    .nuevasAventuras .cardAventuras {
-        margin: -80px 0 0 -20px;
-    }
-
     .textAventuras {
-        margin: -90px 0 0 -20px;
+        margin: 150px 0 0 -20px;
     }
 
     .nuevasAventuras .grupoCard3 {
@@ -2514,51 +2515,135 @@ a {
     .App {
         height: 700px;
     }
-
-    .hoteleSeleccionado .cajaHotelSelec {
-        width: 90%;
+    .recoDia{
+        height: 400px;
     }
+    .recoDia .cajaText{
+        margin: 120px auto;
+    }
+    .reserva .hoteleSeleccionado{
+        width: 55%;
+        margin-left: -40px;
+    }
+    .reserva .formularioReserva{
+        width: 50%;
+        margin-left: -20px;
+    }
+    .cajaPrincipalDestinos{
+        width: 1000px;
+    }
+    .formularioReserva .boton,.formularioReserva
+    .boton2{
+        margin: 20px -20px 0 20px;
+        scale: 90%;
+    }
+}
+@media screen and (max-width: 1024px){
+    .recoDia .cajaText{
+        margin: 20px auto;
+    }
+    .reserva .hoteleSeleccionado{
+        width: 55%;
+        margin-left: -40px;
+    }
+   
+    .caja_principal_seleccion_fechas {
+        width: 100%;
+        margin: 10px 0 0 -35px;
+    }
+    .caja_mi_reserva3 {
+        width: 30%;
+    }
+    .p404 .img404 {
+        scale: 80%;
+        width: 40%;
+        margin: 70px 0 0 -120px;
+    }
+   
 }
 
 @media screen and (max-width: 940px) {
+    .imgHotelSelec{
+        height: 160px;
+    }
+    .reserva .hoteleSeleccionado{
+        width: 55%;
+        margin-left: -40px;
+    }
+    .hoteleSeleccionado .txt_hotel_seleccionado {
+        margin:80px 0 0 30px;
+    }
+    .reserva .formularioReserva{
+        width: 50%;
+        margin-left: -20px;
+    }
+    #box{
+        scale: 90%;
+        margin: -125px 0 0 -60px;
+    }
+    .formularioReserva .boton,
+    .boton2{
+        width: 150px;
+    }
+    .txtHRC{
+        scale: 90%;
+    }
+    .cajaText {
+       top: -50px;
+       left: -20px;
+    }
+    .informacion2{
+        margin: -80px 0 0 0;
+    }
+    .division_card{
+        margin: -40px 0 0 10px;
+    }
+    .beneficios_hotel{
+        margin-left: 20px;
+    }
+    .cajaPrincipalDestinos{
+        scale: 80%;
+        margin: -200px 0 0 -130px;
+        height: 1010px;  
+    }
     .txtBanner {
-        margin: -60px 0 0 40px;
+        margin: -15px 0 0 -65px;
     }
 
     .txtBanner2 {
-        margin: -60px 0 0 200px;
+        margin: -15px 0 0 -65px;
     }
 
-    .banner {
-        height: 720px;
+    .cardpos{
+        height: 400px;
     }
 
     .cardP1,
     .cardP2,
-    .cardP3 {
-        position: absolute;
-        top: 240px;
-        left: 100px;
+    .cardP3
+     {
+        scale: 80%;
+        margin: 130px 0 0 0;
     }
-
-    .cardP2 {
-        left: 300px;
-    }
-
-    .cardP3 {
-        left: 500px;
+    .ciculo_destinos{
+        scale: 80%;
+        margin: 300px 0 0 0;
     }
 
     .formulario {
-        scale: 95%;
-        position: relative;
-        top: 40px;
+        scale: 80%;
+        width: 115%;
+        margin: -150px 0 0 -60px;
+        
     }
 
     .cajaDia {
         width: 500px;
         height: 190px;
-
+        margin: -140px 0 0 0;
+    }
+    .recoDia .cajaText{
+        margin: 150px auto;
     }
 
     .cajaDia img {
@@ -2580,12 +2665,11 @@ a {
     }
 
     .cardAventuras {
-        top: 1100px;
-        left: 250px;
+        scale: 80%;
     }
 
     .textAventuras {
-        margin: 150px auto auto -112px;
+        margin: 150px auto auto -22px;
     }
 
     .textAventuras .txt1Aventuras {
@@ -2633,5 +2717,42 @@ a {
 
     footer .logoFooter {
         padding-top: 30px;
+    }
+}
+@media screen and (max-width: 768px){
+    .recoDia .cajaText{
+        margin: 120px auto;
+    }
+    .reserva .hoteleSeleccionado{
+        width: 55%;
+        margin-left: -40px;
+    }
+    .cajasTexto_mireserva .boton2{
+        width: 250px;
+    }
+    .mireserva_box_img{
+        margin: 100px 0 0 -100px;
+        scale: 80%;
+    }
+    .caja_principal_seleccion_fechas {
+        scale: 90%;
+        width: 120%;
+        margin: 10px 0 0 -40px;
+    }
+    .boton_actualizar{
+        width:60%;
+    }
+    .boton_cancelar {
+        width:47%;
+        margin: -55px 0 0 160px;
+    }
+    .p404 .txt404 {
+
+        scale: 80%;
+    }
+    .p404 .img404 {
+        scale: 70%;
+        width: 40%;
+        margin: 70px 80px 0 -80px;
     }
 }

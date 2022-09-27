@@ -30,10 +30,11 @@ function verificarFechaIN() {
     if (mes < 10)
         mes = '0' + mes //agrega cero si el menor de 10
     let fechaHoy = ano + "-" + mes + "-" + dia;
+    let fechamañana = ano + "-" + mes + "-" + (dia+1);
     document.getElementById('fechaIN').min = ano + "-" + mes + "-" + dia;
-    document.getElementById('fechaOut').min = ano + "-" + mes + "-" + dia;
+    document.getElementById('fechaOut').min = ano + "-" + mes + "-" + (dia+1);
     document.getElementById('fechaIN').value = fechaHoy;
-    document.getElementById('fechaOut').value = fechaHoy;
+    document.getElementById('fechaOut').value = ano + "-" + mes + "-" + (dia+1);
 }
 // Funcion para limpiar el localStorage
 function clearStorage() {
@@ -124,7 +125,7 @@ function creacion(){
     localStorage.setItem("numeroHabitaciones",n)
     let fechaHoy = new Date().toISOString().slice(0, 10)
     localStorage.setItem("fechaCheckIn",fechaHoy)
-    localStorage.setItem("fechaCheckOut",fechaHoy)
+    localStorage.setItem("fechaCheckOut",(fechaHoy +1))
     
 }
 function bogota(){
@@ -142,6 +143,7 @@ function medellin(){
     localStorage.setItem("ciudadSeleccion", ciudad)
     creacion()
 }
+
 function filtracionAvanzada(){
     if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value) {
         mostrarModalFechas()

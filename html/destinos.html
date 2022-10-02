@@ -3,12 +3,12 @@
 <html leng="es">
 
 <head>
-    <meta charset="UTF-16">
+    <meta charset="UTF-8">
     <title>MiViaje.com</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="only screen and (max-width: 1200px)" href="../styles/style.css">
-    <link rel="stylesheet" media="only screen and (max-width: 940px)" href="../styles/style.css">
+    <link rel="stylesheet" media="only screen and (max-width: 1200px)" href="/styles/style.css">
+    <link rel="stylesheet" media="only screen and (max-width: 940px)" href="/styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -17,13 +17,13 @@
 <body class="body_destinos">
     <!--::::: BARRA DE NAVEGACIÓN :::::  -->
     <header class="headeAzul">
-        <h1 class="logoblanco"><a title="logoFooter" href="../index.html">
-                <img id="logoBlanco" src="../Image/logoblanco copy.svg" alt="logoFooter"></h1></a>
+        <h1 class="logoblanco"><a title="logoFooter" href="/index.html">
+                <img id="logoBlanco" src="/Image/logoblanco copy.svg" alt="logoFooter"></h1></a>
         <nav>
-            <a id="limpiar" href="../index.html">Home</a>
-            <a href="../html/destinos.html" style="color:#E48D36">Destinos</a>
-            <a href="../html/mireserva.html">MiReserva</a>
-            <a href="../html/404.html">Contactenos</a>
+            <a id="limpiar" href="/index.html">Home</a>
+            <a href="/html/destinos.html" style="color:#E48D36">Destinos</a>
+            <a href="/html/mireserva.html">MiReserva</a>
+            <a href="/html/404.html">Contactenos</a>
         </nav>
     </header>
     <main>
@@ -33,7 +33,7 @@
                 <section class="cajaPrincipal">
                     <section class="ciudad">
                         <section class="imgCiudad">
-                            <img src="../Image/VectoricoCiudad.svg">
+                            <img src="/Image/VectoricoCiudad.svg">
                         </section>
                         <section class="datosCiudad">
                             <p>Ciudad</p>
@@ -52,7 +52,7 @@
 
                     </section>
                     <div class="checkIn">
-                        <section class="imgCalendarioIN"><img src="../Image/Vectorcalendario.svg"></section>
+                        <section class="imgCalendarioIN"><img src="/Image/Vectorcalendario.svg"></section>
                         <section class="datosCheckIN">
                             <p>Check In</p>
                             <input id="infoIN" class="cajaIn" type="date" max="2023-05-01" style="width: 100px;"
@@ -61,7 +61,7 @@
                         </section>
                     </div>
                     <div class="checkOut">
-                        <section class="imgCalendarioOut"><img src="../Image/Vectorcalendario.svg"></section>
+                        <section class="imgCalendarioOut"><img src="/Image/Vectorcalendario.svg"></section>
                         <section class="datosCheckOut">
                             <p>Check Out</p>
                             <input id="infoOUT" class="cajaOut" type="date" max="2023-05-01" style="width: 100px;"
@@ -69,7 +69,7 @@
                         </section>
                     </div>
                     <div class="huespedes">
-                        <section class="imgHuespedes"><img src="../Image/icoHuesped.svg ">
+                        <section class="imgHuespedes"><img src="/Image/icoHuesped.svg ">
                         </section>
                         <section class="datosHuespedes">
                             <p>Huespedes</p>
@@ -82,7 +82,7 @@
                         </section>
 
                         <section>
-                            <img class="img3H" src="../Image/icoHab.svg">
+                            <img class="img3H" src="/Image/icoHab.svg">
                             <select class="select3" style="width: 80px;" id="numero_hab_destinos">
                                 <option value="1">1 hab</option>
                                 <option value="2">2 hab</option>
@@ -93,7 +93,7 @@
                     </div>
                     <div class="buscar">
                         <div type="submit" id="btnBuscar" onclick="funcionBuscar()" class="imgbuscar"><img
-                                src="../Image/lupa.svg"></div>
+                                src="/Image/lupa.svg"></div>
                     </div>
                 </section>
             </form>
@@ -103,7 +103,7 @@
         <div id="openModal" class="modalDialog" onclick="javascript:CerrarModal();">
             <div class="modal1">
                 <a href="#close" title="close" class="close" onclick="javascript:CerrarModal();">X</a>
-                <img src="../Image/esperandoRespuesta.svg">
+                <img src="/Image/esperandoRespuesta.svg">
                 <p><span style="font-size: 16px; font-weight: 200;">¡POR FAVOR!<br></span>
                     <span>SELECCIONA UNDESTINO</span>
                 </p>
@@ -113,7 +113,7 @@
         <div id="openModal2" class="modalDialog" onclick="javascript:CerrarModal2();">
             <div class="modal2">
                 <a href="#close" title="close" class="close" onclick="javascript:CerrarModal2();">X</a>
-                <img src="../Image/verificacionFechas.svg">
+                <img src="/Image/verificacionFechas.svg">
                 <p><span style="font-size: 15px; font-weight: 200;">UPS! NO PUEDES SALIR SIN HABER ENTRADO...</span>
                     <span> REVISA TU FECHA DE CHECK OUT</span>
                 </p>
@@ -122,7 +122,7 @@
         <!-- MODAL HABITACIONES MAS QUE HUESPEDES -->
         <div id="openModal3" class="modalDialog">
             <div class="modal3">
-                <img src="../Image/numero_habitaciones.svg">
+                <img src="/Image/numero_habitaciones.svg">
                 <input type="button" id="btn_modal_aceptar" class="btn_modal_aceptar" value="ACEPTAR"
                     onclick="javascript:aceptar()">
                 <input type="button" id="btn_modal_cancelar" class="btn_modal_cancelar" value="CANCELAR"
@@ -141,9 +141,9 @@
                     <p class="tituloDestinos"> SELECCIONA UNO DE NUESTROS DESTINOS</p>
 
                     <section class="destino1" id="bogota" value="bogota">
-                        <section class="cajaDestino"><a href="../html/destino-seleccionado.html"
+                        <section class="cajaDestino"><a href="/html/destino-seleccionado.html"
                                 onclick="seleccionardestinoB()">
-                                <img class="imgDestino1" src="../Image/bogota.jpg">
+                                <img class="imgDestino1" src="/Image/bogota.jpg">
 
                         </section></a>
                         <section>
@@ -154,9 +154,9 @@
                     </section>
 
                     <section class="destino2" id="cartagena">
-                        <section class="cajaDestino"><a href="../html/destino-seleccionado.html"
+                        <section class="cajaDestino"><a href="/html/destino-seleccionado.html"
                                 onclick="seleccionardestinoCR()">
-                                <img class="imgDestino2" src="../Image/Cartagena.png">
+                                <img class="imgDestino2" src="/Image/Cartagena.png">
                         </section></a>
                         <section>
                             <h4><b>Cartagena</b></h4>
@@ -165,9 +165,9 @@
                         </section>
                     </section>
                     <section class="destino3" id="medellin">
-                        <section class="cajaDestino"><a href="../html/destino-seleccionado.html"
+                        <section class="cajaDestino"><a href="/html/destino-seleccionado.html"
                                 onclick="seleccionardestinoM()">
-                                <img class="imgDestino3" src="../Image/medellin.jpg">
+                                <img class="imgDestino3" src="/Image/medellin.jpg">
                         </section></a>
                         <section>
                             <h4><b>Medellín</b></h4>
@@ -178,9 +178,9 @@
 
 
                     <section class="destino4" id="san andres">
-                        <section class="cajaDestino"><a href="../html/destino-seleccionado.html"
+                        <section class="cajaDestino"><a href="/html/destino-seleccionado.html"
                                 onclick="seleccionardestinoSA()">
-                                <img class="imgDestino4" src="../Image/SanAndres.jpg">
+                                <img class="imgDestino4" src="/Image/SanAndres.jpg">
 
                         </section></a>
                         <section>
@@ -191,9 +191,9 @@
                     </section>
 
                     <section class="destino5" id="cali">
-                        <section class="cajaDestino"><a href="../html/destino-seleccionado.html"
+                        <section class="cajaDestino"><a href="/html/destino-seleccionado.html"
                                 onclick="seleccionardestinoC()">
-                                <img class="imgDestino5" src="../Image/Cali.png">
+                                <img class="imgDestino5" src="/Image/Cali.png">
                         </section></a>
                         <section>
                             <h4><b>Calí</b></h4>
@@ -202,9 +202,9 @@
                         </section>
                     </section>
                     <section class="destino6" id="santa marta">
-                        <section class="cajaDestino"><a href="../html/destino-seleccionado.html"
+                        <section class="cajaDestino"><a href="/html/destino-seleccionado.html"
                                 onclick="seleccionardestinoSM()">
-                                <img class="imgDestino6" src="../Image/Santa Marta.jpeg">
+                                <img class="imgDestino6" src="/Image/Santa Marta.jpeg">
                         </section></a>
                         <section>
                             <h4><b>Santa Marta</b></h4>
@@ -214,9 +214,9 @@
                     </section>
 
                     <section class="destino7" id="barichara">
-                        <section class="cajaDestino"><a href="../html/destino-seleccionado.html"
+                        <section class="cajaDestino"><a href="/html/destino-seleccionado.html"
                                 onclick="seleccionardestinoBC()">
-                                <img class="imgDestino7" src="../Image/Barichara.jpg">
+                                <img class="imgDestino7" src="/Image/Barichara.jpg">
                         </section></a>
                         <section>
                             <h4><b>Barichara</b></h4>
@@ -225,9 +225,9 @@
                         </section>
                     </section>
                     <section class="destino8" id="leticia">
-                        <section class="cajaDestino"><a href="../html/destino-seleccionado.html"
+                        <section class="cajaDestino"><a href="/html/destino-seleccionado.html"
                                 onclick="seleccionardestinoL()">
-                                <img class="imgDestino8" src="../Image/Leticia.jpg">
+                                <img class="imgDestino8" src="/Image/Leticia.jpg">
                         </section></a>
                         <section>
                             <h4><b>Leticia</b></h4>
@@ -257,16 +257,16 @@
                             <p><span class="txt1Aventuras">EXPLORA NUEVAS</span><br><span
                                     class="txt2Aventuras">AVENTURAS</span></p>
                             <!-- BOTON - PRUEBA ALGO NUEVO -->
-                            <a href="../html/destinos.html">
+                            <a href="/html/destinos.html">
                                 <div class="btnAventuras">
                                     <p class=txtbtn>PRUEBA ALGO NUEVO</p>
                                 </div>
                             </a>
                         </section>
                         <section class="grupoCard1">
-                            <a href="../html/destinos.html">
+                            <a href="/html/destinos.html">
                                 <div class="cardP1NA">
-                                    <div class="card1NA"> <img class="destinop1" src="../Image/Cabañas.jpg"></div>
+                                    <div class="card1NA"> <img class="destinop1" src="/Image/Cabañas.jpg"></div>
                                 </div>
                                 <div class="btnAventuras2">
                                     <p class=txtbtn>CABAÑAS / SAN ANDRES
@@ -278,7 +278,7 @@
                         </section>
                         <!-- CARD 2 - EXPLORA NUEVAS AVENTURAS -->
                         <section class="grupoCard2">
-                            <a href="../html/destinos.html">
+                            <a href="/html/destinos.html">
                                 <div class="cardP2NA">
                                     <div class="card2NA"><img class="destinop2"
                                             src="https://imagenesnoticias.canalrcn.com/ImgNoticias/inline-images/bajoelcielo_glamping.jpg">
@@ -294,9 +294,9 @@
                         </section>
                         <!-- CARD 3 - EXPLORA NUEVAS AVENTURAS -->
                         <section class="grupoCard3">
-                            <a href="../html/destinos.html">
+                            <a href="/html/destinos.html">
                                 <div class="cardP3NA">
-                                    <div class="card3NA"><img class="destinop3" src="../Image/bungalows.jpg"></div>
+                                    <div class="card3NA"><img class="destinop3" src="/Image/bungalows.jpg"></div>
                                 </div>
                                 <div class="btnAventuras4">
                                     <p class=txtbtn>BUGALOWS / CARTAGENA
@@ -316,19 +316,19 @@
         <div class="conocenos">
             <p>Conócenos</p>
             <ul class="listaConocenos">
-                <a href="../html/404.html">
+                <a href="/html/404.html">
                     <li>¿Qué es MiViaje.com?</li>
                 </a>
-                <a href="../html/404.html">
+                <a href="/html/404.html">
                     <li>Privacidad</li>
                 </a>
-                <a href="../html/404.html">
+                <a href="/html/404.html">
                     <li>Términos</li>
                 </a>
-                <a href="../html/404.html">
+                <a href="/html/404.html">
                     <li> Mapa del sitio</li>
                 </a>
-                <a href="../html/404.html">
+                <a href="/html/404.html">
                     <li> Datos de la empresa</li>
                 </a>
             </ul>
@@ -338,28 +338,28 @@
             <p>¿Dudas?<br>
                 Encuéntranos</p>
             <ul class="listaDudas">
-                <a href="../html/404.html">
+                <a href="/html/404.html">
                     <li>Centro de ayuda</li>
                 </a>
-                <a href="../html/404.html">
+                <a href="/html/404.html">
                     <li>Reversión de Pagos</li>
                 </a>
                 <li>(xxx) xxx xxxx xx</li>
                 <li>info@miviaje.com</li>
             </ul>
         </div>
-        <h1 class=logoFooter><a title="logoFooter" href="../Index.html">
-                <img id="logoFooter" src="../Image/LogoBlanco.svg" alt="logoFooter"></a></h1>
+        <h1 class=logoFooter><a title="logoFooter" href="/Index.html">
+                <img id="logoFooter" src="/Image/LogoBlanco.svg" alt="logoFooter"></a></h1>
         <div class="redesSociales">
-            <a href="../html/404.html"><img src="../Image/Instagram.png" class="instagram"></a>
-            <a href="../html/404.html"><img src="../Image/Facebook.png" class="facebook"></a>
-            <a href="../html/404.html"><img src="../Image/Telegram.png" class="telegram"></a>
-            <a href="../html/404.html"><img src="../Image/Twitter.png" class="twitter"></a>
+            <a href="/html/404.html"><img src="/Image/Instagram.png" class="instagram"></a>
+            <a href="/html/404.html"><img src="/Image/Facebook.png" class="facebook"></a>
+            <a href="/html/404.html"><img src="/Image/Telegram.png" class="telegram"></a>
+            <a href="/html/404.html"><img src="/Image/Twitter.png" class="twitter"></a>
         </div>
         <p class="txtFinal">Copyright - Miviaje.com - 2022</p>
     </footer>
 </body>
  <!--::::: SCRIPT :::::  -->
-<script src="../javascript/script-destinos.js"></script>
+<script src="/javascript/script-destinos.js"></script>
 
 </html>

@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>MiViaje.com</title>
-    <link rel="shortcut icon" href="../Image/favicon.png">
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="shortcut icon" href="Image/favicon.png">
+    <link rel="stylesheet" href="styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="only screen and (max-width: 1200px)" href="styles/style.css">
     <link rel="stylesheet" media="only screen and (max-width: 940px)" href="styles/style.css">
@@ -19,12 +19,12 @@
     <header>
         <div>
             <h1 class="logo"><a title="logoInicio" href="#">
-                    <img id="logo" src="../Image/logoNaranja.svg" alt="logoInicio"></h1></a>
+                    <img id="logo" src="Image/logoNaranja.svg" alt="logoInicio"></h1></a>
             <nav>
-                <a href="../index.html" style="color:#E48D36">Home</a>
-                <a href="../html/destinos.html">Destinos</a>
-                <a href="../html/mireserva.html">MiReserva</a>
-                <a href="../html/404.html">Contactenos</a>
+                <a href="index.html" style="color:#E48D36">Home</a>
+                <a href="html/destinos.html">Destinos</a>
+                <a href="html/mireserva.html">MiReserva</a>
+                <a href="html/404.html">Contactenos</a>
                 </ul>
             </nav>
         </div>
@@ -32,33 +32,33 @@
     <main>
     <!-- ::::: TEXTO BANNER ::::: -->
         <p class="txtBanner">VIAJA, VIVE, EXISTE</p>
-        <p class="txtBanner2"><a href="../html/destinos.html">Destinos Populares</p></a>
+        <p class="txtBanner2"><a href="/html/destinos.html">Destinos Populares</p></a>
     <!-- ::::: CARDS / BANNER ::::: -->
         <section >
             <div class="cardpos">
-                <div class="cardP1" onclick="bogota()"><a href="../html/destino-seleccionado.html">
-                        <div class="card1"><img class="destinop1" src="../Image/bogota.jpg"></div>
+                <div class="cardP1" onclick="bogota()"><a href="/html/destino-seleccionado.html">
+                        <div class="card1"><img class="destinop1" src="/Image/bogota.jpg"></div>
                         <div class="txtCard1">
                             <h4><b>Viaja a Bogotá</b></h4>
                             <p>Desde $150.000 la noche</p>
                         </div></a>
                 </div>
-                <div class="cardP2" onclick="medellin()"><a href="../html/destino-seleccionado.html">
-                        <div class="card2"><img class="destinop2" src="../Image/medellin.jpg"></div>
+                <div class="cardP2" onclick="medellin()"><a href="/html/destino-seleccionado.html">
+                        <div class="card2"><img class="destinop2" src="/Image/medellin.jpg"></div>
                         <div class="txtCard1">
                             <h4><b>Viaja a Medellin</b></h4>
                             <p>Desde $140.000 la noche</p>
                         </div></a>
                 </div>
-                <div class="cardP3" onclick="cartagena()"><a href="../html/destino-seleccionado.html">
-                        <div class="card3"><img class="destinop3" src="../Image/Cartagena.png"></div>
+                <div class="cardP3" onclick="cartagena()"><a href="/html/destino-seleccionado.html">
+                        <div class="card3"><img class="destinop3" src="/Image/Cartagena.png"></div>
                         <div class="txtCard1">
                             <h4><b>Viaja a Cartagena</b></h4>
                             <p>Desde $280.000 la noche</p>
                         </div></a>
                 </div>
-                <a href="../html/destinos.html"><div class = "ciculo_destinos">
-                    <img src ="../Image/felcha.svg">
+                <a href="/html/destinos.html"><div class = "ciculo_destinos">
+                    <img src ="/Image/felcha.svg">
                 </div></a>
             </div>    
             
@@ -69,7 +69,7 @@
         <div id="openModal" class="modalDialog" onclick="javascript:CerrarModal();">
             <div class="modal1">
                 <a href="#close" title="close" class="close" onclick="javascript:CerrarModal();">X</a>
-                <img src="../Image/esperandoRespuesta.svg">
+                <img src="/Image/esperandoRespuesta.svg">
                 <p><span style="font-size: 16px; font-weight: 200;">¡POR FAVOR!<br></span>
                     <span>SELECCIONA UNDESTINO</span></p>
             </div>
@@ -78,7 +78,7 @@
         <div id="openModal2" class="modalDialog" onclick="javascript:CerrarModal2();">
             <div class="modal2">
                 <a href="#close" title="close" class="close" onclick="javascript:CerrarModal2();">X</a>
-                <img src="../Image/verificacionFechas.svg">
+                <img src="/Image/verificacionFechas.svg">
                 <p><span style="font-size: 15px; font-weight: 200;">UPS! NO PUEDES SALIR SIN HABER ENTRADO...</span>
                     <span> REVISA TU FECHA DE CHECK OUT</span></p>
             </div>
@@ -86,7 +86,7 @@
         <!-- MODAL HABITACIONES MAS QUE HUESPEDES -->  
         <div id="openModal3" class="modalDialog" >
             <div class="modal3">
-                <img src="../Image/numero_habitaciones.svg">
+                <img src="/Image/numero_habitaciones.svg">
                 <input type="button" id = "btn_modal_aceptar" class="btn_modal_aceptar" value = "ACEPTAR" onclick="javascript:aceptar()">
                 <input type="button" id = "btn_modal_cancelar" class="btn_modal_cancelar" value = "CANCELAR" onclick="javascript:cancelar()">
                 <p><span style="font-size: 15px; font-weight: 200;">EL NÚMERO DE HABITACIONES ES MAYOR QUE LOS HUÉSPEDES...</span>
@@ -99,7 +99,7 @@
             <section class="cajaPrincipal">
                 <!-- SELEC DESTINO  -->
                 <div class="ciudad">
-                    <div class="imgCiudad"><img src="../Image/VectoricoCiudad.svg"></div>
+                    <div class="imgCiudad"><img src="/Image/VectoricoCiudad.svg"></div>
                     <div class="datosCiudad">
                         <p>Ciudad</p>
                         <select id="ciudad" name="ciudad" class="select1" style="width: 147px;">
@@ -117,7 +117,7 @@
                 </div>
                 <!-- CHECK IN  -->
                 <section class="checkIn">
-                    <div class="imgCalendarioIN"><img src="../Image/Vectorcalendario.svg"></div>
+                    <div class="imgCalendarioIN"><img src="/Image/Vectorcalendario.svg"></div>
                     <div class="datosCheckIN">
                         <p>Check In</p>
                         <input id="fechaIN" class="cajaIn" type="date" max="2023-05-01" style="width: 100px;" min="" value=""
@@ -126,7 +126,7 @@
                 </section>
                 <!-- CHECK OUT  -->
                 <section class="checkOut">
-                    <div class="imgCalendarioOut"><img src="../Image/Vectorcalendario.svg"></div>
+                    <div class="imgCalendarioOut"><img src="/Image/Vectorcalendario.svg"></div>
                     <div class="datosCheckOut">
                         <p>Check Out</p>
                         <input id="fechaOut" class="cajaOut" type="date" max="2023-05-01" style="width: 100px;" min="" value=""
@@ -135,7 +135,7 @@
                 </section>
                 <!-- HUESPEDES -->
                 <section class="huespedes">
-                    <div class="imgHuespedes"><img src="../Image/icoHuesped.svg "></div>
+                    <div class="imgHuespedes"><img src="/Image/icoHuesped.svg "></div>
                     <div class="datosHuespedes">
                         <p>Huespedes</p>
                         <select id ="numAdult" class="select2">
@@ -147,7 +147,7 @@
                     </div>
                     <!-- HABITACIONES -->
                     <div>
-                        <img class="img3H" src="../Image/icoHab.svg">
+                        <img class="img3H" src="/Image/icoHab.svg">
                         <select id ="numHab" class="select3" style="width: 80px;">
                             <option value="1" selected>1 hab</option>
                             <option value="2">2 hab</option>
@@ -158,7 +158,7 @@
                 </section>
                 <!-- BOTON BUSCAR -->
                 <div class="buscar" type="submit" id="btnBuscar" onclick="funcionBuscar()">
-                    <div class="imgbuscar"><img src="../Image/lupa.svg"></div>
+                    <div class="imgbuscar"><img src="/Image/lupa.svg"></div>
                 </div>
             </section>
         </form>
@@ -166,20 +166,20 @@
     <!-- ::::: RECOMENDADO DEL DIA ::::: -->
         <section class="recoDia">
             <!-- IMAGEN RECOMENDADO DEL DIA -->
-            <div class="cajaDia"><img src="../Image/Barichara.jpg"></div>
+            <div class="cajaDia"><img src="/Image/Barichara.jpg"></div>
             <!-- INFORMACION RECOMENDADO DEL DIA -->
             <section class="cajaText">
                 <p class="txtRD">RECOMENDADO DEL DIA</p>
                 <p class="txtRD2" style="color: #E48D36">BARICHARA</p>
                 <div class="estrellas">
-                    <img src="../Image/Estrella.svg">
-                    <img src="../Image/Estrella.svg">
-                    <img src="../Image/Estrella.svg">
-                    <img src="../Image/Estrella.svg">
-                    <img src="../Image/Estrella.svg">
+                    <img src="/Image/Estrella.svg">
+                    <img src="/Image/Estrella.svg">
+                    <img src="/Image/Estrella.svg">
+                    <img src="/Image/Estrella.svg">
+                    <img src="/Image/Estrella.svg">
                 </div>
-                <div class="check_index"><img src="../Image/Check.svg"></div>
-                <div class="check2_index"><img src="../Image/Check.svg"></div>
+                <div class="check_index"><img src="/Image/Check.svg"></div>
+                <div class="check2_index"><img src="/Image/Check.svg"></div>
                 <!-- TEXTO RECOMENDADO DEL DIA -->
                 <section class="desc_index">
                     <p class="text1">2 DIAS (1 NOCHE)</p>
@@ -195,7 +195,7 @@
                         <span style="font-size: 0.938rem;" style="font-family: poppinsRegular;">c/u</span>
                     </p>
                     <!-- BOTON RECOMENDADO DEL DIA -->
-                    <a href="../html/form-reserva.html" onclick="crearBarichara()"><div class="btnRecomendadoDia"><p class=txtbtn>RESERVA AHORA!</p></div></a>
+                    <a href="/html/form-reserva.html" onclick="crearBarichara()"><div class="btnRecomendadoDia"><p class=txtbtn>RESERVA AHORA!</p></div></a>
                 </section>
             </section>
         </section>
@@ -210,14 +210,14 @@
                     <section class="textAventuras">
                         <p><span class="txt1Aventuras">EXPLORA NUEVAS</span><br><span class="txt2Aventuras">AVENTURAS</span></p>
                         <!-- BOTON - PRUEBA ALGO NUEVO -->
-                        <a href="../html/destinos.html">
+                        <a href="/html/destinos.html">
                             <div class="btnAventuras"><p class=txtbtn>PRUEBA ALGO NUEVO</p></div>
                         </a>
                     </section>
                     <section class="grupoCard1">
-                        <a href="../html/destinos.html">
+                        <a href="/html/destinos.html">
                             <div class="cardP1NA"> 
-                                <div class="card1NA"> <img class="destinop1" src="../Image/Cabañas.jpg"></div>
+                                <div class="card1NA"> <img class="destinop1" src="/Image/Cabañas.jpg"></div>
                             </div>
                             <div class="btnAventuras2">
                                 <p class=txtbtn>CABAÑAS / SAN ANDRES 
@@ -227,7 +227,7 @@
                     </section>
                     <!-- CARD 2 - EXPLORA NUEVAS AVENTURAS -->
                     <section class="grupoCard2">
-                        <a href="../html/destinos.html">
+                        <a href="/html/destinos.html">
                             <div class="cardP2NA">
                                     <div class="card2NA"><img class="destinop2" src="https://imagenesnoticias.canalrcn.com/ImgNoticias/inline-images/bajoelcielo_glamping.jpg"></div>
                             </div>
@@ -239,9 +239,9 @@
                     </section>
                     <!-- CARD 3 - EXPLORA NUEVAS AVENTURAS -->
                     <section class="grupoCard3">
-                        <a href="../html/destinos.html">
+                        <a href="/html/destinos.html">
                             <div class="cardP3NA">
-                                <div class="card3NA"><img class="destinop3" src="../Image/bungalows.jpg"></div>
+                                <div class="card3NA"><img class="destinop3" src="/Image/bungalows.jpg"></div>
                             </div>
                             <div class="btnAventuras4">
                                 <p class=txtbtn>BUGALOWS / CARTAGENA
@@ -260,7 +260,7 @@
             <!-- INFORMACION Y MOCKUP -->
             <section class="cajaApp">
                 <!-- INFORMACION -->
-                <img class="btnStore" src="../Image/btnStore.png">
+                <img class="btnStore" src="/Image/btnStore.png">
                 <div class="cajaTxtApp">
                     <p class="textApp"><span class="txtApp1">PRÓXIMAMENTE<br> NUESTRA <span class="txtApp1-1">APP</span></span></p><br>
                     <p class="textApp2"><span class="txtApp2">SI ERES UNO DE LOS PRIMEROS,</span><br>
@@ -270,7 +270,7 @@
                     </p>
                 </div>
                 <!-- MOCKUP -->
-                <img class="mockup" src="../Image/Appmockup.png">
+                <img class="mockup" src="/Image/Appmockup.png">
             </section>
         </article>
     </main>
@@ -280,32 +280,32 @@
         <div class="conocenos">
             <p>Conócenos</p>
             <ul class="listaConocenos">
-                <a href="../html/404.html"><li>¿Qué es MiViaje.com?</li></a>
-                <a href="../html/404.html"><li>Privacidad</li></a>
-                <a href="../html/404.html"><li>Términos</li></a>
-                <a href="../html/404.html"><li> Mapa del sitio</li></a>
-                <a href="../html/404.html"><li> Datos de la empresa</li></a>
+                <a href="/html/404.html"><li>¿Qué es MiViaje.com?</li></a>
+                <a href="/html/404.html"><li>Privacidad</li></a>
+                <a href="/html/404.html"><li>Términos</li></a>
+                <a href="/html/404.html"><li> Mapa del sitio</li></a>
+                <a href="/html/404.html"><li> Datos de la empresa</li></a>
             </ul>
         </div>
         <div class="dudas">
             <p>¿Dudas?<br>Encuéntranos</p>
             <ul class="listaDudas">
-                <a href="../html/404.html"><li>Centro de ayuda</li></a>
-                <a href="../html/404.html"><li>Reversión de Pagos</li></a>
+                <a href="/html/404.html"><li>Centro de ayuda</li></a>
+                <a href="/html/404.html"><li>Reversión de Pagos</li></a>
                 <li>(xxx) xxx xxxx xx</li>
                 <li>info@miviaje.com</li>
             </ul>
         </div>
-        <h1 class=logoFooter><a title="logoFooter" href="../Index.html">
-            <img id="logoFooter" src="../Image/LogoBlanco.svg" alt="logoFooter"></a></h1>
+        <h1 class=logoFooter><a title="logoFooter" href="/Index.html">
+            <img id="logoFooter" src="/Image/LogoBlanco.svg" alt="logoFooter"></a></h1>
         <div class="redesSociales">
-            <a href="../html/404.html"><img src="../Image/Instagram.png" class="instagram"></a>
-            <a href="../html/404.html"><img src="../Image/Facebook.png" class="facebook"></a>
-            <a href="../html/404.html"><img src="../Image/Telegram.png" class="telegram"></a>
-            <a href="../html/404.html"><img src="../Image/Twitter.png" class="twitter"></a>
+            <a href="/html/404.html"><img src="/Image/Instagram.png" class="instagram"></a>
+            <a href="/html/404.html"><img src="/Image/Facebook.png" class="facebook"></a>
+            <a href="/html/404.html"><img src="/Image/Telegram.png" class="telegram"></a>
+            <a href="/html/404.html"><img src="/Image/Twitter.png" class="twitter"></a>
         </div>
         <p class="txtFinal">Copyright - Miviaje.com - 2022</p>
     </footer>
-    <script src="../javascript/script-index.js"></script>
+    <script src="/javascript/script-index.js"></script>
 </body>
 </html>

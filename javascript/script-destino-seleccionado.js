@@ -1,4 +1,8 @@
 // document.getElementById('infoIN').value = localStorage.getItem("fechaCheckIn");
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// CONVERTIR INFORMACIÓN SELECCIONADA PARA MOSTRAR EN EL DOM
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 let adulnum_seleccionado = ""
     switch (localStorage.getItem("numeroAdultos")) {
         case '1':
@@ -30,11 +34,17 @@ let habnum_seleccionado = ""
             break; 
            }
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++         
+// : OBTENIENDO INFORMACIÓN DE HOTELES A ATRAVES DE API REST
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+let ciudad = localStorage.getItem("ciudadSeleccion")
+
 async function obtenerHoteles(url) {
     const respuesta = await fetch(url)
     const hoteles = await respuesta.json()
     return hoteles
 }
+// :::: OBTENIENDO HOTELES POR CIUDAD
 async function main() {
     let url = "http://localhost:8080/hoteles/"
     url += ciudad
@@ -43,9 +53,12 @@ async function main() {
     hoteles_disponibles(hoteles)
 }
 
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// :::::: MOSTRAR EN EL DOM CARD HOTEL DE ACUERDO AL CONSUMO DE API
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 const fechaHoy_3 = new Date().toISOString().slice(0, 10)
 function hoteles_disponibles(hoteles) {
-    
     const cardHotelDisponible = document.getElementById('hoteldisponible')
     let section = "<div>"
     for (let i = 0; i < hoteles.length; i++) {
@@ -120,8 +133,10 @@ function hoteles_disponibles(hoteles) {
     rellarFormulario()
 
 }
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // ::::::::  ITERACIONES PARA CONSUMO DE API :::::::
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 function rellarFormulario() {
 
     // CONDICIONAL PARA SELEC -> DESTINO, SI SE ENTRA DIRECTAMENTE ESCOGER UN DESTINO SIN UTILIZAR FORMULARIO
@@ -180,6 +195,9 @@ function rellarFormulario() {
     }
 }
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ::: ENVIO DE INFORMACIÓN PARA EL FORMULARIO DE RESERVA ::::
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function sendInfo(hotel) {
     //window.location.href= `form-reserva.html?idhotel=${hotel.idHoteles}&img=${hotel.imagen}&p=${hotel.costoHabitacion}`
     let id_H = hotel.idHoteles
@@ -193,19 +211,20 @@ function sendInfo(hotel) {
     window.location.href = `../html/form-reserva.html`
     //`form-reserva.html?hotel=${JSON.stringify(hotel)}`
 }
-let ciudad = localStorage.getItem("ciudadSeleccion")
 
 
-
-// Funcion para iniciar funciones que necesitemos al iniciar la pagina
+// FUNCIONES PRIMARIAS
 function ejecutarAlCargarPagina() {
     verificarFechaIN()
 }
 
+// LLAMADO DE FUNCIONES PRIMARIAS AL CARGAR LA PAGINA
 window.onload = ejecutarAlCargarPagina;
 main()
 
-// Funcion para establcer la fecha del Check In y no permitir escoger una fecha anterior
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// :::: ESTABLECER LA FECHA DEL CHECK IN Y NO PERMITIR ESCOGER UNA FECHA ANTERIOR
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function verificarFechaIN() {
     let fecha = new Date() //Fecha actual
     let mes = fecha.getMonth() + 1 //obteniendo mes
@@ -216,14 +235,22 @@ function verificarFechaIN() {
     if (mes < 10)
         mes = '0' + mes //agrega cero si el menor de 10
     let fechaHoy = new Date().toISOString().slice(0, 10)
+
+    // FECHA PARA MAÑANA
+    let mañana = (fecha.getDate() + 1)
+    if (mañana < 10)
+        mañana = '0' + mañana; //agrega cero si el menor de 10
+    let fechamañana = ano + "-" + mes + "-" + mañana;
+
   
-    document.getElementById('infoOUT').min = ano + "-" + mes + "-" + + (dia+1);
-    document.getElementById('infoOUT').value = ano + "-" + mes + "-" + + (dia+1);
+    document.getElementById('infoOUT').min = fechamañana;
+    document.getElementById('infoOUT').value = fechamañana;
     document.getElementById('infoIN').min = ano + "-" + mes + "-" + dia;
     
 }
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // :::: GUARDAR INFORMACION LOCALSTORAGE - PASAR A OTRO HTML ::::
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function passInformacion() {
     let fechaIN = document.getElementById('infoIN').value;
     localStorage.setItem("fechaCheckIn", fechaIN); // Guardando en el localStorage la fecha del checkIn
@@ -283,7 +310,6 @@ function funcionBuscar() {
 }
 
 
-    
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // FUNCIONES PARA MODALES 
@@ -342,12 +368,14 @@ if(localStorage.getItem("numeroAdultos") == undefined){
     location.href = "../index.html"
 }
 
+// ::: LIMPIEZA LOCALSTORAGE
 function clearStorage() {
     if (localStorage.getItem("flag") == "true") {
         localStorage.clear();
         window.location.href = "../html/destinos.html"
     }
 } 
+
 clearStorage();
 
 

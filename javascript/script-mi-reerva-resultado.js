@@ -1,5 +1,6 @@
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // :::::  OBTENIENDO INFORMACION RESERVA ::::::
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 let URL_R = "http://localhost:8080/reservas/mireserva/"
 URL_R += "?numeroDocumento=" + localStorage.getItem("numeroDocumento") + "&token=" + localStorage.getItem("token") + "&tipoDocumento=" + localStorage.getItem("tipoDocumento")
 
@@ -55,11 +56,15 @@ async function mainR() {
 }
 mainR() // LLAMADO FUNCION PRINCIPAL
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// CONDICIONAL VISUALIZACIÓN INFORMACIÓN
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function mostrar() {
     // :::::  SI EXISTE LA RESERVA SE MUESTRA LA INFORMACION - SI NO SE DEVUELVE ::::::
     if (localStorage.getItem("idHotelReserva") != 0) {
-
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // :::::  OBTENIENDO INFORMACION DEL HOTEL DE LA RESERVA ::::::
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // URL API OBTENER HOTELES
         let URL_H = "http://localhost:8080/hoteles/id/"
         URL_H += localStorage.getItem("idHotelReserva")
@@ -79,9 +84,10 @@ function mostrar() {
             saludo() //SI SE OBTIENE INFORMACIÓN DEL HOTEL SE SALUDA AL HUESPED
         }
         mainH()
-
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // ::::: FRONT ::::::
         // SALUDO INICIAL MENSAJE DE ADVERTENCIA SOBRE MODIFICACION DE RESERVA
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function saludo() {
             const saludo = document.getElementById("txt_inicial_mireserva_resultado")
             let div = "<div>"
@@ -92,8 +98,9 @@ function mostrar() {
             div += "</div>"
             saludo.innerHTML += div
         }
-
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // :::::  CARD CON INFORMACION DEL HOTEL DE LA RESERVA ::::::
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function set_value_hote(hotel) {
             const card_hotel = document.getElementById("hotelSeleccionadoApi")
             let div = "<div class = 'box-img'>"
@@ -145,7 +152,9 @@ function mostrar() {
             div += "</div>"
             card_hotel.innerHTML += div
         }
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // :::::  FORMULARIO CON LA INFORMAICON DE LA RESERVA ::::::
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function formulario_Actualizar() {
             const formu_actualizar = document.getElementById("form_reserva_mireserva")
             div = "<div>"
@@ -258,8 +267,9 @@ function mostrar() {
             formu_actualizar.innerHTML += div
             rellarFormulario() // LLAMADO DE FUNCION QUE RELLENA EL FORMULARIO CON LOS DATOS OBTENIDOS DEL JSON RESERVA
         }
-
-        // ::::: FUNCION PARA RELLANR EL FORMULARIO CON LOS DATOS DE LA RESERVA ::::::
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // ::::: RELLANR EL FORMULARIO CON LOS DATOS DE LA RESERVA ::::::
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function rellarFormulario() {
             document.getElementById("nombrePersona").setAttribute("value", localStorage.getItem("nombre"))
             document.getElementById("apellidoPersona").setAttribute("value", localStorage.getItem("apellido"))
@@ -274,8 +284,9 @@ function mostrar() {
             document.getElementById("fkHotel").value = localStorage.getItem("idHotelReserva")
         }
 
-
-        // FUNCION PARA ESTABLECE LA FECHA DEL CHEKC IN Y CHECK OUT Y NO PERMITIR ESCOGER UNA FECHA MENOR A LA ACTUAL
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // ESTABLECER LA FECHA DEL CHEKC IN Y CHECK OUT Y NO PERMITIR ESCOGER UNA FECHA MENOR A LA ACTUAL
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function verificarFechaIN() {
             let fecha = new Date(); //Fecha actual
             let mes = fecha.getMonth() + 1; //obteniendo mes
@@ -288,8 +299,9 @@ function mostrar() {
             let fechaHoy = ano + "-" + mes + "-" + dia;
             return fechaHoy
         }
-
-        // :::::: FUNCION PARA CONOCER EL NUMERO DE NOCHES ENTRE LAS FECHAS DE RESERVA :::::
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // CONOCER EL NUMERO DE NOCHES ENTRE LAS FECHAS DE RESERVA :::::
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function numeroNoches() {
             let fechainicio = new Date(localStorage.getItem("fechaCheckIn"))
             let fechaFin = new Date(localStorage.getItem("fechaCheckOut"))
@@ -301,7 +313,9 @@ function mostrar() {
             }
             return diferenciaDia
         }
-        // :::: FUNCION PARA CAMBIAR TEXTO NOCHES O NOCHE
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // MANIPULACIÓN TEXTO PLURAL - SINGULAR DE ACUERDO A SELECCIÓN
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function txtnoche(){
             let txt = "NOCHES"
             if(numeroNoches() == 1){
@@ -310,6 +324,7 @@ function mostrar() {
             return txt
         }
         txtnoche()
+
         function txthabi(){
             let txt = "HABITACIONES"
             if(localStorage.getItem("numeroHabitaciones") == 1){
@@ -318,16 +333,23 @@ function mostrar() {
             return txt
         }
         txthabi()
-        
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // :::::  LLAMADO DE FUNCIONES ::::::
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         formulario_Actualizar()
         verificarFechaIN() 
     } else {
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // ::: LLAMADO DE MODAL - NO EXISTE RESERVA
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         no_existe_reserva()
     }
 }
 
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // ::::: FUNCION PARA CREAR EL JSON PARA MODIFICAR RESERVA ::::
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function obtenerInfo(evt) {
     evt.preventDefault()
     const form = evt.target
@@ -345,7 +367,6 @@ function obtenerInfo(evt) {
         tipoDocumento: form.tipoDocumento.value,
         numeroDocumento: form.numeroDocumento.value,
         fkHotel: form.fkHotel.value
-
     }
     save_info() // LLAMADO DE FUNCION PARA GUARDAR INFORMACION EN EL LOCAL STORAGE
     if (localStorage.getItem("fechaCheckIn") > localStorage.getItem("fechaCheckOut")) {
@@ -354,8 +375,9 @@ function obtenerInfo(evt) {
         update(reserva)
     }
 }
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // ::: FUNCION PARA GUARDAR INFORMACIÓN EN EL LOCALSTORAGE PARA FUTURO ENVIO AL BACK
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function save_info() {
     let nombre = document.getElementById("nombrePersona").value
     localStorage.setItem("nombreAdul", nombre)
@@ -374,12 +396,15 @@ function save_info() {
     localStorage.setItem("numeroHabitaciones",numHabi)
     
 }
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // :::: METODOS DE ACTUALIZACION Y BORRADO DE RESERVAS
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // URL API
 const URL_API = "http://localhost:8080/reservas"
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // ::: METODO DE ACTUALIZACION RESERVA
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 async function update(reserva) {
     // ENVIO DE PETICION
     const resp = await fetch(URL_API, {
@@ -392,6 +417,9 @@ async function update(reserva) {
     const text = await resp.text()
     window.location.replace("../html/confirmacion-reserva.html") // SI ES EXITOSA SE REDIRIGE A LA PAGINA DE CONFIRMACIÓN RESERVA
 }
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ::: METODO DE BORRAR RESERVA
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function borrarMain(){
     confirmacionEliminacionReserva()
     /* if (confirm("Seguro quieres cancelar la reserva") == true) {
@@ -399,10 +427,9 @@ function borrarMain(){
       } else {
         alert("Entonces disfruta tu viaje");
       } */
-    
 }
 
-// ::: METODO DE ACTUALIZACION RESERVA
+// ::: METODO DE ELIMACIÓN RESERVA
 async function borrar_reserva(id) {
     // ENVIO DE PETICION
     const resp = await fetch(`${URL_API}/${id}`, {
@@ -413,10 +440,11 @@ async function borrar_reserva(id) {
 
 }
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ::: MODALES
 
-//window.onload = clearStorage;
-
-// :::: CREACION MODAL ELIMACION RESERVA :::::
+// ::: MODAL ELIMACION RESERVA :::::
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 function modal_elimicion(){
     const modal_elimnacion = document.getElementById("openModal5")
@@ -445,7 +473,7 @@ function modal_elimicion(){
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // FUNCIONES PARA MODALES 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// MODAL CHEK OUT ANTES QUE CHECK IN
+// ::: MODAL CHEK OUT ANTES QUE CHECK IN ::::
 function mostrarModalFechas() {
     document.getElementById('openModal2').style.display = 'initial';
 }
@@ -454,7 +482,7 @@ function CerrarModal2() {
     document.getElementById('openModal2').style.display = 'none';
 }
 
-// MODAL NO EXISTE RESERVA EN LA BASE DE DATOS
+// :::::  MODAL NO EXISTE RESERVA EN LA BASE DE DATOS :::::
 function no_existe_reserva() {
     document.getElementById('openModal4').style.display = 'block';
 }
@@ -463,7 +491,7 @@ function CerrarModal4() {
     document.getElementById('openModal4').style.display = 'none';
 }
 
-// MODAL LA RESERVA FUE ELIMINADA
+// :::::: MODAL LA RESERVA FUE ELIMINADA :::::
 function elimiancion_reserva() {
     modal_elimicion()
     document.getElementById('openModal5').style.display = 'block';
@@ -473,7 +501,7 @@ function CerrarModal5() {
     document.getElementById('openModal5').style.display = 'none';
 }
 
-// MODAL SI NO ELIMNAR RESERVA
+// ::::::  MODAL SI NO ELIMNAR RESERVA :::::::
 function confirmacionEliminacionReserva() {
     document.getElementById('openModal6').style.display = 'block';
 }
@@ -482,22 +510,19 @@ function CerrarModal6() {
     document.getElementById('openModal6').style.display = 'none';
 }
 
-
 // ::: FUNCION BOTON ACEPTAR - MODAL NO EXISTE RESERVA
 function aceptar() {
     clearStorage()
     window.location.replace("../html/mireserva.html")
 }
 
-
 // ::::::: DECISIONES MODAL HABITACIONES MAYOR A HUESPEDES
 let decision = ""
 function aceptar2() {
     CerrarModal6()
     borrar_reserva(localStorage.getItem("idReservas"))
-    
 }
-
+// ::: FUNCION BOTON CANCELAR - TODOS LOS MODALES
 function cancelar() {
     CerrarModal6()
 }
@@ -505,7 +530,9 @@ function cancelar() {
 CerrarModal2()
 CerrarModal4()
 
-// :::::  Funcion para limpiar el localStorage
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// : LIMPIEZA LOCALSTORAGE
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function clearStorage() {
     localStorage.clear();
 }

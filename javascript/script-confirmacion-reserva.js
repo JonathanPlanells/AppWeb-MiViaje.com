@@ -1,9 +1,15 @@
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// CONDICIONAL SI NO EXISTEN DATOS - DEVOLVER Y NO MOSTRAR INFORMACIÓN
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-function devolver() {
+function devolver() { // SI NO EXISTEN DATOS MOSTRAR DEVOLVER AL INDEX
     if (localStorage.getItem("numDocum") == null) {
         window.location.href = "../index.html"
-    } else {
-
+    } else {// SI EXISTEN DATOS MOSTRAR LOS DATOS ACORDE AL CONSUMO DE API
+        
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // OBTENIENDO TOKEN DE ACUERDO AL NUMERO DE DOCUMENTO
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         let URLT = "http://localhost:8080/reservas/token/"
         URLT += localStorage.getItem("numDocum")
         async function obtenertoken(url) {
@@ -17,6 +23,10 @@ function devolver() {
             token_reserva(token)
         }
         main()
+
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // BANDERA PARA MANIPULACIÓN TEXTO DOM
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function txtConfirmacion_actu(){
             if(localStorage.getItem("flag2") == "true"){
                 txt = "ACTUALIZADA"
@@ -25,7 +35,9 @@ function devolver() {
             }
             return txt
         }
-        
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // VISUALIZACIÓN DOM -> INFORMACIÓN RESERVA
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function token_reserva(token) {
             const complemento_reserva = document.getElementById("confirmacion_reserva")
             let t = token
@@ -50,7 +62,9 @@ function devolver() {
             div += "</div>"
             complemento_reserva.innerHTML += div
         }
-
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // VIUSALIZACIÓN DOM -> INFORMACIÓN HOTEL SELECCIONADO DE ACUERDO A RESERVA
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function set_value_hote() {
             const card_hotel = document.getElementById("hotelSeleccionadoApi")
             let div = "<div class = 'box-img'>"
@@ -94,7 +108,9 @@ function devolver() {
 
         }
 
-
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // CALCULO NÚMERO DE NOCHES DE ACUERDO A LAS FECHAS SELECCIONADAS
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function numeroNoches() {
             let fechainicio = new Date(localStorage.getItem("fechaCheckIn"))
             let fechaFin = new Date(localStorage.getItem("fechaCheckOut"))
@@ -105,9 +121,11 @@ function devolver() {
                 diferenciaDia = 1
             }
             return diferenciaDia
-
         }
-       
+        
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // EDICIÓN TEXTO PLURAL SINGULAR -> DOM
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function txtnoche(){
             let txt = "NOCHES"
             if(numeroNoches() == 1){
@@ -124,17 +142,20 @@ function devolver() {
             return txt
         }
         txthabi()
+
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // LLAMADO DE FUNCIONES
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         set_value_hote()
-
         
-
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // BANDERA PARA NO DEOLVERSE NI EXISTA FUGA DE DATOS
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         let flag = true
         localStorage.setItem("flag", flag)
         window.location.hash = "no-back-button";
         window.location.hash = "Again-No-back-button";//esta linea es necesaria para chrome
         window.onhashchange = function () { window.location.hash = "no-back-button"; }
-
-
     }
 }
 

@@ -1,3 +1,6 @@
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// CONVERTIR INFORMACIÓN SELECCIONADA PARA MOSTRAR EN EL DOM
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 switch (localStorage.getItem("numeroAdultos")) {
     case 'opcion 0':
         localStorage.setItem("numeroAdultos", '1')
@@ -28,7 +31,14 @@ switch (localStorage.getItem("numeroHabitaciones")) {
         break;
 }
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// URL API
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 const URL_APi = "http://localhost:8080/reservas"
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// OBTENIENDO INFORMACIÓN DEL FORMULARIO DE RESERVA
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 function obtenerInfo(evt) {
     evt.preventDefault()
@@ -45,12 +55,14 @@ function obtenerInfo(evt) {
         tipoDocumento: form.tipoDocumento.value,
         numeroDocumento: form.numeroDocumento.value,
         fkHotel:form.fkHotel.value
-        
     }
     save_name()
     crearReserva(reserva)
-
 }
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// CONVERTIR INFORMACIÓN SELECCIONADA PARA MOSTRAR EN EL DOM
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function save_name(){
     let nombre = document.getElementById("nombrePersona").value
     localStorage.setItem("nombreAdul",nombre)
@@ -59,8 +71,9 @@ function save_name(){
     let numeroDocu =document.getElementById("numeroDocumento").value
     localStorage.setItem("numDocum",numeroDocu)
 }
-
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// LIMPIAR FORMULARIO
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function clearForm(form) {
     form.nombrePersona.value = ""
     form.apellidoPersona.value = ""
@@ -69,7 +82,9 @@ function clearForm(form) {
     form.tipoDocumento.value = ""
     form.numeroDocumento.value = ""
 }
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// CONSUMO DE API - CREACIÓN DE RESERVA 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 async function crearReserva(reserva) {
     // Enviar peticion
     const respues = await fetch(URL_APi, {
@@ -83,7 +98,6 @@ async function crearReserva(reserva) {
     window.location.replace("../html/confirmacion-reserva.html")
 }
 
-
 /* function get_params_url() {
     const params = window.location.search
     const url = new URLSearchParams(params)
@@ -94,13 +108,19 @@ async function crearReserva(reserva) {
     //localStorage.setItem("imghs", imgh)
     set_value_hote(hotel)
     get_idhotel(hotel)
-
 }
-
 get_params_url() */
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// LLAMADO DE FUNCIONES
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 set_value_hote()
 get_idhotel()
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// OBTENIENDO INFORMACIÓN DEL HOTEL SELECCINADO PARA CREACIÓN DE RESERVA
+// ---- SE CREA FORMUMALIO INHABILITADO ----
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function get_idhotel(){
     const complemento_reserva = document.getElementById("form_reserva")
     let div = "<div style = 'display:none;'>"
@@ -120,7 +140,9 @@ function get_idhotel(){
     complemento_reserva.innerHTML += div
 }
 
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// MOSTRANDO EN EL DOM INFORMACIÓN DEL HOTEL SLECCIONADO
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 function set_value_hote(hotel) {
     const card_hotel = document.getElementById("hotelSeleccionadoApi")
@@ -166,6 +188,10 @@ function set_value_hote(hotel) {
 
 }
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// CALCULO PARA TOTAL DE NÚMERO DE NOCHES SELECCIONADAS DE ACUERDO A LAS FECHAS
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 function numeroNoches(){
     let fechainicio = new Date(localStorage.getItem("fechaCheckIn"))
     let fechaFin = new Date(localStorage.getItem("fechaCheckOut"))
@@ -178,8 +204,16 @@ function numeroNoches(){
     return diferenciaDia
     
 }
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// BANDERA FUGA DE DATOS
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 let flag = true
 localStorage.setItem("flag",flag)
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// SI NO HAY INFORMACIÓN RETROCEDER
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 function devolver(){
     if(localStorage.getItem("fechaCheckOut") == undefined){
@@ -187,6 +221,10 @@ function devolver(){
     }
 }
 devolver()
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// MODIFIACIÓN TEXTO DE PLURAR O SINGULAR DE ACUERDO A SELECCIÓN
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function txtnoche(){
     let txt = "NOCHES"
     if(numeroNoches() == 1){
@@ -195,6 +233,7 @@ function txtnoche(){
     return txt
 }
 txtnoche()
+
 function txthabi(){
     let txt = "HABITACIONES"
     if(localStorage.getItem("numeroHabitaciones") == 1){

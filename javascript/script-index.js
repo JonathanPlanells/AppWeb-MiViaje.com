@@ -1,10 +1,14 @@
-// Función para obtener el valor del select de ciudad
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// OBTENER EL VALOR DEL SELECT DE CIUDAD
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 let select = document.getElementById('ciudad');
 select.addEventListener('change', function sel(event) {
     console.log(event.target.value)
 })
 
-// FUNCION PARA RELLENAR EL LOCALSTORAGE - INFORMACION QUE PASA DE HTML A HTML
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// RELLENO DEL LOCALSTORAGE - INFORMACION QUE PASA DE HTML A HTML
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function passInformacion() {
     let fechaIN = document.getElementById('fechaIN').value;
     localStorage.setItem("fechaCheckIn", fechaIN); // Guardando en el localStorage la fecha del checkIn
@@ -18,8 +22,9 @@ function passInformacion() {
     localStorage.setItem("numeroHabitaciones", habSelec);
     return true;
 }
-
-// FUNCIÓN PARA ESTABLECER LA FECHA DEL CHECK IN Y NO PERMITIR ESCOGER UNA FECHA ANTERIOR
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ESTABLECER LA FECHA DEL CHECK IN Y NO PERMITIR ESCOGER UNA FECHA ANTERIOR
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function verificarFechaIN() {
     let fecha = new Date(); //Fecha actual
     let mes = fecha.getMonth() + 1; //obteniendo mes
@@ -30,25 +35,33 @@ function verificarFechaIN() {
     if (mes < 10)
         mes = '0' + mes //agrega cero si el menor de 10
     let fechaHoy = ano + "-" + mes + "-" + dia;
-    let fechamañana = ano + "-" + mes + "-" + (dia+1);
+    // FECHA PARA MAÑANA
+    let mañana = (fecha.getDate() + 1)
+    if (mañana < 10)
+        mañana = '0' + mañana; //agrega cero si el menor de 10
+    let fechamañana = ano + "-" + mes + "-" + mañana;
     document.getElementById('fechaIN').min = ano + "-" + mes + "-" + dia;
-    document.getElementById('fechaOut').min = ano + "-" + mes + "-" + (dia+1);
+    document.getElementById('fechaOut').min = ano + "-" + mes + "-" + mañana;
     document.getElementById('fechaIN').value = fechaHoy;
-    document.getElementById('fechaOut').value = ano + "-" + mes + "-" + (dia+1);
+    document.getElementById('fechaOut').value = fechamañana;
     // ALMACENAMIENTOS DATOS PARA CARDS BANNER
-    localStorage.setItem("fechaCheckOut", (ano + "-" + mes + "-" + + (dia + 1)));
-    localStorage.setItem("fechaCheckIn",fechaHoy)
+    localStorage.setItem("fechaCheckOut", fechamañana);
+    localStorage.setItem("fechaCheckIn", fechaHoy)
 }
-// FUNCION LIMPIAR LOCALSTORAGE
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// LIMPIEZA LOCALSTORAGE
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function clearStorage() {
     localStorage.clear();
 }
 
-// FUNCION PARA EJECUTAR ACCIONES AL CARGAR LA PAGINA
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// EJECUTAR ACCIONES AL CARGAR LA PAGINA
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function ejecutarAlCargarPagina() {
     verificarFechaIN();
     clearStorage();
-    vs() 
+    vs()
 }
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -73,7 +86,7 @@ function CerrarModal2() {
 
 function mostrarModalHabitaciones() {
     document.getElementById('openModal3').style.display = 'block';
-    vs() 
+    vs()
 }
 
 function CerrarModal3() {
@@ -107,80 +120,83 @@ function cancelar() {
 }
 
 
-//::::::::::::::::::::::::::::::::::::::::::::::::::::
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //::::::::::::::::::: CARDS BANNER:::::::::::::::::
-//::::::::::::::::::::::::::::::::::::::::::::::::::::
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-function bogota(){
+function bogota() {
     let ciudad = "BOGOTA"
     localStorage.setItem("ciudadSeleccion", ciudad)
     creacion()
 }
-function cartagena(){
+function cartagena() {
     let ciudad = "CARTAGENA"
     localStorage.setItem("ciudadSeleccion", ciudad)
     creacion()
 }
-function medellin(){
+function medellin() {
     let ciudad = "MEDELLIN"
     localStorage.setItem("ciudadSeleccion", ciudad)
     creacion()
 }
 
-// ::::::::  CREACION DE DATOS PARA FORMULARIO DE RESERVA SI SE DIRIGE DESDE LAS CARD BANNER
-function creacion(){
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// : CREACION DE DATOS PARA FORMULARIO DE RESERVA SI SE DIRIGE DESDE LAS CARD BANNER
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+function creacion() {
     let n = 1
     let h = 2
-    localStorage.setItem("numeroAdultos",h)
-    localStorage.setItem("numeroHabitaciones",n)
-    verificarFechaIN() 
+    localStorage.setItem("numeroAdultos", h)
+    localStorage.setItem("numeroHabitaciones", n)
+    verificarFechaIN()
 }
 
-function crearBarichara(){
+function crearBarichara() {
     let ciudad = "Barichara"
     localStorage.setItem("ciudadSeleccion", ciudad)
     let id_hotel_sc = 25
     localStorage.setItem("id_hotel_sc", id_hotel_sc)
-    let imgHotelDS ="https://imagenes.weekendcolombia.co/47561293db15b9cb8174a22e5b5-3.jpg"
-    localStorage.setItem("imgHotelDS",imgHotelDS)
-    let namehotel ="TERRA BARICHARA"
-    localStorage.setItem("namehotel",namehotel)
+    let imgHotelDS = "https://imagenes.weekendcolombia.co/47561293db15b9cb8174a22e5b5-3.jpg"
+    localStorage.setItem("imgHotelDS", imgHotelDS)
+    let namehotel = "TERRA BARICHARA"
+    localStorage.setItem("namehotel", namehotel)
     let precioHab = 210000
-    localStorage.setItem("precioHab",precioHab)
+    localStorage.setItem("precioHab", precioHab)
     creacion()
 }
 
 
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // :::::::::::: BANDERA PARA FILTRO AVANZADO :::::::::::
-function vs(){
-    if(document.getElementById("numAdult").value >= document.getElementById("numHab").value){
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+function vs() {
+    if (document.getElementById("numAdult").value >= document.getElementById("numHab").value) {
         let HueFlag = 1;
         localStorage.setItem("HUEvsHAB", HueFlag)
-    }else{
+    } else {
         let HueFlag = 2;
         localStorage.setItem("HUEvsHAB", HueFlag)
-        
-    } 
+
+    }
 }
 
-//::::::::::::::::::::::::::::::::::::::::::::::::::::
-//++++++++ BARRA DE BUSQUEDA PRINCIPAL +++++++++++++++
-//::::::::::::::::::::::::::::::::::::::::::::::::::::
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//::::::::::::: BARRA DE BUSQUEDA PRINCIPAL ::::::::::
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // LOGICA PRINCIPAL BARRA DE BISQUEDA
-function filtracionAvanzada(){
+function filtracionAvanzada() {
     if (document.getElementById('fechaIN').value > document.getElementById('fechaOut').value) {
         mostrarModalFechas()
-        }else if(document.getElementById('numHab').value > document.getElementById('numAdult').value){
-            if(localStorage.getItem("decision") == false || localStorage.getItem("decision") == undefined){
-                mostrarModalHabitaciones()  
-            } else{
-                window.location.href = "../html/destino-seleccionado.html", true;
-            }
-        }else if(localStorage.getItem("HUEvsHAB") == 1 ){
-                window.location.href = "../html/destino-seleccionado.html", true;
-        } 
+    } else if (document.getElementById('numHab').value > document.getElementById('numAdult').value) {
+        if (localStorage.getItem("decision") == false || localStorage.getItem("decision") == undefined) {
+            mostrarModalHabitaciones()
+        } else {
+            window.location.href = "../html/destino-seleccionado.html", true;
+        }
+    } else if (localStorage.getItem("HUEvsHAB") == 1) {
+        window.location.href = "../html/destino-seleccionado.html", true;
+    }
 }
 
 // FUNCIONAMIENTO Y LOGICA DE LA BARRA DE BUQUEDA
@@ -191,7 +207,7 @@ function funcionBuscar() {
     } else if (document.getElementById('ciudad').value == "BARICHARA") {
         filtracionAvanzada()
     } else if (document.getElementById('ciudad').value == "BOGOTA") {
-        filtracionAvanzada() 
+        filtracionAvanzada()
     } else if (document.getElementById('ciudad').value == "CALI") {
         filtracionAvanzada()
     } else if (document.getElementById('ciudad').value == "CARTAGENA") {
@@ -200,7 +216,7 @@ function funcionBuscar() {
         filtracionAvanzada()
     } else if (document.getElementById('ciudad').value == "SANTA MARTA") {
         filtracionAvanzada()
-    }else if (document.getElementById('ciudad').value == "MEDELLIN") {
+    } else if (document.getElementById('ciudad').value == "MEDELLIN") {
         filtracionAvanzada()
     } else if (document.getElementById('ciudad').value == "LETICIA") {
         filtracionAvanzada()
@@ -209,5 +225,5 @@ function funcionBuscar() {
     }
     passInformacion() //Ejecutamos la funcion de guardar información para luego utilizarla en los otros html
 }
-    
+
 

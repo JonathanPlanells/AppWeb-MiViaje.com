@@ -1,4 +1,7 @@
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// CREACIÓN DE INFORMACÍON DE ACUERDO AL DESTINO
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function seleccionardestinoB() {
     let ciudad = "BOGOTA"
     localStorage.setItem("ciudadSeleccion", ciudad)
@@ -44,7 +47,9 @@ function seleccionardestinoL() {
     localStorage.setItem("ciudadSeleccion", ciudad)
     rellenoDatos()
 }
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // ::: RELLENAR FORMULARIO CUANDO NO SE ENTRA DESDE LA PESTAÑA DESTINOS O CARD BANNER :::
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function rellenoDatos(){
     let n = 1
     let h = 2
@@ -52,12 +57,21 @@ function rellenoDatos(){
     localStorage.setItem("numeroHabitaciones", n)
     let fechaHoy = new Date().toISOString().slice(0, 10)
     localStorage.setItem("fechaCheckIn", fechaHoy)
-    localStorage.setItem("fechaCheckOut", fechaHoy)
+    // FECHA PARA MAÑANA
+    let fecha = new Date(); //Fecha actual
+    let mes = fecha.getMonth() + 1; //obteniendo mes
+    let ano = fecha.getFullYear(); //obteniendo año
+    let mañana = (fecha.getDate() + 1)
+    if (mañana < 10)
+        mañana = '0' + mañana; //agrega cero si el menor de 10
+    let fechamañana = ano + "-" + mes + "-" + mañana;
+    localStorage.setItem("fechaCheckOut", fechamañana)
 
 }
 
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // ::: ESTABLECER FECHAS ACTUALES Y MINIMAS CHECK IN - CHEKC OUT :::
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function verificarFechaIN() {
     let fecha = new Date(); //Fecha actual
     let mes = fecha.getMonth() + 1; //obteniendo mes
@@ -67,15 +81,22 @@ function verificarFechaIN() {
         dia = '0' + dia; //agrega cero si el menor de 10
     if (mes < 10)
         mes = '0' + mes //agrega cero si el menor de 10
-    let fechaHoy = ano + "-" + mes + "-" + dia;
-    document.getElementById('infoOUT').min = ano + "-" + mes + "-" + + (dia+1);
+
+    // FECHA PARA MAÑANA
+    let mañana = (fecha.getDate() + 1)
+    if (mañana < 10)
+        mañana = '0' + mañana; //agrega cero si el menor de 10
+    let fechamañana = ano + "-" + mes + "-" + mañana;
+
+    document.getElementById('infoOUT').min = fechamañana;
     document.getElementById('infoIN').min = ano + "-" + mes + "-" + dia;
     document.getElementById("infoIN").value = new Date().toISOString().slice(0, 10)
-    document.getElementById("infoOUT").value = ano + "-" + mes + "-" + (dia + 1)
+    document.getElementById("infoOUT").value = fechamañana
    
 }
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // :::: GUARDAR INFORMACION LOCALSTORAGE - PASAR A OTRO HTML ::::
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function passInformacion() {
     let fechaIN = document.getElementById('infoIN').value;
     localStorage.setItem("fechaCheckIn", fechaIN); // Guardando en el localStorage la fecha del checkIn
@@ -171,8 +192,6 @@ function aceptar() {
     window.location.href = "../html/destino-seleccionado.html", true;
     let e = 1;
     localStorage.setItem("HUEvsHAB",e)
-    
-    
 }
 function cancelar() {
     decision = false
@@ -187,8 +206,7 @@ function vs(){
         localStorage.setItem("HUEvsHAB", HueFlag)
     }else{
         let HueFlag = 2;
-        localStorage.setItem("HUEvsHAB", HueFlag)
-        
+        localStorage.setItem("HUEvsHAB", HueFlag) 
     } 
 }
 //+++++++++++++++++++++++++++++++++

@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
+ <!-- :::::  BARRA DE NAVEGACION :::::  -->
 <body class="mi_reserva_body">
     <header class="headeAzul">
         <h1 class="logoblanco"><a title="logoFooter" href="../index.html">
@@ -25,45 +25,48 @@
         </nav>
     </header>
     <main class="mi_reserva_main">
+        <!-- :::::  FORMULARIO MIRESERVA :::::  -->
         <div class="mireserva" id="mireserva">
             <section class="formulario_mi_reserva">
                 <form onsubmit="get_data_form(event)" action="../html/mireserva_resultado.html" method="post">
                     <div class="cajasTexto_mireserva">
-                        <!-- FROMULARIO MIRESERVA -->
+                        <!-- TIPO DE DOCUMENTO -->
                         <label for="tipoDocumento">TIPO DE DOCUMENTO</label>
                         <select class="inputForm" name="tipoDocumento" id="tipoDocumento" required>
                             <option value="CC">Cedula de Ciudadania</option>
                             <option value="CE">Cedula de Extranjeria</option>
                             <option value="PA">Pasaporte</option>
                         </select>
-
+                         <!-- NUMERO DOCUMENTO -->
                         <label for="numeroDocumento">NUMERO DE DOCUMENTO</label>
                         <input type="text" id="numeroDocumento" name="numeroDocumento" class="inputForm" required>
-
+                         <!-- CODIGO DE RESERVA -->
                         <label for="token">CODIGO DE RESERVA</label>
                         <input type="text" id="token" name="token" class="inputForm" required>
 
-                        <!-- Boton -->
+                        <!-- BOTON BUSCAR RESERVA -->
                         <button class="boton2" type="submit" onclick="verificacion()">CONSULTAR RESERVA </button>
                         <p class="olivde_codigo" onclick=recupercionToken()> OLIVDE MI CODIGO DE RESERVA</p>
                     </div>
                 </form>
             </section>
+             <!-- :::::  IMAGEN FORMULARIO :::::  -->
             <section class="mireserva_box_img">
                 <img src="../Image/mireserva.svg">
             </section>
         </div>
-        <!-- MODAL ELIMINACION RESERVA-->
+        <!-- :::::  MODAL ELIMINACION RESERVA :::::  -->
         <div id="openModal7" class="modalDialog2">
             <div class="modal7">
-                
                 <div class="txt_modal_eliminacion_reserva" >
+                     <!-- X CERRAR MODAL -->  
                     <a href="#close" title="close" class="close" onclick="javascript:CerrarModal7();">X</a>
+                     <!-- TEXTO MODAL -->  
                     <p class="ups_recuperacion_token">RECUPERACIÓN DE CÓDIGO DE RESERVA</p>
                     <p class="nombre_persona_cancelacion_reserva">Tranquilo, nada está perdido</p>
                     <p class="nombre_persona_cancelacion_reserva">Si hiciste una reserva encontraremos tu código.</p>
                     <p class="txt1_eliminada" style="margin-top:20px ;">RELLENA EL SIGUIENTE FORMULARIO</p>
-
+                     <!-- FORMULARIO -->  
                     <form class="form_recuperar_token" id="form_recuperar_token" onsubmit="obtenerInfo(event)">
 
                         <label for="tipoDocumento2">TIPO DE DOCUMENTO</label>
@@ -79,22 +82,23 @@
                         <label for="correoPersona">CORREO ELECTRONICO</label>
                         <input type="email" id="correoPersona" name="correoPersona" class="inputForm" required
                             placeholder="email@domino.com">
-
+                         <!-- BOTÓN BUSCAR CODIGO RESERVA -->  
                         <input type="submit" value="BUSCAR CODIGO DE RESERVA" class="btn_modal_aceptar"
                             id="btn_modal_aceptar">
+                         <!-- BOTON CERRAR CON FORMULARIO -->  
                         <input type="button" id="btn_modal_cancelar2" class="btn_modal_cancelar2" value="SALIR"
                             onclick="javascript:CerrarModal7()">
                     </form>
+                     <!-- BOTON CERRAR CUANDO SE HA O NO SE HA ENCONTRADO CODIGO -->  
                     <input type="button" id="btn_modal_cancelar" class="btn_modal_cancelar" value="SALIR"
                     onclick="javascript:CerrarModal7()">
                     <div id="token_encontrado" class="token_encontrado"></div>
                 </div>
             </div>
         </div>
-        
-
     </main>
 </body>
+<!-- :::::  FOOTER :::::  -->
 <footer class="footer2" id="footer_mireserva">
     <div class="conocenos">
         <p>Conócenos</p>

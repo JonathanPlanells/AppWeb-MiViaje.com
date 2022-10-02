@@ -1,18 +1,26 @@
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// :::: OBTENER INFORMACIÓN FORMULARIO MI RESERVA ::::
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function get_data_form(evt) {
-    // Indicar que no recarge página al enviar el formulario
+    // NO RECARGAR PAGINA
     evt.preventDefault()
     const form = evt.target
+
+    // :: EXTRACIIÓN DE INFORMACIÓN ::
     let tipoDocu = form.tipoDocumento.value
     localStorage.setItem("tipoDocumento", tipoDocu)
-
+  
     let numDocu = form.numeroDocumento.value
     localStorage.setItem("numeroDocumento", numDocu)
-
+  
     let numtoken = form.token.value
     localStorage.setItem("token", numtoken)
 
+    // BANDERA PARA EVITAR FUGA DE DATOS
     let flag2 = true
     localStorage.setItem("flag2", flag2)
+
+    // INFORMACIÓN JSON
     const reserva = {
         tipoDocumento: form.numeroDocumento.value,
         numeroDocumento: form.numeroDocumento.value,
@@ -22,27 +30,33 @@ function get_data_form(evt) {
     return reserva
 }
 
-
-// Funcion para limpiar el localStorage
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// :::: LIMPIEZA LOCALSTORAGE :::::
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function clearStorage() {
     localStorage.clear();
 }
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// :: VERIFICACIÓN DE INFORMACIÓN PARA REDIRIGIR A OTRA PAGINA
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function verificacion() {
     if (document.getElementById("numeroDocumento").value != "" && document.getElementById("token").value != "") {
         window.location.href = '../html/mireserva_resultado.html'
     }
 }
-
-window.onload = clearStorage;
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ::: LIMPIEZA FORMULARIO
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function limpiar_formulario() {
     document.getElementById("numeroDocumento").value = ""
     document.getElementById("token").value = ""
     clearStorage
 }
 
+//::: LLAMADO DE FUNCIONES :::: //
 
+window.onload = clearStorage;
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // FUNCIONES PARA MODALES 
@@ -57,7 +71,9 @@ function CerrarModal7() {
     clearStorage
 }
 
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ::: FORMULARIO RECUPERAR CODIGO DE RESERVA ::::
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function obtenerInfo(evt) {
     // Indicar que no recarge página al enviar el formulario
     evt.preventDefault()
@@ -78,18 +94,22 @@ function obtenerInfo(evt) {
     limpiar_formulario2()
     mainR()
     return info
-
 }
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ::: LIMPIAR FORMULARIO RECUPERACIÓN NUMERO DE RESERVA ::::::
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function limpiar_formulario2() {
     document.getElementById("tipoDocumento2").value = "CC"
     document.getElementById("numeroDocumento2").value = ""
     document.getElementById("correoPersona").value = ""
 }
+
 // :::::  OBTENIENDO TOKEN ::::::
 
-
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ::: CONSUMO DE API
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // OBTENIENDO JSON
 async function get_info_reserva(url) {
     const respuesta = await fetch(url)
@@ -111,10 +131,14 @@ async function mainR() {
     console.log(info)
     localStorage.setItem("token", token)
 
-
     recuperarToken() // LLAMADO DE FUNCION PARA MOSTRAR INFO DE LA RESERVA DE ACUERDO AL RESULTADO, SI NO SE MUESTRA MODAL SIN RESERVA
 }
-document.getElementById('btn_modal_cancelar').style.display = 'none';
+
+document.getElementById('btn_modal_cancelar').style.display = 'none'; // BOTON CANCELAR 2 INHABILITADO 
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ::: MANIPULACIÓN DOM - MOSTRAR SI O NO NUMERO DE RESERVA - MOSTRAR BOTON DE SALIDA
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function recuperarToken() {
     function confirmacion(){
         let txt = ""
@@ -130,7 +154,9 @@ function recuperarToken() {
         return txt
     }
     confirmacion()
-    
+    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    // ::: MANIPULACIÓN DOM -> MOSTRAR NÚMERO DE RESERVA
+    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     let titulo = ""
     if(localStorage.getItem("flag") =="true"){
         titulo = "TU CODIGO DE RESERVA ES"
@@ -138,11 +164,16 @@ function recuperarToken() {
     const modal_elimnacion = document.getElementById("token_encontrado")
     let div = "<div>"
     div +=
-        `<p>${titulo}</p>
-         <p style ="font-size: 30px;font-weight: 600; margin-top:20px;">${confirmacion()}</p>
-    `
+        `
+        <p>${titulo}</p>
+        <p style ="font-size: 30px;font-weight: 600; margin-top:20px;">${confirmacion()}</p>
+        `
     div += "</div>"
     modal_elimnacion.innerHTML += div
+
+    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    // ::: FORMULARIO Y BOTONES INHABILITADOS  :::
+    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     document.getElementById('btn_modal_aceptar').style.display = 'none';
     document.getElementById('form_recuperar_token').style.display = 'none';
     document.getElementById('btn_modal_cancelar2').style.display = 'none';

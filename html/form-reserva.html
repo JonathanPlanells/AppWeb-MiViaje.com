@@ -13,10 +13,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <!--::::: BARRA DE NAVEGACIÓN :::::  -->
     <header class="headeAzul">
         <h1 class="logoblanco"><a title="logoFooter" href="../index.html">
-            <img id="logoBlanco" src="../Image/logoblanco copy.svg" alt="logoFooter"></h1></a>
+                <img id="logoBlanco" src="../Image/logoblanco copy.svg" alt="logoFooter"></h1></a>
         <nav>
             <a href="../index.html">Home</a>
             <a href="../html/destinos.html" style="color:#E48D36">Destinos</a>
@@ -25,108 +27,105 @@
         </nav>
     </header>
     <main>
-        <div class = "reserva" >
+        <div class="reserva">
+            <!--:::::  CARD HOTEL SELECCIONADO :::::  -->
             <div class="hoteleSeleccionado">
-                <div class ="cajaHotelSelec" id = "hotelSeleccionadoApi">
-    
+                <div class="cajaHotelSelec" id="hotelSeleccionadoApi">
+
                 </div>
-                
             </div>
-            <div class = "formularioReserva">
-                <form onsubmit="obtenerInfo(event)" >
-                    <div class ="cajasTexto" id ="form_reserva">
-                        <!-- CREACIÓN DE FORMULARIO -->
+            <!--::::: FORMULARIO RESERVA:::::  -->
+            <div class="formularioReserva">
+                <form onsubmit="obtenerInfo(event)">
+                    <div class="cajasTexto" id="form_reserva">
+                        <!--:::::  CREACIÓN DE FORMULARIO :::::  -->
                         <!-- El for relaciona la caja de texto con el titulo -->
-                        <label for = "nombrePersona" >NOMBRE</label>
-                        <input type = "text" id = "nombrePersona" name = "nombrePersona" class ="inputForm" required >
-    
-                        <label for = "apellidoPersona">APELLIDO</label>
-                        <input type = "text" id = "apellidoPersona" name = "apellidoPersona" class ="inputForm" required>
-    
-                        <label for = "correoPersona">CORREO ELECTRONICO</label>
-                        <input type = "email" id = "correoPersona" name = "correoPersona" class ="inputForm" required
-                        placeholder="email@domino.com">
-    
-                        <label for = "telefonoPersona">TELÉFONO</label>
-                        <input type = "tel" id = "telefonoPersona" name = "telefonoPersona" class ="inputForm" required
-                        placeholder="(xx) xxx xxx xxxx" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
-                        
-                        <label for = "tipoDocumento">TIPO DE DOCUMENTO</label>
-                        <select class ="inputForm" name = "tipoDocumento" id = "tipoDocumento" required >
+                        <label for="nombrePersona">NOMBRE</label>
+                        <input type="text" id="nombrePersona" name="nombrePersona" class="inputForm" required>
+
+                        <label for="apellidoPersona">APELLIDO</label>
+                        <input type="text" id="apellidoPersona" name="apellidoPersona" class="inputForm" required>
+
+                        <label for="correoPersona">CORREO ELECTRONICO</label>
+                        <input type="email" id="correoPersona" name="correoPersona" class="inputForm" required
+                            placeholder="email@domino.com">
+
+                        <label for="telefonoPersona">TELÉFONO</label>
+                        <input type="tel" id="telefonoPersona" name="telefonoPersona" class="inputForm" required
+                            placeholder="(xx) xxx xxx xxxx"
+                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+
+                        <label for="tipoDocumento">TIPO DE DOCUMENTO</label>
+                        <select class="inputForm" name="tipoDocumento" id="tipoDocumento" required>
                             <option value="CC">Cedula de Ciudadania</option>
                             <option value="CE">Cedula de Extranjeria</option>
                             <option value="PA">Pasaporte</option>
                         </select>
 
-                        <label for = "numeroDocumento">NÚMERO DOCUMENTO</label>
-                        <input type ="text" id ="numeroDocumento" name = "numeroDocumento" class ="inputForm" required/>
+                        <label for="numeroDocumento">NÚMERO DOCUMENTO</label>
+                        <input type="text" id="numeroDocumento" name="numeroDocumento" class="inputForm" required />
                     </div>
                     <section>
-                         <!-- Boton -->
-                    <input type="submit" value="REALIZAR RESERVA" class="boton">
-                    <input type="reset" value="NO RESERVAR" class="boton2" onclick="location.href='../index.html'">
+                        <!-- BOTÓN -->
+                        <input type="submit" value="REALIZAR RESERVA" class="boton">
+                        <input type="reset" value="NO RESERVAR" class="boton2" onclick="location.href='../index.html'">
                     </section>
-                       
                 </form>
             </div>
-
         </div>
-       
-
     </main>
-    <footer>
-        <div class="conocenos">
-            <p>Conócenos</p>
-            <ul class="listaConocenos">
-                <a href="../html/404.html">
-                    <li>¿Qué es MiViaje.com?</li>
-                </a>
-                <a href="../html/404.html">
-                    <li>Privacidad</li>
-                </a>
-                <a href="../html/404.html">
-                    <li>Términos</li>
-                </a>
-                <a href="../html/404.html">
-                    <li> Mapa del sitio</li>
-                </a>
-                <a href="../html/404.html">
-                    <li> Datos de la empresa</li>
-                </a>
-            </ul>
-
-        </div>
-        <div class="dudas">
-            <p>¿Dudas?<br>
-                Encuéntranos</p>
-            <ul class="listaDudas">
-                <a href="../html/404.html">
-                    <li>Centro de ayuda</li>
-                </a>
-                <a href="../html/404.html">
-                    <li>Reversión de Pagos</li>
-                </a>
-                <li>(xxx) xxx xxxx xx</li>
-                <li>info@miviaje.com</li>
-            </ul>
-
-        </div>
-
-        <h1 class=logoFooter><a title="logoFooter" href="../Index.html">
-                <img id="logoFooter" src="../Image/LogoBlanco.svg" alt="logoFooter"></a></h1>
-        <div class="redesSociales">
-
-            <a href="../html/404.html"><img src="../Image/Instagram.png" class="instagram"></a>
-            <a href="../html/404.html"><img src="../Image/Facebook.png" class="facebook"></a>
-            <a href="../html/404.html"><img src="../Image/Telegram.png" class="telegram"></a>
-            <a href="../html/404.html"><img src="../Image/Twitter.png" class="twitter"></a>
-
-
-        </div>
-        <p class="txtFinal">Copyright - Miviaje.com - 2022</p>
-
-
-    </footer>
 </body>
-    <script src="../javascript/script-form-reserva.js"> </script>
-</html> 
+<!--:::::  FOOTER :::::  -->
+<footer>
+    <div class="conocenos">
+        <p>Conócenos</p>
+        <ul class="listaConocenos">
+            <a href="../html/404.html">
+                <li>¿Qué es MiViaje.com?</li>
+            </a>
+            <a href="../html/404.html">
+                <li>Privacidad</li>
+            </a>
+            <a href="../html/404.html">
+                <li>Términos</li>
+            </a>
+            <a href="../html/404.html">
+                <li> Mapa del sitio</li>
+            </a>
+            <a href="../html/404.html">
+                <li> Datos de la empresa</li>
+            </a>
+        </ul>
+
+    </div>
+    <div class="dudas">
+        <p>¿Dudas?<br>
+            Encuéntranos</p>
+        <ul class="listaDudas">
+            <a href="../html/404.html">
+                <li>Centro de ayuda</li>
+            </a>
+            <a href="../html/404.html">
+                <li>Reversión de Pagos</li>
+            </a>
+            <li>(xxx) xxx xxxx xx</li>
+            <li>info@miviaje.com</li>
+        </ul>
+    </div>
+
+    <h1 class=logoFooter><a title="logoFooter" href="../Index.html">
+            <img id="logoFooter" src="../Image/LogoBlanco.svg" alt="logoFooter"></a></h1>
+    <div class="redesSociales">
+
+        <a href="../html/404.html"><img src="../Image/Instagram.png" class="instagram"></a>
+        <a href="../html/404.html"><img src="../Image/Facebook.png" class="facebook"></a>
+        <a href="../html/404.html"><img src="../Image/Telegram.png" class="telegram"></a>
+        <a href="../html/404.html"><img src="../Image/Twitter.png" class="twitter"></a>
+
+    </div>
+    <p class="txtFinal">Copyright - Miviaje.com - 2022</p>
+</footer>
+<!--:::::  SCRIPT :::::  -->
+<script src="../javascript/script-form-reserva.js"> </script>
+
+</html>
